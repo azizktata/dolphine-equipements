@@ -12,14 +12,20 @@ import Footer from "@/components/ui/footer";
 import { getAll } from "@/utils/getComposants";
 
 import ListCards from "@/components/ui/listCards";
+import RecursiveAccordion from "@/components/ui/recursiveAccordion";
 
 export default async function page() {
   const data = await getAll();
+
   return (
     <>
       <Header />
-      <div className="my-4">
-        <div className="w-[90%] m-auto py-4">
+      <div className="bg-[#f4f8ff]">
+        <div className="pt-16 pb-64 flex flex-col w-[90%]  lg:w-[986px] m-auto  justify-center ">
+          {/* <div className="hidden lg:block lg:w-[350px]">
+          <RecursiveAccordion data={data} active={"composants"} />
+        </div> */}
+
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>

@@ -20,22 +20,25 @@ export default function CardSvg({
   image: string;
 }) {
   return (
-    <Card className="w-[350px] m-auto">
-      <CardContent className="pt-4">
+    <Card className="w-[350px] m-auto border-[#FCFAF3] ">
+      <CardContent className="pt-4 ">
         <Image
           src={image ?? "/globe.svg"}
           alt="hydrauliques"
           width={64}
           height={64}
+          className="text-[#316F9E] "
         />
       </CardContent>
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="lg:text-xl font-medium tracking-wide">
+          {title}
+        </CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardFooter>
         {/* <Button variant="outline">Cancel</Button> */}
-        <Button>voir composants</Button>
+        <Button className="bg-[#488DCA] rounded-sm">voir composants</Button>
       </CardFooter>
     </Card>
   );

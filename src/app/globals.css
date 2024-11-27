@@ -1,11 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto); /* Default font */
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-merriweather); /* Headings */
+}
+.accordion-trigger {
+  font-weight: normal; /* Default font weight */
+  transition: font-weight 0.2s ease;
+}
+
+/* When the AccordionItem is open, make the font bold */
+.accordion-trigger[data-state="open"] {
+  font-weight: bold;
+  color: #092844;
+  text-decoration: underline;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -33,6 +48,8 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --font-roboto: "Roboto", sans-serif;
+    --font-merriweather: "Merriweather", serif;
   }
   .dark {
     --background: 240 10% 3.9%;

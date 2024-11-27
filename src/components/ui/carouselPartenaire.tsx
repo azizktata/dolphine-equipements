@@ -7,28 +7,42 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
+import { Image } from "@nextui-org/image";
 export default function CarouselPartenaire() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
-  const partenairs = [""];
+  const partenairs = [
+    "/partenaire-1.webp",
+    "/partenaire-2.webp",
+    "/partenaire-3.webp",
+    "/partenaire-4.webp",
+    "/partenaire-5.webp",
+    "/partenaire-6.webp",
+    "/partenaire-7.webp",
+    "/partenaire-8.webp",
+    "/partenaire-9.webp",
+  ];
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full max-w-xs m-auto"
+      className="w-full  m-auto"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
-      <CarouselContent className="">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem className="basis-1/3" key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
+      <CarouselContent className="m-auto ">
+        {partenairs.map((img, index) => (
+          <CarouselItem
+            className="basis-1/2 lg:basis-1/3 flex justify-center items-center"
+            key={index}
+          >
+            <Image
+              src={img}
+              alt="hydrauliques"
+              width={350}
+              height={120}
+              className="object-fill"
+            />
           </CarouselItem>
         ))}
       </CarouselContent>
