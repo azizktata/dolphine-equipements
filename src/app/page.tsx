@@ -50,9 +50,9 @@ export default function Home() {
                 circuits hydrauliques
               </p>
               <div className="flex self-start">
-                <Link href="./composants">
+                <Link href="./produits">
                   <Button className="bg-[#488DCA] rounded-sm lg:self-start hover:bg-[#285C8A]">
-                    voir composants
+                    voir produits
                     <ArrowRight size={24} />
                   </Button>
                 </Link>

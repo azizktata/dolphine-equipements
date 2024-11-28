@@ -42,17 +42,17 @@ export default function Footer() {
         </div>
         <div>
           <h3 className="text-xl font-normal uppercase mb-2 after:block after:w-full after:h-[1px] after:bg-[#488DCA] after:mt-2 after:rounded-md after:scale-x-50 after:origin-left">
-            composant
+            produits
           </h3>
           <ul className="flex text-sm font-light flex-col gap-2 pl-2">
             <li>
-              <Link href="../composants/hydrauliques">Hydrauliques</Link>
+              <Link href="../produits/hydrauliques">Hydrauliques</Link>
             </li>
             <li>
-              <Link href="../composants/pneumatiques">Pneumatiques</Link>
+              <Link href="../produits/pneumatiques">Pneumatiques</Link>
             </li>
             <li>
-              <Link href="../composants/nettoyage">
+              <Link href="../produits/nettoyage">
                 Assainissement & Nettoyage
               </Link>
             </li>

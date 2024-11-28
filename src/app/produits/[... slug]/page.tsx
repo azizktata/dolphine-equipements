@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 
 import {
   Breadcrumb,
@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-import { getAll } from "@/utils/getComposants";
+import { getAll } from "@/utils/getProduits";
 import ListCards from "@/components/ui/listCards";
 import { Composant, Data } from "@/types";
 export default async function page({
@@ -55,7 +55,7 @@ export default async function page({
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/composants">Composants</BreadcrumbLink>
+              <BreadcrumbLink href="/composants">Produits</BreadcrumbLink>
             </BreadcrumbItem>
             {paramss[" slug"].length > 0
               ? paramss[" slug"].map((item: string) => (
@@ -72,11 +72,7 @@ export default async function page({
           </BreadcrumbList>
         </Breadcrumb>
 
-        {composants && (
-          <Suspense fallback={<div id="loading">Loading ...</div>}>
-            <ListCards composants={composants} />
-          </Suspense>
-        )}
+        {composants && <ListCards composants={composants} />}
       </div>
 
       <Footer />

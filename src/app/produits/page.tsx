@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-import { getAll } from "@/utils/getComposants";
+import { getAll } from "@/utils/getProduits";
 
 import ListCards from "@/components/ui/listCards";
 
@@ -32,9 +32,7 @@ export default async function page() {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage className="text-blue">
-                  Composants
-                </BreadcrumbPage>
+                <BreadcrumbPage className="text-blue">Produits</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>

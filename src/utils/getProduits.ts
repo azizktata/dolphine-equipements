@@ -1,7 +1,7 @@
 import { Data } from "@/types";
 
 export const mockData = {
-    title: "composants",
+    title: "produits",
     elements: [
       {
         title: "Hydrauliques",

@@ -19,7 +19,7 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["Nos Activités", "Composants", "Nos Services"];
+  const menuItems = ["Nos Activités", "Produits", "Nos Services"];
   const currentPath = usePathname();
   return (
     <Navbar
@@ -54,13 +54,13 @@ export default function Header() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="/composants"
+            href="/produits"
             aria-current="page"
             className={
-              currentPath === "/composants" ? "text-gray-100" : "text-gray-300"
+              currentPath === "/produits" ? "text-gray-100" : "text-gray-300"
             }
           >
-            Composants
+            Produits
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -95,7 +95,7 @@ export default function Header() {
               className="w-full"
               href={
                 item === "Composants"
-                  ? "/composants"
+                  ? "/produits"
                   : item === "Nos Services"
                   ? "./#services"
                   : "./#activités"
