@@ -46,13 +46,13 @@ export default function Footer() {
           </h3>
           <ul className="flex text-sm font-light flex-col gap-2 pl-2">
             <li>
-              <Link href="./composants/hydroliques">Hydrauliques</Link>
+              <Link href="../composants/hydrauliques">Hydrauliques</Link>
             </li>
             <li>
-              <Link href="./composants/pneumatiques">Pneumatiques</Link>
+              <Link href="../composants/pneumatiques">Pneumatiques</Link>
             </li>
             <li>
-              <Link href="./composants/nettoyage">
+              <Link href="../composants/nettoyage">
                 Assainissement & Nettoyage
               </Link>
             </li>

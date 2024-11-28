@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <div className="bg-[#f4f8ff] py-4">
       <div className="flex flex-col   items-center justify-center  m-auto   bg-[#f4f8ff]">
-        <div className="mt-16 text-center text-4xl  ">
+        <div className="mt-16 text-center text-3xl  ">
           <div className="flex flex-col mb-6">
             <Badge
               variant="outline"
@@ -45,25 +45,27 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-6 w-[380px]">
+        <div className="flex flex-col items-center gap-6 w-[400px]">
           <h3 className="text-center font-light text-sm text-gray-400  ">
             Explorez nos nombreux produits hydrauliques.
             <br /> Nous vous souhaitons la bienvenue dans nos boutiques à Tunis.
           </h3>
           <div className="flex gap-2">
-            <Button className="bg-[#488DCA] rounded-sm lg:self-start hover:bg-[#285C8A]">
-              <a href="#dolphin">Explorer</a>
-              <ArrowDown size={24} />
-            </Button>
-            <Button variant={"outline"} className=" rounded-sm lg:self-start">
-              <a
-                target="_blank"
-                href="https://www.google.com/maps/place/DOLPHIN+EQUIPEMENTS/@36.7623251,10.2236865,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd379bc05dd4d5:0x26a7e7cff34d891e!8m2!3d36.7623251!4d10.2262614!16s%2Fg%2F11t4fw6lrr?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
-              >
+            <a href="#dolphin">
+              <Button className="bg-[#488DCA] rounded-sm lg:self-start hover:bg-[#285C8A]">
+                Explorer
+                <ArrowDown size={24} />
+              </Button>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.google.com/maps/place/DOLPHIN+EQUIPEMENTS/@36.7623251,10.2236865,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd379bc05dd4d5:0x26a7e7cff34d891e!8m2!3d36.7623251!4d10.2262614!16s%2Fg%2F11t4fw6lrr?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+            >
+              <Button variant={"outline"} className=" rounded-sm lg:self-start">
                 Voir location
-              </a>
-              <Map size={24} />
-            </Button>
+                <Map size={24} />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
@@ -88,8 +90,8 @@ export default function Hero() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden" />
-        <CarouselNext className="hidden" />
+        <CarouselPrevious className="hidden lg:flex" />
+        <CarouselNext className="hidden lg:flex" />
       </Carousel>
     </div>
   );
