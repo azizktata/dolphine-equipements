@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -21,11 +22,22 @@ export default function Footer() {
             Informations
           </h3>
           <ul className="flex text-sm font-light flex-col gap-2 pl-2">
-            <li>Qui Sommes Nous</li>
-            <li>Nos Produits</li>
-            <li>Nos Activités</li>
-            <li>Nos Partenaires</li>
-            <li>Notre Emplacement</li>
+            <li>
+              <a href="./#dolphin">Qui Sommes Nous</a>
+            </li>
+            <li>
+              <a href="./services">Nos Services</a>
+            </li>
+            <li>
+              <a href="./#activités"></a>
+              Nos Activités
+            </li>
+            <li>
+              <a href="./#partenaires">Nos Partenaires</a>
+            </li>
+            <li>
+              <a href="./#emplacement">Notre Emplacement</a>
+            </li>
           </ul>
         </div>
         <div>
@@ -33,9 +45,17 @@ export default function Footer() {
             composant
           </h3>
           <ul className="flex text-sm font-light flex-col gap-2 pl-2">
-            <li>hydrauliques</li>
-            <li>pneumatiques</li>
-            <li>assainissement & nettoyage</li>
+            <li>
+              <Link href="./composants/hydroliques">Hydrauliques</Link>
+            </li>
+            <li>
+              <Link href="./composants/pneumatiques">Pneumatiques</Link>
+            </li>
+            <li>
+              <Link href="./composants/nettoyage">
+                Assainissement & Nettoyage
+              </Link>
+            </li>
           </ul>
         </div>
         <div>

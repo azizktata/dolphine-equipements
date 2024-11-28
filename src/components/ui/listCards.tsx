@@ -4,8 +4,9 @@ import React from "react";
 import { Image } from "@nextui-org/image";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { useRouter, usePathname } from "next/navigation";
+import { Data } from "@/types";
 
-export default function ListCards({ composants }) {
+export default function ListCards({ composants }: { composants: Data }) {
   const router = useRouter();
   const currentPath = usePathname();
   return (
@@ -37,7 +38,7 @@ export default function ListCards({ composants }) {
               />
             </CardBody>
 
-            <CardFooter className="text-small justify-center py-4">
+            <CardFooter className="text-small font-light justify-center py-4">
               <b>{item.title}</b>
             </CardFooter>
           </Card>

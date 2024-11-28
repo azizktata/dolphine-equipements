@@ -12,7 +12,6 @@ import Footer from "@/components/ui/footer";
 import { getAll } from "@/utils/getComposants";
 
 import ListCards from "@/components/ui/listCards";
-import RecursiveAccordion from "@/components/ui/recursiveAccordion";
 
 export default async function page() {
   const data = await getAll();

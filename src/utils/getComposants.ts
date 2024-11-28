@@ -1,3 +1,5 @@
+import { Data } from "@/types";
+
 export const mockData = {
     title: "composants",
     elements: [
@@ -111,7 +113,7 @@ export const mockData = {
   };
       
 
-export const getAll = async () => {
+export const getAll = async (): Promise<Data> => {
     return new Promise((resolve) => {
         setTimeout(() => {
         resolve(mockData);

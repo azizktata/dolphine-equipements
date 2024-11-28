@@ -15,10 +15,12 @@ import { Link } from "@nextui-org/link";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["Nos Activités", "Composants", "Nos Partenaires"];
+  const menuItems = ["Nos Activités", "Composants", "Nos Services"];
+  const currentPath = usePathname();
   return (
     <Navbar
       shouldHideOnScroll
@@ -31,49 +33,50 @@ export default function Header() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand className="flex flex-col gap-2">
-          {/* <AcmeLogo /> */}
-          <Image
-            src={"/logo_dolphin.svg"}
-            alt="hydrauliques"
-            width={46}
-            height={46}
-            className="text-[#316F9E] "
-          />
-          {/* <p className="text-xs text-inherit tracking-wide hidden sm:block">
-            Dolphine Equipements
-          </p> */}
+        <NavbarBrand>
+          <Link href="/">
+            <Image
+              src={"/logo_dolphin.svg"}
+              alt="hydrauliques"
+              width={46}
+              height={46}
+              className="text-[#316F9E] "
+            />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4 " justify="center">
         <NavbarItem>
-          <Link className="text-[#F5F5F5]" href="#">
+          <Link className="text-gray-300" href="./#activités">
             Nos Activités
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="text-[#F5F5F5]"
             href="/composants"
             aria-current="page"
+            className={
+              currentPath === "/composants" ? "text-gray-100" : "text-gray-300"
+            }
           >
             Composants
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-[#F5F5F5]" href="#">
-            Nos Partenaires
+          <Link className="text-gray-300" href="./#services">
+            Nos Services
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button className="text-[#488DCA]" variant="outline">
+          <Button
+            className="text-[#488DCA] hover:text-[#285C8A] "
+            variant="outline"
+          >
             <Phone size={16} />
-            <Link className="text-[#488DCA]" href="/login">
-              +216 53 488 169
-            </Link>
+            +216 58 432 372
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -90,7 +93,13 @@ export default function Header() {
                   : "foreground"
               }
               className="w-full"
-              href={item === "Composants" ? "/composants" : ""}
+              href={
+                item === "Composants"
+                  ? "/composants"
+                  : item === "Nos Services"
+                  ? "./#services"
+                  : "./#activités"
+              }
               size="lg"
             >
               {item}

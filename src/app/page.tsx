@@ -3,11 +3,12 @@ import Header from "@/components/ui/header";
 import Hero from "@/components/ui/hero";
 import NextImage from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import CardSvg from "@/components/ui/cardSvg";
 import { Image } from "@nextui-org/image";
 import CarouselPartenaire from "@/components/ui/carouselPartenaire";
 import Footer from "@/components/ui/footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,7 +16,10 @@ export default function Home() {
       <Header />
       <Hero />
       <div className="my-32">
-        <div className="w-[90%]  lg:w-[80%] xl:w-[1024px]  m-auto flex flex-col md:flex-row md:jusitfy-between md:gap-16 items-center">
+        <div
+          id="dolphin"
+          className="w-[90%]  lg:w-[80%] xl:w-[1024px]  m-auto flex flex-col md:flex-row md:jusitfy-between md:gap-16 items-center"
+        >
           <div className="md:w-[45%]">
             <NextImage
               src={"/logo_dolphin.webp"}
@@ -27,16 +31,16 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center md:items-start md:w-[45%]">
-            <h1 className="text-3xl mb-3 font-bold xl:text-4xl ">
+            <h1 className="text-3xl mb-3 text-gray-800 font-medium xl:text-4xl ">
               <span className="text-[#316F9E]">Dolphin </span>
               Equipements
             </h1>
-            <h3 className="text-lg text-gray-800  mb-6 pl-1 ">
+            <h3 className="text-lg text-gray-900 font-light  mb-6 pl-1 ">
               Votre partenaire{" "}
               <span className="text-[#D4AF37] font-medium"> hydraulique</span> &
               services
             </h3>
-            <p className="mb-16 max-w-sm text-gray-600">
+            <p className="mb-16 max-w-sm font-light text-gray-600">
               Nous appertenons aux groupe FLEXIMAT France, specialisé depuis
               plus de{" "}
               <span className="text-[#D4AF37] font-medium"> 20 ans </span> dans
@@ -44,21 +48,21 @@ export default function Home() {
               fluide ainsi que de la mise en propreté des circuits hydrauliques
             </p>
             <div className="flex self-start">
-              <Button className="mr-auto bg-[#488DCA] rounded-xs">
-                voir composants
-              </Button>
-              <Button className="mr-auto bg-[#1F3A75] rounded-xs">
+              <Button className="bg-[#488DCA] rounded-sm lg:self-start hover:bg-[#285C8A]">
+                <Link href="./composants">voir composants</Link>
                 <ArrowRight size={24} />
               </Button>
             </div>
           </div>
         </div>
       </div>
-      <div className=" bg-[#E9F1F7] py-16 mb-32">
+      <div id="partenaires" className=" bg-[#E9F1F7] py-16 mb-32">
         <CarouselPartenaire />
       </div>
-      <div className="text-center py-8 ">
-        <h2 className="text-3xl font-bold text-[#092844] mt-2">Nos Services</h2>
+      <div id="services" className="text-center py-8 ">
+        <h2 className="text-3xl font-medium text-[#092844] mt-2">
+          Nos Services
+        </h2>
 
         <div className="flex justify-center items-center mt-2">
           <span className="w-10 border-t border-gray-300"></span>
@@ -86,8 +90,10 @@ export default function Home() {
         />
       </div>
 
-      <div className="text-center py-8 ">
-        <h2 className="text-3xl font-bold text-gray-800 mt-2">Nos Activités</h2>
+      <div id="activités" className="text-center py-8 ">
+        <h2 className="text-3xl font-medium text-gray-800 mt-2">
+          Nos Activités
+        </h2>
 
         <div className="flex justify-center items-center mt-2">
           <span className="w-10 border-t border-gray-300"></span>
@@ -177,7 +183,7 @@ export default function Home() {
       </div>
 
       <div className="text-center py-8 ">
-        <h2 className="text-3xl font-bold text-gray-800 mt-2">
+        <h2 className="text-3xl font-medium text-gray-800 mt-2">
           Notre Emplacement
         </h2>
 

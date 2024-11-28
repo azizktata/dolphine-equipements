@@ -5,11 +5,6 @@ body {
   font-family: var(--font-roboto); /* Default font */
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-merriweather); /* Headings */
-}
 .accordion-trigger {
   font-weight: normal; /* Default font weight */
   transition: font-weight 0.2s ease;

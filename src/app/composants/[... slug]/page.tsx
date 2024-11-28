@@ -1,6 +1,5 @@
 import React from "react";
-import { Image } from "@nextui-org/image";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,21 +12,24 @@ import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import { getAll } from "@/utils/getComposants";
 import ListCards from "@/components/ui/listCards";
-import RecursiveAccordion from "@/components/ui/recursiveAccordion";
-export default async function page({ params }: { params: { slug: string[] } }) {
+import { Composant, Data } from "@/types";
+export default async function page({
+  params,
+}: {
+  params: { [" slug"]: string[] };
+}) {
   const paramss = await params;
   const title = paramss[" slug"][paramss[" slug"].length - 1];
-  const currentPath = "composants/" + paramss[" slug"].join("/");
-  console.log(currentPath);
+
   const data = await getAll();
 
-  function findElementByTitle(data, title) {
+  function findElementByTitle(data: Composant[], title: string): Data | null {
     for (const item of data) {
       if (item.title.toLowerCase().replace(/ /g, "-") === title) {
-        return item;
+        return item as Data;
       }
       if (item.elements) {
-        const found = findElementByTitle(item.elements, title);
+        const found: Data | null = findElementByTitle(item.elements, title);
         if (found) {
           return found;
         }
@@ -38,7 +40,7 @@ export default async function page({ params }: { params: { slug: string[] } }) {
   const composants = findElementByTitle(data.elements, title);
 
   return (
-    <>
+    <div className="bg-[#f4f8ff]">
       <Header />
       <div className="mt-16 mb-64 flex flex-col w-[90%]  lg:w-[986px] m-auto  justify-center ">
         {/* <div className="hidden lg:block lg:w-[350px]">
@@ -55,24 +57,24 @@ export default async function page({ params }: { params: { slug: string[] } }) {
               <BreadcrumbLink href="/composants">Composants</BreadcrumbLink>
             </BreadcrumbItem>
             {paramss[" slug"].length > 0
-              ? paramss[" slug"].map((item, index) => (
-                  <>
+              ? paramss[" slug"].map((item: string) => (
+                  <BreadcrumbList key={item}>
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
                       <BreadcrumbPage>
                         <BreadcrumbLink href=".">{item}</BreadcrumbLink>
                       </BreadcrumbPage>
                     </BreadcrumbItem>
-                  </>
+                  </BreadcrumbList>
                 ))
               : null}
           </BreadcrumbList>
         </Breadcrumb>
 
-        <ListCards composants={composants} />
+        {composants && <ListCards composants={composants} />}
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
