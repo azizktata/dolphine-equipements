@@ -26,16 +26,16 @@ export default function Hero() {
   ];
   return (
     <div className="bg-[#f4f8ff] py-4">
-      <div className="flex flex-col   items-center justify-center  m-auto   bg-[#f4f8ff]">
-        <div className="mt-16 text-center text-3xl  ">
-          <div className="flex flex-col mb-6">
+      <div className="flex flex-col    items-center justify-center  m-auto   bg-[#f4f8ff]">
+        <div className="mt-16 text-center text-xl md:text-3xl  ">
+          <div className="flex flex-col w-auto mb-6">
             <Badge
               variant="outline"
               className="text-[#D4AF37] font-light self-end"
             >
               +20 ans d&apos;experiance
             </Badge>
-            <h1 className="mb-2 text-[#002566] ">
+            <h1 className="mb-2  text-[#002566] ">
               {" "}
               Fournisseur D&apos;équipement Hydraulique
             </h1>
@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-6 w-[400px]">
+        <div className="flex flex-col items-center gap-6 w-[350px] lg:w-[400px]">
           <h3 className="text-center font-light text-sm text-gray-400  ">
             Explorez nos nombreux produits hydrauliques.
             <br /> Nous vous souhaitons la bienvenue dans nos boutiques à Tunis.

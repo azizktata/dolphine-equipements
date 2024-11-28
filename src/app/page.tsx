@@ -31,7 +31,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex flex-col items-center md:items-start md:w-[45%]">
+            <div className="flex flex-col items-center md:items-start  md:w-[45%]">
               <h1 className="text-3xl mb-3 text-gray-800 font-medium xl:text-4xl ">
                 <span className="text-[#316F9E]">Dolphin </span>
                 Equipements
@@ -41,7 +41,7 @@ export default function Home() {
                 <span className="text-[#D4AF37] font-medium"> hydraulique</span>{" "}
                 & services
               </h3>
-              <p className="mb-16 max-w-sm font-light text-gray-600">
+              <p className="mb-16 max-w-sm  font-light text-gray-600">
                 Nous appertenons aux groupe FLEXIMAT France, specialisé depuis
                 plus de{" "}
                 <span className="text-[#D4AF37] font-medium"> 20 ans </span>{" "}
@@ -111,7 +111,7 @@ export default function Home() {
           <div className="flex flex-col w-[90%] lg:w-[80%] xl:w-[60%] m-auto items-center">
             <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-4 md:mx-auto">
               <div className="md:w-[45%] ">
-                <h2 className="text-2xl bold text-center md:text-left mb-6 after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-left">
+                <h2 className="text-2xl bold text-center md:text-left mb-6 after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
                   Vente, Négoce, étude
                 </h2>
 
@@ -137,7 +137,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-4 md:mx-auto">
               <div className="md:w-[45%]">
-                <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-left">
+                <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
                   Maintenace et Réparation
                 </h2>
                 <p className="hidden lg:block text-[#828C96]  mb-4 w-[350px] text-left">
@@ -163,7 +163,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-4 md:mx-auto">
               <div className="md:w-[45%]">
-                <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-left">
+                <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
                   Assainissement & Nettoyage
                 </h2>
                 <p className="text-[#828C96] text-center mb-4 w-[280px] lg:w-[350px] md:text-left">
