@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import {
   Breadcrumb,
@@ -16,7 +16,8 @@ import { Composant, Data } from "@/types";
 export default async function page({
   params,
 }: {
-  params: { [" slug"]: string[] };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  params: any;
 }) {
   const paramss = await params;
   const title = paramss[" slug"][paramss[" slug"].length - 1];
@@ -71,7 +72,11 @@ export default async function page({
           </BreadcrumbList>
         </Breadcrumb>
 
-        {composants && <ListCards composants={composants} />}
+        {composants && (
+          <Suspense fallback={<div id="loading">Loading ...</div>}>
+            <ListCards composants={composants} />
+          </Suspense>
+        )}
       </div>
 
       <Footer />
