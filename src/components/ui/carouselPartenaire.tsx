@@ -15,12 +15,13 @@ export default function CarouselPartenaire() {
     "/partenaire-1.webp",
     "/partenaire-2.webp",
     "/partenaire-3.webp",
-    "/partenaire-4.webp",
-    "/partenaire-5.webp",
+    "/partenaire-4.png",
+    "/partenaire-5.png",
     "/partenaire-6.webp",
-    "/partenaire-7.webp",
-    "/partenaire-8.webp",
-    "/partenaire-9.webp",
+    "/partenaire-7.png",
+    "/partenaire-8.png",
+    "/partenaire-9.png",
+    "/partenaire-10.png",
   ];
   return (
     <Carousel
@@ -29,7 +30,7 @@ export default function CarouselPartenaire() {
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
-      <CarouselContent className="m-auto ">
+      <CarouselContent className="m-auto flex gap-4 ">
         {partenairs.map((img, index) => (
           <CarouselItem
             className="basis-1/2 lg:basis-1/3 flex justify-center items-center"
@@ -38,9 +39,9 @@ export default function CarouselPartenaire() {
             <Image
               src={img}
               alt="hydrauliques"
-              width={350}
-              height={120}
-              className="object-fill"
+              width={250}
+              height={80}
+              className="object-fill "
             />
           </CarouselItem>
         ))}

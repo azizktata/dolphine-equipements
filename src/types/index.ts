@@ -1,10 +1,10 @@
 export interface Composant {
     title: string;
-    img: string;
-    elements?: Composant[];
+    image: string;
+    children?: Composant[];
 }
 
 export interface Data {
     title: string;
-    elements: Composant[];
+    children: Composant[];
 }

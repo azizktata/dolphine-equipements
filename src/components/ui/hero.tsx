@@ -11,8 +11,8 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { Image } from "@nextui-org/image";
 import { Button } from "./button";
-import { ArrowDown, Map } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Map } from "lucide-react";
+import { Card, CardBody } from "@nextui-org/card";
 
 export default function Hero() {
   const plugin = React.useRef(
@@ -26,7 +26,7 @@ export default function Hero() {
   ];
   return (
     <div className="bg-[#f4f8ff] py-4">
-      <div className="flex flex-col    items-center justify-center  m-auto   bg-[#f4f8ff]">
+      {/* <div className="flex flex-col    items-center justify-center  m-auto   bg-[#f4f8ff]">
         <div className="mt-16 text-center text-xl md:text-3xl  ">
           <div className="flex flex-col w-auto mb-6">
             <Badge
@@ -68,17 +68,17 @@ export default function Hero() {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
       <Carousel
         plugins={[plugin.current]}
-        className="w-full lg:w-[90%] m-auto mt-16 "
+        className="w-full w-[90%] m-auto "
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
         <CarouselContent className="">
           {images.map((img, index) => (
             <CarouselItem className="" key={index}>
-              <div className="p-1 w-full">
+              {/* <div className="p-1 w-full">
                 <Image
                   src={img}
                   alt="hydrauliques"
@@ -86,7 +86,54 @@ export default function Hero() {
                   height={480}
                   className="object-cover"
                 />
-              </div>
+              </div> */}
+              <Card className="h-[450px] ">
+                <div className="relative w-full h-full">
+                  <Image
+                    removeWrapper
+                    alt="Card background"
+                    className="z-0 w-full h-full object-cover"
+                    src={img}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div>
+                </div>
+                <CardBody className="absolute inset-0 mb-16 ml-4 lg:ml-14 z-10 flex items-start justify-center">
+                  <div className="mt-16  text-2xl md:text-3xl  ">
+                    <div className="flex flex-col w-auto mb-6">
+                      <h1 className="mb-2 w-[350px] font-normal  text-gray-100 ">
+                        {" "}
+                        Fournisseur D&apos;équipement Hydraulique
+                      </h1>
+                      <p className="text-sm  text-[#488DCA] tracking-widest font-normal ">
+                        Dolphin Equipements
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col items-center gap-8 w-[250px] sm:w-[350px] lg:w-[450px]">
+                    <h3 className=" font-light  text-gray-200  ">
+                      Explorez nos nombreux produits hydrauliques.
+                      <br /> Nous vous souhaitons la bienvenue dans nos
+                      boutiques à Tunis.
+                    </h3>
+                    <div className="flex gap-2 self-start">
+                      <a
+                        target="_blank"
+                        href="https://www.google.com/maps/place/DOLPHIN+EQUIPEMENTS/@36.7623251,10.2236865,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd379bc05dd4d5:0x26a7e7cff34d891e!8m2!3d36.7623251!4d10.2262614!16s%2Fg%2F11t4fw6lrr?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+                      >
+                        <Button
+                          variant={"outline"}
+                          className=" rounded-sm text-white/90 bg-transparent border-[#488DCA]/50"
+                        >
+                          Voir Localisation
+                          <Map size={24} />
+                        </Button>
+                      </a>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
             </CarouselItem>
           ))}
         </CarouselContent>

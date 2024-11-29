@@ -19,7 +19,7 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["Nos Activités", "Produits", "Nos Services"];
+  const menuItems = ["Nos Activités", "Nos Produits", "Nos Services"];
   const currentPath = usePathname();
   return (
     <Navbar
@@ -46,7 +46,7 @@ export default function Header() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4 " justify="center">
+      <NavbarContent className="hidden sm:flex gap-16 " justify="center">
         <NavbarItem>
           <Link className="text-gray-300" href="./#activités">
             Nos Activités
@@ -60,7 +60,7 @@ export default function Header() {
               currentPath === "/produits" ? "text-gray-100" : "text-gray-300"
             }
           >
-            Produits
+            Nos Produits
           </Link>
         </NavbarItem>
         <NavbarItem>

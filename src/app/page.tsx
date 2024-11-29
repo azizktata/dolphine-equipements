@@ -19,7 +19,7 @@ export default function Home() {
         <div className="my-32">
           <div
             id="dolphin"
-            className="w-[90%]  lg:w-[80%] xl:w-[1024px]  m-auto flex flex-col md:flex-row md:jusitfy-between md:gap-16 items-center"
+            className="w-[90%]  lg:w-[80%]   m-auto flex flex-col md:flex-row md:jusitfy-between  md:gap-16 items-center"
           >
             <div className="md:w-[45%]">
               <NextImage
@@ -31,17 +31,17 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex flex-col items-center md:items-start  md:w-[45%]">
-              <h1 className="text-3xl mb-3 text-gray-800 font-medium xl:text-4xl ">
+            <div className="flex flex-col items-center md:items-center  m-auto">
+              <h1 className="text-3xl md:self-start mb-3 text-gray-800 font-medium xl:text-4xl ">
                 <span className="text-[#316F9E]">Dolphin </span>
                 Equipements
               </h1>
-              <h3 className="text-lg text-gray-900 font-light  mb-6 pl-1 ">
+              <h3 className=" md:self-start text-lg text-gray-900 font-light  mb-6 pl-1 ">
                 Votre partenaire{" "}
                 <span className="text-[#D4AF37] font-medium"> hydraulique</span>{" "}
                 & services
               </h3>
-              <p className="mb-16 max-w-sm  font-light text-gray-600">
+              <p className="mb-16 max-w-xs  md:max-w-sm  font-light text-gray-600">
                 Nous appertenons aux groupe FLEXIMAT France, specialisé depuis
                 plus de{" "}
                 <span className="text-[#D4AF37] font-medium"> 20 ans </span>{" "}
@@ -49,14 +49,13 @@ export default function Home() {
                 transport de fluide ainsi que de la mise en propreté des
                 circuits hydrauliques
               </p>
-              <div className="flex self-start">
-                <Link href="./produits">
-                  <Button className="bg-[#488DCA] rounded-sm lg:self-start hover:bg-[#285C8A]">
-                    voir produits
-                    <ArrowRight size={24} />
-                  </Button>
-                </Link>
-              </div>
+
+              <Link className="self-start" href="./produits">
+                <Button className="bg-[#488DCA] rounded-sm  hover:bg-[#285C8A]">
+                  voir produits
+                  <ArrowRight size={24} />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

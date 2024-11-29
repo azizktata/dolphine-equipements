@@ -11,14 +11,14 @@ export default function ListCards({ composants }: { composants: Data }) {
   const currentPath = usePathname();
   return (
     <div className="my-8 w-full">
-      <div className="gap-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
-        {composants.elements.map((item, index) => (
+      <div className="gap-2 grid grid-cols-2 sm:grid-cols-3 ">
+        {composants.children.map((item, index) => (
           <Card
             key={index}
             shadow="sm"
             isPressable
             onPress={() => {
-              if (item.elements) {
+              if (item.children && item.children.length > 0) {
                 router.push(
                   `${currentPath}/${item.title
                     .toLowerCase()
@@ -34,7 +34,7 @@ export default function ListCards({ composants }: { composants: Data }) {
                 width="100%"
                 alt={item.title}
                 className="w-full object-cover h-[140px]"
-                src={item.img}
+                src={item.image !== "" ? item.image : undefined}
               />
             </CardBody>
 
