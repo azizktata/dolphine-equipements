@@ -19,39 +19,36 @@ export default function Home() {
         <div className="my-32">
           <div
             id="dolphin"
-            className="w-[90%]  lg:w-[80%]   m-auto flex flex-col md:flex-row md:jusitfy-between  md:gap-16 items-center"
+            className="w-[90%]  lg:w-[85%]   m-auto flex flex-col md:flex-row md:jusitfy-between  md:gap-8 items-center"
           >
-            <div className="md:w-[45%]">
+            <div className="xl:w-[50%] ">
               <NextImage
                 src={"/logo_dolphin.webp"}
                 alt="logo dolphin"
                 width={320}
                 height={250}
-                className="md:w-full md:h-full "
+                className="xl:w-full xl:h-full xl:p-16"
               />
             </div>
 
             <div className="flex flex-col items-center md:items-center  m-auto">
-              <h1 className="text-3xl md:self-start mb-3 text-gray-800 font-medium xl:text-4xl ">
-                <span className="text-[#316F9E]">Dolphin </span>
-                Equipements
+              <h1 className="text-2xl md:self-start tracking-wide text-gray-800 font-medium mb-2 xl:text-4xl ">
+                Dolphin Equipements
               </h1>
-              <h3 className=" md:self-start text-lg text-gray-900 font-light  mb-6 pl-1 ">
-                Votre partenaire{" "}
-                <span className="text-[#D4AF37] font-medium"> hydraulique</span>{" "}
-                & services
+              <h3 className="text-base text-center md:self-start mb-6  text-[#619CD1] tracking-widest font-medium ">
+                Votre partenaire hydraulique & services
               </h3>
-              <p className="mb-16 max-w-xs  md:max-w-sm  font-light text-gray-600">
+              <p className="mb-16 max-w-xs pl-4 sm:pl-0 md:max-w-md lg:text-lg  font-light text-gray-600">
                 Nous appertenons aux groupe FLEXIMAT France, specialisé depuis
                 plus de{" "}
-                <span className="text-[#D4AF37] font-medium"> 20 ans </span>{" "}
+                <span className="text-[#2E699E] font-medium"> 20 ans </span>{" "}
                 dans les domaines de la maintenance, des composants, du
                 transport de fluide ainsi que de la mise en propreté des
                 circuits hydrauliques
               </p>
 
               <Link className="self-start" href="./produits">
-                <Button className="bg-[#488DCA] rounded-sm  hover:bg-[#285C8A]">
+                <Button className="bg-[#488DCA] rounded-sm text-base lg:text-lg  ml-4 sm:ml-0  font-normal  hover:bg-[#285C8A]">
                   voir produits
                   <ArrowRight size={24} />
                 </Button>
@@ -77,7 +74,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-6 mb-32 md:flex-row md:flex-wrap md:w-[95%] lg:w-[80%]  md:mx-auto">
           <CardSvg
-            title="Hydroliques"
+            title="Hydrauliques"
             description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
             image="/engine.svg"
           />

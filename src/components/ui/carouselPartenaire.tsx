@@ -30,7 +30,7 @@ export default function CarouselPartenaire() {
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
-      <CarouselContent className="m-auto flex gap-4 ">
+      <CarouselContent className="m-auto flex  ">
         {partenairs.map((img, index) => (
           <CarouselItem
             className="basis-1/2 lg:basis-1/3 flex justify-center items-center"
@@ -39,8 +39,8 @@ export default function CarouselPartenaire() {
             <Image
               src={img}
               alt="hydrauliques"
-              width={250}
-              height={80}
+              width={"100%"}
+              height={120}
               className="object-fill "
             />
           </CarouselItem>

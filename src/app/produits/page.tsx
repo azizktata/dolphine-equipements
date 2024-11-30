@@ -21,7 +21,7 @@ export default async function page() {
     <>
       <Header />
       <div className="bg-[#f4f8ff]">
-        <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%] gap-8 lg:w-[986px] m-auto lg:justify-between lg:items-baseline justify-center ">
+        <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%] gap-8 lg:w-[986px] m-auto lg:justify-between lg:items-baseline justify-center min-h-[100vh]">
           <div className="hidden lg:block lg:w-[250px]">
             <RecursiveAccordion data={data} />
           </div>

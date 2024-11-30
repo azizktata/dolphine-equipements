@@ -57,7 +57,7 @@ export default function Header() {
             href="/produits"
             aria-current="page"
             className={
-              currentPath === "/produits" ? "text-gray-100" : "text-gray-300"
+              currentPath.includes("/produits") ? "text-white" : "text-gray-300"
             }
           >
             Nos Produits
@@ -94,7 +94,7 @@ export default function Header() {
               }
               className="w-full"
               href={
-                item === "Composants"
+                item === "Nos Produits"
                   ? "/produits"
                   : item === "Nos Services"
                   ? "./#services"

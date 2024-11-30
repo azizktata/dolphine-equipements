@@ -42,13 +42,13 @@ export default function CardSvg({
         <Link
           href={
             title === "Hydroliques"
-              ? "./composants/hydrauliques"
+              ? "./produits/hydrauliques"
               : title === "Pneumatiques"
-              ? "./composants/pneumatiques"
-              : "./composants/nettoyage"
+              ? "./produits/pneumatiques"
+              : "./produits/assainissement-et-nettoyage"
           }
         >
-          <Button className="bg-[#488DCA] rounded-sm lg:self-start hover:bg-[#285C8A]">
+          <Button className="bg-[#488DCA] rounded-sm text-base lg:self-start hover:bg-[#285C8A]">
             voir produits
           </Button>
         </Link>
