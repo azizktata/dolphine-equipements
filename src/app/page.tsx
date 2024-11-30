@@ -21,24 +21,24 @@ export default function Home() {
             id="dolphin"
             className="w-[90%]  lg:w-[85%]   m-auto flex flex-col md:flex-row md:jusitfy-between  md:gap-8 items-center"
           >
-            <div className="xl:w-[50%] ">
+            <div className=" md:w-[55%] lg:w-[45%]">
               <NextImage
                 src={"/logo_dolphin.webp"}
                 alt="logo dolphin"
                 width={320}
                 height={250}
-                className="xl:w-full xl:h-full xl:p-16"
+                className="md:w-full md:h-full xl:p-16"
               />
             </div>
 
-            <div className="flex flex-col items-center md:items-center  m-auto">
-              <h1 className="text-2xl md:self-start tracking-wide text-gray-800 font-medium mb-2 xl:text-4xl ">
+            <div className="flex flex-col items-center md:items-start  m-auto">
+              <h1 className="text-2xl tracking-widest text-gray-800 font-medium mb-2 sm:text-3xl lg:text-4xl xl:text-5xl ">
                 Dolphin Equipements
               </h1>
-              <h3 className="text-base text-center md:self-start mb-6  text-[#619CD1] tracking-widest font-medium ">
+              <h3 className="text-base text-center mb-6  text-[#619CD1] tracking-widest font-medium ">
                 Votre partenaire hydraulique & services
               </h3>
-              <p className="mb-16 max-w-xs pl-4 sm:pl-0 md:max-w-md lg:text-lg  font-light text-gray-600">
+              <p className="mb-16  pl-6 md:pl-0  lg:text-lg  font-light text-gray-600">
                 Nous appertenons aux groupe FLEXIMAT France, specialisé depuis
                 plus de{" "}
                 <span className="text-[#2E699E] font-medium"> 20 ans </span>{" "}
@@ -48,7 +48,7 @@ export default function Home() {
               </p>
 
               <Link className="self-start" href="./produits">
-                <Button className="bg-[#488DCA] rounded-sm text-base lg:text-lg  ml-4 sm:ml-0  font-normal  hover:bg-[#285C8A]">
+                <Button className="bg-[#488DCA] rounded-sm text-base lg:text-lg px-4 py-6 ml-6 md:ml-0   font-normal  hover:bg-[#285C8A]">
                   voir produits
                   <ArrowRight size={24} />
                 </Button>
@@ -56,12 +56,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="partenaires" className=" bg-[#E9F1F7] py-16 mb-32">
+        <div id="partenaires" className=" bg-[#E9F1F7] py-32 mb-32">
           <CarouselPartenaire />
         </div>
-        <div id="services" className="text-center py-8 ">
-          <h2 className="text-3xl font-medium text-[#092844] mt-2">
-            Nos Services
+        <div id="catalogues" className="text-center py-8 mb-16">
+          <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-[#092844] mt-2">
+            Notre Catalogues
           </h2>
 
           <div className="flex justify-center items-center mt-2">
@@ -90,8 +90,8 @@ export default function Home() {
           />
         </div>
 
-        <div id="activités" className="text-center py-8 ">
-          <h2 className="text-3xl font-medium text-gray-800 mt-2">
+        <div id="activités" className="text-center py-8 mb-16">
+          <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
             Nos Activités
           </h2>
 
@@ -105,23 +105,23 @@ export default function Home() {
         </div>
         <div className="mb-32">
           <div className="flex flex-col w-[90%] lg:w-[80%] xl:w-[60%] m-auto items-center">
-            <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-4 md:mx-auto">
+            <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
               <div className="md:w-[45%] ">
                 <h2 className="text-2xl bold text-center md:text-left mb-6 after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
                   Vente, Négoce, étude
                 </h2>
 
-                <p className="hidden lg:block text-[#828C96]  mb-4 w-[350px] text-left">
+                <p className="hidden text-lg font-light lg:block text-gray-600  mb-4  text-left">
                   Nous proposons une gamme complète de services adaptés à vos
                   besoins en équipements hydrauliques et pneumatiques
                 </p>
-                <p className="text-[#828C96] text-center mb-4 w-[280px] md:text-left">
+                <p className="text-gray-600 text-lg font-light text-center mb-4 md:text-left">
                   {" "}
                   Pour tous équipements hydraulique & pneumatique dans secteurs
                   Industries, BTP, Marine
                 </p>
               </div>
-              <div className="md:w-[55%] md:h-[280px] md:bg-[#F7EDDB] ">
+              <div className="md:w-[50%] md:h-[280px] md:bg-[#F7EDDB] ">
                 <Image
                   width={350}
                   height={280}
@@ -131,23 +131,23 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-4 md:mx-auto">
+            <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
               <div className="md:w-[45%]">
                 <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
                   Maintenace et Réparation
                 </h2>
-                <p className="hidden lg:block text-[#828C96]  mb-4 w-[350px] text-left">
+                <p className="hidden lg:block font-light text-gray-600 text-lg  mb-4  text-left">
                   Nous offrons des services complets de maintenance et de
                   réparation pour tous types d’équipements hydrauliques et
                   pneumatiques
                 </p>
-                <p className="text-[#828C96] text-center mb-4 w-[280px] md:text-left">
+                <p className="text-gray-600 font-light text-lg text-center mb-4  md:text-left">
                   {" "}
                   Pour tous équipements hydraulique & pneumatique dans secteurs
                   Industries, BTP, Marine
                 </p>
               </div>
-              <div className="md:w-[55%] md:h-[280px] md:bg-[#F7EDDB] ">
+              <div className="md:w-[50%] md:h-[280px] md:bg-[#F7EDDB] ">
                 <Image
                   width={350}
                   height={280}
@@ -157,12 +157,12 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-4 md:mx-auto">
+            <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
               <div className="md:w-[45%]">
                 <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
                   Assainissement & Nettoyage
                 </h2>
-                <p className="text-[#828C96] text-center mb-4 w-[280px] lg:w-[350px] md:text-left">
+                <p className="text-gray-600 font-light text-lg text-center mb-4  md:text-left">
                   {" "}
                   Nous offrons des services d’assainissement et nettoyage,
                   incluant filtration, flushing hydraulique, réparation
@@ -170,7 +170,7 @@ export default function Home() {
                   pression.
                 </p>
               </div>
-              <div className="md:w-[55%] md:h-[280px] md:bg-[#F7EDDB] ">
+              <div className="md:w-[50%] md:h-[280px] md:bg-[#F7EDDB] ">
                 <Image
                   width={350}
                   height={280}
@@ -183,8 +183,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="text-center py-8 ">
-          <h2 className="text-3xl font-medium text-gray-800 mt-2">
+        <div className="text-center py-8 mb-16">
+          <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
             Notre Emplacement
           </h2>
 
@@ -202,7 +202,7 @@ export default function Home() {
             style={{
               border: 0,
               width: "100%",
-              height: "420px",
+              height: "480px",
             }}
             allowFullScreen
             loading="lazy"

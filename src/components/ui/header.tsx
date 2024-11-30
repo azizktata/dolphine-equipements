@@ -19,7 +19,7 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["Nos Activités", "Nos Produits", "Nos Services"];
+  const menuItems = ["Nos Activités", "Nos Produits", "Notre Catalogues"];
   const currentPath = usePathname();
   return (
     <Navbar
@@ -64,8 +64,8 @@ export default function Header() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-gray-300" href="./#services">
-            Nos Services
+          <Link className="text-gray-300" href="./#catalogues">
+            Notre Catalogues
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -96,8 +96,8 @@ export default function Header() {
               href={
                 item === "Nos Produits"
                   ? "/produits"
-                  : item === "Nos Services"
-                  ? "./#services"
+                  : item === "Notre Catalogues"
+                  ? "./#catalogues"
                   : "./#activités"
               }
               size="lg"

@@ -1,21 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
-  font-family: var(--font-roboto); /* Default font */
+  font-family: var(--font-roboto);
 }
 
 .accordion-trigger {
-  font-weight: normal; /* Default font weight */
+  font-weight: normal;
   transition: font-weight 0.2s ease;
 }
 
-/* When the AccordionItem is open, make the font bold */
 .accordion-trigger[data-state="open"] {
   font-weight: bold;
   color: #092844;
   text-decoration: underline;
 }
+
+p {
+  max-width: 50ch;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

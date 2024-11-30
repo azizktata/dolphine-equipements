@@ -26,7 +26,7 @@ export default function Footer() {
               <a href="./#dolphin">Qui Sommes Nous</a>
             </li>
             <li>
-              <a href="./services">Nos Services</a>
+              <a href="./#catalogues">Nos Catalogues</a>
             </li>
             <li>
               <a href="./#activités"></a>

@@ -48,7 +48,7 @@ export default function Hero() {
                 </div>
                 <CardBody className="absolute inset-0 mb-16 ml-4 lg:ml-14 z-10 flex items-start justify-center">
                   <div className="mt-12  flex flex-col w-auto mb-6  ">
-                    <h1 className="mb-2 w-[350px] lg:w-full font-medium text-2xl tracking-wide text-white ">
+                    <h1 className="mb-2 max-w-[30ch] font-medium text-2xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-widest text-white ">
                       {" "}
                       Fournisseur D&apos;équipement Hydraulique
                     </h1>
@@ -57,7 +57,7 @@ export default function Hero() {
                     </p>
                   </div>
 
-                  <div className="flex flex-col items-center  gap-12 w-[250px] sm:w-[350px] lg:w-full">
+                  <div className="flex flex-col items-center  gap-12  ">
                     <h3 className="text-base lg:text-lg self-start text-gray-200 font-normal ">
                       Explorez nos nombreux produits hydrauliques.
                       <br /> Nous vous souhaitons la bienvenue dans nos
@@ -70,7 +70,7 @@ export default function Hero() {
                       >
                         <Button
                           variant={"outline"}
-                          className=" rounded-sm text-white font-normal  bg-transparent border-[#B0CEE8]/80"
+                          className="px-4 py-5 rounded-sm text-white font-normal  bg-transparent border-[#B0CEE8]/80"
                         >
                           Voir Localisation
                           <Map size={24} />

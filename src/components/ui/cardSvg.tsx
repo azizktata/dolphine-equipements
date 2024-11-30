@@ -35,7 +35,9 @@ export default function CardSvg({
         <CardTitle className="lg:text-xl font-medium tracking-wide">
           {title}
         </CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription>
+          <p className="text-lg text-gray-500 font-light">{description}</p>
+        </CardDescription>
       </CardHeader>
       <CardFooter>
         {/* <Button variant="outline">Cancel</Button> */}
@@ -48,7 +50,7 @@ export default function CardSvg({
               : "./produits/assainissement-et-nettoyage"
           }
         >
-          <Button className="bg-[#488DCA] rounded-sm text-base lg:self-start hover:bg-[#285C8A]">
+          <Button className="px-4 py-5 bg-[#488DCA] rounded-sm text-base lg:self-start hover:bg-[#285C8A] mt-8">
             voir produits
           </Button>
         </Link>
