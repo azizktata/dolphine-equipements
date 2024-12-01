@@ -10,12 +10,12 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Link } from "@nextui-org/link";
 
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -48,7 +48,7 @@ export default function Header() {
 
       <NavbarContent className="hidden sm:flex gap-16 " justify="center">
         <NavbarItem>
-          <Link className="text-gray-300" href="./#activités">
+          <Link className="text-gray-300" href="/#activités">
             Nos Activités
           </Link>
         </NavbarItem>
@@ -64,7 +64,7 @@ export default function Header() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-gray-300" href="./contactez-nous">
+          <Link className="text-gray-300" href="/contactez-nous">
             Contactez-nous
           </Link>
         </NavbarItem>
@@ -97,10 +97,9 @@ export default function Header() {
                 item === "Nos Produits"
                   ? "/produits"
                   : item === "Contactez-nous"
-                  ? "./contactez-nous"
-                  : "./#activités"
+                  ? "/contactez-nous"
+                  : "/#activités"
               }
-              size="lg"
             >
               {item}
             </Link>

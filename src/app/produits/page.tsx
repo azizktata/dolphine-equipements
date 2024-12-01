@@ -22,7 +22,7 @@ export default async function page() {
         <div className="hidden lg:block lg:w-[400px]">
           <RecursiveAccordion data={data} />
         </div>
-        <div className="flex-1 border">
+        <div className="flex-1 ">
           <Breadcrumb>
             <BreadcrumbList className="text-base">
               <BreadcrumbItem>

@@ -21,7 +21,7 @@ export default function CardSvg({
   image: string;
 }) {
   return (
-    <Card className="w-[350px] m-auto border-[#FCFAF3] flex-1">
+    <Card className="min-w-[350px] max-w-[450px] m-auto border-[#FCFAF3] flex-1 ">
       <CardContent className="pt-4 ">
         <Image
           src={image ?? "/globe.svg"}
