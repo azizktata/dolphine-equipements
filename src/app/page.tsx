@@ -44,9 +44,9 @@ export default function Home() {
                 circuits hydrauliques
               </p>
 
-              <Link className="self-start" href="./produits">
+              <Link className="self-start" href="/about">
                 <Button className="bg-[#488DCA] rounded-sm text-base lg:text-lg px-4 py-6 ml-6 md:ml-0   font-normal  hover:bg-[#285C8A]">
-                  voir produits
+                  voir plus
                   <ArrowRight size={24} />
                 </Button>
               </Link>
@@ -182,7 +182,7 @@ export default function Home() {
 
         <div className="text-center py-8 mb-8 ">
           <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
-            Notre Emplacement
+            Vous êtes le Bienvenu
           </h2>
 
           <div className="flex justify-center items-center mt-2">

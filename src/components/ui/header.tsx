@@ -10,16 +10,24 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+} from "@nextui-org/dropdown";
 
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { Button } from "./button";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["Nos Activités", "Nos Produits", "Contactez-nous"];
+  const menuItems = ["Qui Sommes Nous", "Nos Produits", "Contactez-nous"];
+
   const currentPath = usePathname();
   return (
     <Navbar
@@ -48,12 +56,24 @@ export default function Header() {
 
       <NavbarContent className="hidden sm:flex gap-16 " justify="center">
         <NavbarItem>
-          <Link className="text-gray-300" href="/#activités">
-            Nos Activités
+          <Link className="text-gray-300 " href="/about">
+            Qui Sommes Nous
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <span
+                className={
+                  currentPath.includes("/produits")
+                    ? "text-white"
+                    : "text-gray-300 cursor-pointer"
+                }
+              >
+                Nos Produits
+              </span>
+            </DropdownTrigger>
+            {/* <Link
             href="/produits"
             aria-current="page"
             className={
@@ -61,8 +81,47 @@ export default function Header() {
             }
           >
             Nos Produits
-          </Link>
-        </NavbarItem>
+          </Link> */}
+          </NavbarItem>
+          <DropdownMenu
+            aria-label="Produits Dolhpines"
+            className="w-auto  text-center"
+            itemClasses={{
+              base: "gap-4",
+            }}
+          >
+            <DropdownItem
+              key="autoscaling"
+              // description="ACME scales apps to meet user demand, automagically, based on load."
+              // startContent={icons.scale}
+            >
+              <Link className="text-base" href="/produits/hydrauliques">
+                Hydrauliques
+              </Link>
+            </DropdownItem>
+            <DropdownItem
+              key="usage_metrics"
+              // description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+              // startContent={icons.activity}
+            >
+              <Link className="text-base" href="/produits/pneumatiques">
+                Pneumatiques
+              </Link>
+            </DropdownItem>
+            <DropdownItem
+              key="production_ready"
+              // description="ACME runs on ACME, join us and others serving requests at web scale."
+              // startContent={icons.flash}
+            >
+              <Link
+                className="text-base"
+                href="/produits/assainissement-et-nettoyage"
+              >
+                Assainissement
+              </Link>
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
         <NavbarItem>
           <Link className="text-gray-300" href="/contactez-nous">
             Contactez-nous
@@ -98,7 +157,7 @@ export default function Header() {
                   ? "/produits"
                   : item === "Contactez-nous"
                   ? "/contactez-nous"
-                  : "/#activités"
+                  : "/about"
               }
             >
               {item}

@@ -11,6 +11,7 @@
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
     "@nextui-org/card": "^2.0.34",
+    "@nextui-org/dropdown": "^2.1.31",
     "@nextui-org/image": "^2.0.32",
     "@nextui-org/link": "^2.0.35",
     "@nextui-org/navbar": "^2.0.37",
