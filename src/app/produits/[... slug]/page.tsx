@@ -8,8 +8,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import Header from "@/components/ui/header";
-import Footer from "@/components/ui/footer";
+
 import { getAll } from "@/utils/getProduits";
 import ListCards from "@/components/ui/listCards";
 import { Composant, Data } from "@/types";
@@ -43,14 +42,13 @@ export default async function page({
 
   return (
     <div className="bg-[#f4f8ff]">
-      <Header />
-      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%] gap-16 lg:w-[1024px] m-auto lg:justify-between lg:items-baseline justify-center min-h-[100vh]">
-        <div className="hidden lg:block lg:w-[250px]">
+      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%]  gap-16  m-auto lg:justify-between lg:items-baseline justify-center min-h-[100vh]">
+        <div className="hidden  lg:flex lg:w-[400px]  flex-col gap-6  border-right">
           <RecursiveAccordion data={data} />
         </div>
         <div className="flex-1">
           <Breadcrumb>
-            <BreadcrumbList>
+            <BreadcrumbList className="text-base">
               <BreadcrumbItem>
                 <BreadcrumbLink href="/">Acceuil</BreadcrumbLink>
               </BreadcrumbItem>
@@ -64,7 +62,12 @@ export default async function page({
                       <BreadcrumbSeparator />
                       <BreadcrumbItem>
                         <BreadcrumbPage>
-                          <BreadcrumbLink href=".">{item}</BreadcrumbLink>
+                          <BreadcrumbLink
+                            className="capitalize text-[#4588c5]"
+                            href="."
+                          >
+                            {item.replace(/-/g, " ")}
+                          </BreadcrumbLink>
                         </BreadcrumbPage>
                       </BreadcrumbItem>
                     </BreadcrumbList>
@@ -76,8 +79,6 @@ export default async function page({
           {composants && <ListCards composants={composants} />}
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

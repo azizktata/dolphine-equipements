@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "@/components/ui/header";
 import Hero from "@/components/ui/hero";
 import NextImage from "next/image";
 import { Button } from "@/components/ui/button";
@@ -7,13 +6,11 @@ import { ArrowRight } from "lucide-react";
 import CardSvg from "@/components/ui/cardSvg";
 import { Image } from "@nextui-org/image";
 import CarouselPartenaire from "@/components/ui/carouselPartenaire";
-import Footer from "@/components/ui/footer";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <main>
         <Hero />
         <div className="my-32">
@@ -56,10 +53,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="partenaires" className=" bg-[#E9F1F7] py-32 mb-32">
+        <div id="partenaires" className=" bg-[#E9F1F7] py-16 lg:py-32 mb-32">
           <CarouselPartenaire />
         </div>
-        <div id="catalogues" className="text-center py-8 mb-16">
+        {/* <div id="catalogues" className="text-center py-8 mb-16">
           <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-[#092844] mt-2">
             Notre Catalogues
           </h2>
@@ -71,7 +68,7 @@ export default function Home() {
             <span className="mx-1 text-[#D4AF37]">&#10072;</span>
             <span className="w-10 border-t border-gray-300"></span>
           </div>
-        </div>
+        </div> */}
         <div className="flex flex-col gap-6 mb-32 md:flex-row md:flex-wrap md:w-[95%] lg:w-[80%]  md:mx-auto">
           <CardSvg
             title="Hydrauliques"
@@ -90,7 +87,7 @@ export default function Home() {
           />
         </div>
 
-        <div id="activités" className="text-center py-8 mb-16">
+        <div id="activités" className="text-center py-8 mb-8 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
             Nos Activités
           </h2>
@@ -183,7 +180,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="text-center py-8 mb-16">
+        <div className="text-center py-8 mb-8 ">
           <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
             Notre Emplacement
           </h2>
@@ -210,7 +207,6 @@ export default function Home() {
           ></iframe>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

@@ -48,7 +48,7 @@ export default function Hero() {
                 </div>
                 <CardBody className="absolute inset-0 mb-16 ml-4 lg:ml-14 z-10 flex items-start justify-center">
                   <div className="mt-12  flex flex-col w-auto mb-6  ">
-                    <h1 className="mb-2 max-w-[30ch] font-medium text-2xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-widest text-white ">
+                    <h1 className="mb-2 max-w-[30ch] font-medium text-xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-widest text-white ">
                       {" "}
                       Fournisseur D&apos;équipement Hydraulique
                     </h1>

@@ -7,8 +7,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import Header from "@/components/ui/header";
-import Footer from "@/components/ui/footer";
+
 import { getAll } from "@/utils/getProduits";
 
 import ListCards from "@/components/ui/listCards";
@@ -18,33 +17,31 @@ export default async function page() {
   const data = await getAll();
 
   return (
-    <>
-      <Header />
-      <div className="bg-[#f4f8ff]">
-        <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%] gap-8 lg:w-[986px] m-auto lg:justify-between lg:items-baseline justify-center min-h-[100vh]">
-          <div className="hidden lg:block lg:w-[250px]">
-            <RecursiveAccordion data={data} />
-          </div>
-          <div className="flex-1">
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/">Acceuil</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="text-blue">
+    <div className="bg-[#f4f8ff]">
+      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%] gap-16  m-auto lg:justify-between lg:items-baseline justify-center min-h-[100vh]">
+        <div className="hidden lg:block lg:w-[400px]">
+          <RecursiveAccordion data={data} />
+        </div>
+        <div className="flex-1 border">
+          <Breadcrumb>
+            <BreadcrumbList className="text-base">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Acceuil</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>
+                  <BreadcrumbLink className="text-[#4588c5]">
                     Produits
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
+                  </BreadcrumbLink>
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
-            <ListCards composants={data} />
-          </div>
+          <ListCards composants={data} />
         </div>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 }

@@ -1,14 +1,11 @@
-import Footer from "@/components/ui/footer";
-import Header from "@/components/ui/header";
 import React from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function loading() {
   return (
     <div className="bg-[#f4f8ff]">
-      <Header />
-      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%] gap-8 lg:w-[986px] m-auto lg:justify-between lg:items-start justify-center min-h-[100vh]">
-        <div className="hidden  lg:flex lg:w-[250px]  flex-col gap-6">
+      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%] gap-8  m-auto lg:justify-between lg:items-start justify-center min-h-[100vh]">
+        <div className="hidden  lg:flex lg:w-[400px]  flex-col gap-6">
           <Skeleton className="h-4 w-[250px]" />
           <Skeleton className="h-4 w-[200px]" />
           <Skeleton className="h-4 w-[200px]" />
@@ -36,7 +33,6 @@ export default function loading() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

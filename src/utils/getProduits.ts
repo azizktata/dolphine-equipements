@@ -115,8 +115,11 @@ import { cache } from "react";
       
 
 export const getAll = cache (async (): Promise<Data> => {
+  console.log("Fetching data from API...");
   try {
-    const res = await fetch("http://dolphiv.cluster030.hosting.ovh.net/wp-json/custom/v1/elements/");
+    const res = await fetch("http://dolphiv.cluster030.hosting.ovh.net/wp-json/custom/v1/elements/", {
+      next: { revalidate: 120 }
+    });
     const data = await res.json();
     
     if (!res){

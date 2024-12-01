@@ -30,10 +30,10 @@ export default function CarouselPartenaire() {
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
-      <CarouselContent className="m-auto flex  ">
+      <CarouselContent className="m-auto flex ">
         {partenairs.map((img, index) => (
           <CarouselItem
-            className="basis-1/2 lg:basis-1/3 flex justify-center items-center"
+            className=" sm:basis-1/2 md:basis-1/3 flex justify-center items-center"
             key={index}
           >
             <Image
