@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Send } from "lucide-react";
 
 const formSchema = z.object({
   nom: z.string().min(2, {
@@ -114,6 +115,7 @@ export default function ContactForm() {
           className="bg-[#488DCA] rounded-sm text-base lg:text-lg px-4 py-6    font-normal  hover:bg-[#285C8A]"
         >
           envoyer
+          <Send size={24} />
         </Button>
       </form>
     </Form>

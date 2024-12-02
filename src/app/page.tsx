@@ -88,16 +88,16 @@ export default function Home() {
             <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
               <div className="md:w-[45%] ">
                 <h2 className="text-2xl bold text-center md:text-left mb-6 after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
-                  Vente, Négoce, étude
+                  Vente et négoce
                 </h2>
 
                 <p className="hidden text-lg font-light lg:block text-gray-600  mb-4  text-left">
-                  Nous proposons une gamme complète de services adaptés à vos
-                  besoins en équipements hydrauliques et pneumatiques
+                  Une large gamme d’équipements hydrauliques et pneumatiques
+                  disponibles dans nos boutiques à Tunis.
                 </p>
                 <p className="text-gray-600 text-lg font-light text-center mb-4 md:text-left">
                   {" "}
-                  Pour tous équipements hydraulique & pneumatique dans secteurs
+                  Tous équipements hydraulique & pneumatique dans secteurs
                   Industries, BTP, Marine
                 </p>
               </div>
@@ -140,14 +140,13 @@ export default function Home() {
             <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
               <div className="md:w-[45%]">
                 <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
-                  Assainissement & Nettoyage
+                  Étude et conseil
                 </h2>
                 <p className="text-gray-600 font-light text-lg text-center mb-4  md:text-left">
                   {" "}
-                  Nous offrons des services d’assainissement et nettoyage,
-                  incluant filtration, flushing hydraulique, réparation
-                  yachting, accessoires d’assainissement et nettoyeurs haute
-                  pression.
+                  Des solutions personnalisées adaptées à vos besoins
+                  spécifiques.pour tous types d’équipements hydrauliques et
+                  pneumatiques
                 </p>
               </div>
               <div className="md:w-[50%] md:h-[280px] md:bg-[#F7EDDB] ">

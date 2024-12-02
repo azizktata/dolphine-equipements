@@ -20,7 +20,7 @@ export default function page() {
           <CardBody className="absolute inset-0 mb-16 z-10 flex items-start justify-center">
             {/* <div className="mt-12  flex flex-col  w-auto mb-6  "> */}
             <div className="max-w-[60ch] mx-auto flex flex-col items-center">
-              <h1 className="mb-2  font-medium text-3xl lg:text-4xl xl:text-5xl tracking-widest text-white ">
+              <h1 className="mb-2  font-medium text-3xl lg:text-5xl  tracking-widest text-white ">
                 {" "}
                 Qui Sommes Nous?
               </h1>
@@ -31,56 +31,112 @@ export default function page() {
           </CardBody>
         </Card>
       </div>
-      <div className="max-w-[65ch] px-4 mx-auto mb-16 flex flex-col items-start justify-center">
-        <h1 className="text-2xl lg:text-4xl mb-8 lg:mb-16 font-semibold text-center tracking-wide">
-          Qui est Dolhin Equipements?
+      <div className="max-w-[70ch] px-4 mx-auto mb-16 flex flex-col items-start justify-center">
+        <h1 className="text-3xl lg:text-4xl mb-16  font-semibold text-center tracking-wide">
+          À Propos de Dolphin Équipements
         </h1>
 
-        <div className="mb-8">
-          <h3 className="text-lg font-medium text-gray-900 lg:text-2xl mb-2 ">
-            Fournisseur D&apos;équipement Hydraulique
+        <div className="mb-12 lg:mb-16">
+          <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4 ">
+            Votre Partenaire en Solutions Hydrauliques et Pneumatiques
           </h3>
           <p className="max-w-[60ch] text-lg text-gray-700 font-light">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book.
+            Bienvenue chez Dolphin Équipements, un acteur incontournable dans le
+            domaine de l&apos;hydraulique et des services en Tunisie.
+            <span className="block mt-2"></span>
+            En tant que membre du groupe FLEXIMAT France, fort de plus de 20 ans
+            d&apos;expertise, nous sommes fiers de proposer des solutions
+            innovantes et adaptées aux besoins des professionnels dans divers
+            secteurs, tels que l&apos;industrie, le BTP et la marine.
           </p>
         </div>
-        <div className="mb-8">
-          <h3 className="text-lg font-medium text-gray-900 lg:text-2xl mb-2">
-            Nos Secteurs
+        <div className="mb-12 lg:mb-16">
+          <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4">
+            Notre Mission
           </h3>
           <p className="max-w-[60ch] text-lg text-gray-700 font-light">
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
+            Fournir des produits et services hydrauliques et pneumatiques de
+            qualité, conçus pour optimiser vos performances et garantir la
+            durabilité de vos équipements.
+            <span className="block mt-2"></span>
+            Que ce soit pour la vente, la maintenance ou le nettoyage des
+            circuits hydrauliques, nous nous engageons à vous accompagner avec
+            expertise et professionnalisme.
           </p>
         </div>
-        <div className="mb-8">
-          <h3 className="text-lg font-medium text-gray-900 lg:text-2xl mb-2">
+        <div className="mb-12 lg:mb-16 ">
+          <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  ">
             Nos Activités
           </h3>
-          <p className="max-w-[60ch] text-lg text-gray-700 font-light">
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
+          <ul className="max-w-[70ch] text-lg text-gray-700 font-light space-y-4 leading-relaxed">
+            <li>
+              <span className="font-medium text-gray-700">
+                Vente et négoce:
+              </span>{" "}
+              Une large gamme d’équipements hydrauliques et pneumatiques
+              disponibles dans nos boutiques à Tunis.
+            </li>
+            <li>
+              <span className="font-medium text-gray-700">
+                Étude et conseil:
+              </span>{" "}
+              Des solutions personnalisées adaptées à vos besoins spécifiques.
+            </li>
+            <li>
+              <span className="font-medium text-gray-700">
+                Maintenance et réparation:
+              </span>{" "}
+              Des services rapides et fiables pour prolonger la durée de vie de
+              vos équipements.
+            </li>
+            <li>
+              <span className="font-medium text-gray-700">
+                Assainissement et nettoyage:
+              </span>{" "}
+              Filtration, flushing hydraulique, accessoires de nettoyage, et
+              nettoyeurs haute pression pour des performances optimales.
+            </li>
+          </ul>
         </div>
-        <div className="mb-8">
-          <h3 className="text-lg font-medium text-gray-900 lg:text-2xl mb-2">
-            Nos Produits
+        <div className="mb-12 lg:mb-16 ">
+          <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  ">
+            {" "}
+            Pourquoi Choisir Dolphin Équipements ?
           </h3>
-          <p className="max-w-[60ch] text-lg text-gray-700 font-light">
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
+          <ul className="max-w-[70ch] text-lg text-gray-700 font-light space-y-4 leading-relaxed mb-6">
+            <li>
+              <span className="font-medium text-gray-700">
+                Expertise reconnue:
+              </span>{" "}
+              Grâce à notre appartenance au groupe FLEXIMAT France.
+            </li>
+            <li>
+              <span className="font-medium text-gray-700">
+                Produits de qualité:
+              </span>{" "}
+              Adaptés aux exigences des secteurs industriels, du BTP et de la
+              marine.
+            </li>
+            <li>
+              <span className="font-medium text-gray-700">
+                Services personnalisés:
+              </span>{" "}
+              Un accompagnement de proximité pour répondre à tous vos besoins.
+            </li>
+          </ul>
+          <p className="text-lg max-w-[70ch] text-gray-700 font-light leading-relaxed">
+            Chez{" "}
+            <span className="font-medium text-gray-700">
+              Dolphin Équipements
+            </span>
+            , nous faisons bien plus que vendre des équipements : nous devenons
+            votre partenaire de confiance pour toutes vos solutions hydrauliques
+            et pneumatiques.
+            <span className="block mt-2">
+              Venez nous rencontrer à <span className="font-medium">Tunis</span>{" "}
+              et découvrez comment nous pouvons vous aider à optimiser vos
+              performances et garantir la fiabilité de vos équipements !
+            </span>
           </p>
         </div>
       </div>

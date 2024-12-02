@@ -24,15 +24,28 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
       elements: Composant[],
       parents: string[] = []
     ) {
+      const containsTitle = (
+        children: Composant[],
+        targetTitle: string
+      ): boolean => {
+        for (const child of children) {
+          if (child.title === targetTitle) {
+            return true; // Found the target title
+          }
+          if (child.children && containsTitle(child.children, targetTitle)) {
+            return true; // Found in deeper levels
+          }
+        }
+        return false; // Not found
+      };
+
       for (const item of elements) {
-        if (
-          item.children &&
-          item.children.some((child) => child.title === title)
-        ) {
-          parents.unshift(item.title);
+        if (item.children && containsTitle(item.children, title)) {
+          parents.push(item.title);
 
           getAllParentTitles(item.title, elements, parents);
         }
+
         if (item.children && item.children.length > 0) {
           getAllParentTitles(title, item.children, parents);
         }
