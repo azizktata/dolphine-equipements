@@ -20,7 +20,7 @@ export default function page() {
           <CardBody className="absolute inset-0 mb-16 z-10 flex items-start justify-center">
             {/* <div className="mt-12  flex flex-col  w-auto mb-6  "> */}
             <div className="max-w-[60ch] mx-auto flex flex-col items-center">
-              <h1 className="mb-2  font-medium text-xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-widest text-white ">
+              <h1 className="mb-2  font-medium text-3xl lg:text-4xl xl:text-5xl tracking-widest text-white ">
                 {" "}
                 Qui Sommes Nous?
               </h1>

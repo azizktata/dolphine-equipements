@@ -69,23 +69,6 @@ export default function Home() {
             <span className="w-10 border-t border-gray-300"></span>
           </div>
         </div> */}
-        <div className="flex flex-col gap-6 mb-32 md:flex-row md:flex-wrap md:w-[95%] lg:w-[90%]  md:mx-auto ">
-          <CardSvg
-            title="Hydrauliques"
-            description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
-            image="/engine.svg"
-          />
-          <CardSvg
-            title="Pneumatiques"
-            description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
-            image="/tyre.svg"
-          />
-          <CardSvg
-            title="Assainissement & Nettoyage"
-            description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
-            image="/water-pump.svg"
-          />
-        </div>
 
         <div id="activités" className="text-center py-8 mb-8 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
@@ -179,7 +162,23 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+        <div className="flex flex-col gap-6 mb-32 md:flex-row w-[90%] mx-auto">
+          <CardSvg
+            title="Hydrauliques"
+            description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
+            image="/hydrauliques.webp"
+          />
+          <CardSvg
+            title="Pneumatiques"
+            description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
+            image="/pneumatiques.webp"
+          />
+          <CardSvg
+            title="Assainissement & Nettoyage"
+            description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
+            image="/lavage.webp"
+          />
+        </div>
         <div className="text-center py-8 mb-8 ">
           <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
             Vous êtes le Bienvenu

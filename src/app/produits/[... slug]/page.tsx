@@ -26,7 +26,10 @@ export default async function page({
 
   function findElementByTitle(data: Composant[], title: string): Data | null {
     for (const item of data) {
-      if (item.title.toLowerCase().replace(/ /g, "-") === title) {
+      if (
+        decodeURIComponent(item.title).toLowerCase().replace(/ /g, "-") ===
+        decodeURIComponent(title)
+      ) {
         return item as Data;
       }
       if (item.children) {
@@ -62,11 +65,10 @@ export default async function page({
                       <BreadcrumbSeparator />
                       <BreadcrumbItem>
                         <BreadcrumbPage>
-                          <BreadcrumbLink
-                            className="capitalize text-[#4588c5]"
-                            href="."
-                          >
-                            {item.replace(/-/g, " ")}
+                          <BreadcrumbLink className=" text-[#4588c5]" href=".">
+                            <span>
+                              {decodeURIComponent(item).replace(/-/g, " ")}
+                            </span>
                           </BreadcrumbLink>
                         </BreadcrumbPage>
                       </BreadcrumbItem>

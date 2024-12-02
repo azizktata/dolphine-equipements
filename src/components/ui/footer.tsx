@@ -29,14 +29,10 @@ export default function Footer() {
               <Link href="/contactez-nous">Contactez-nous</Link>
             </li>
             <li className="hover:text-gray-300">
-              <Link href="/#activités"></Link>
-              Nos Activités
+              <Link href="/#activités">Nos Activités</Link>
             </li>
             <li className="hover:text-gray-300">
               <Link href="/#partenaires">Nos Partenaires</Link>
-            </li>
-            <li className="hover:text-gray-300">
-              <Link href="/#emplacement">Notre Emplacement</Link>
             </li>
           </ul>
         </div>
