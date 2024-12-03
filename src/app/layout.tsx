@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import { Toaster } from "sonner";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const roboto = Roboto({
   weight: ["300", "400", "500"],
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto}  antialiased`}>
+        <SpeedInsights />
         <Toaster
           toastOptions={{
             classNames: {
