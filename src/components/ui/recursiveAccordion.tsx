@@ -30,13 +30,13 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
       ): boolean => {
         for (const child of children) {
           if (child.title === targetTitle) {
-            return true; // Found the target title
+            return true;
           }
           if (child.children && containsTitle(child.children, targetTitle)) {
-            return true; // Found in deeper levels
+            return true;
           }
         }
-        return false; // Not found
+        return false;
       };
 
       for (const item of elements) {
@@ -74,7 +74,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                       .join("/")}`
                   );
                 }}
-                className="accordion-trigger pl-3 pb-2 text-lg  font-light capitalize"
+                className="accordion-trigger pl-3  text-lg  font-light capitalize"
               >
                 {element.title}
               </AccordionTrigger>
@@ -84,7 +84,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
             </AccordionItem>
           </>
         ) : (
-          <AccordionContent className="pl-3 pt-1 text-left text-lg">
+          <AccordionContent className="pl-3 mt-3 text-left text-lg">
             {element.title}
           </AccordionContent>
         )}

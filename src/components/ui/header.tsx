@@ -39,7 +39,7 @@ export default function Header() {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          className="md:hidden"
         />
         <NavbarBrand>
           <Link href="/">
@@ -55,7 +55,7 @@ export default function Header() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-16 " justify="center">
+      <NavbarContent className="hidden md:flex gap-16 " justify="center">
         <NavbarItem>
           <Link className="text-gray-300 " href="/about">
             Qui Sommes Nous

@@ -116,7 +116,11 @@ import { cache } from "react";
 
 export const getAll = cache (async (): Promise<Data> => {
   try {
-    const res = await fetch("http://dolphiv.cluster030.hosting.ovh.net/wp-json/custom/v1/elements/", {
+    const url = process.env.ELEMENTS_URL;
+    if (!url) {
+      throw new Error("URL is not defined");
+    }
+    const res = await fetch(url, {
       next: { revalidate: 120 }
     });
     const data = await res.json();

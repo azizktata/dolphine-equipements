@@ -65,7 +65,10 @@ export default async function page({
                       <BreadcrumbSeparator />
                       <BreadcrumbItem>
                         <BreadcrumbPage>
-                          <BreadcrumbLink className=" text-[#4588c5]" href=".">
+                          <BreadcrumbLink
+                            className="capitalize text-[#4588c5]"
+                            href="."
+                          >
                             <span>
                               {decodeURIComponent(item).replace(/-/g, " ")}
                             </span>

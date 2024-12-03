@@ -10,8 +10,8 @@ export default function ListCards({ composants }: { composants: Data }) {
   const router = useRouter();
   const currentPath = usePathname();
   return (
-    <div className="my-8 w-full">
-      <div className="gap-2 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4   ">
+    <div className="my-8 w-full ">
+      <div className="gap-2 grid grid-cols sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  ">
         {composants.children.map((item, index) => (
           <div key={index} className="flex flex-col ">
             <Card
