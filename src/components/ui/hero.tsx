@@ -36,12 +36,13 @@ export default function Hero() {
           {images.map((img, index) => (
             <CarouselItem className="" key={index}>
               <Card className="h-[450px] ">
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full overflow-hidden bg-gray-100">
                   <Image
                     removeWrapper
                     alt="Card background"
                     className="z-0 w-full h-full object-cover"
                     src={img}
+                    loading="eager"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-linear"></div>
                   {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
@@ -52,9 +53,9 @@ export default function Hero() {
                       {" "}
                       Fournisseur D&apos;équipement Hydraulique
                     </h1>
-                    <p className="text-base  text-[#B0CEE8] tracking-widest font-medium ">
+                    <h2 className="text-base  text-[#B0CEE8] tracking-widest font-medium ">
                       Dolphin Equipements
-                    </p>
+                    </h2>
                   </div>
 
                   <div className="flex flex-col items-center  gap-12  ">

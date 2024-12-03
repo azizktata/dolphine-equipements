@@ -48,6 +48,7 @@ export default function Header() {
               alt="hydrauliques"
               width={46}
               height={46}
+              priority
               className="text-[#316F9E] "
             />
           </Link>
@@ -131,7 +132,7 @@ export default function Header() {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
-            className="text-[#488DCA] hover:text-[#285C8A] "
+            className="text-[#2E699E] hover:text-[#1F3A75] "
             variant="outline"
           >
             <Phone size={16} />

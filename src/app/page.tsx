@@ -32,9 +32,9 @@ export default function Home() {
               <h1 className="text-2xl tracking-widest text-gray-800 font-medium mb-2 sm:text-3xl lg:text-4xl xl:text-5xl ">
                 Dolphin Equipements
               </h1>
-              <h3 className="text-base text-center mb-6  text-[#619CD1] tracking-widest font-medium ">
+              <h2 className="text-base text-center mb-6  text-[#2E699E] tracking-widest font-medium ">
                 Votre partenaire hydraulique & services
-              </h3>
+              </h2>
               <p className="mb-16  pl-6 md:pl-0  lg:text-lg  font-light text-gray-600">
                 Nous appertenons aux groupe FLEXIMAT France, specialisé depuis
                 plus de{" "}
@@ -45,7 +45,7 @@ export default function Home() {
               </p>
 
               <Link className="self-start" href="/about">
-                <Button className="bg-[#488DCA] rounded-sm text-base lg:text-lg px-4 py-6 ml-6 md:ml-0   font-normal  hover:bg-[#285C8A]">
+                <Button className="bg-[#2E699E] rounded-sm text-base lg:text-lg px-4 py-6 ml-6 md:ml-0 text-white  font-normal  hover:bg-[#1F3A75]">
                   voir plus
                   <ArrowRight size={24} />
                 </Button>
@@ -202,6 +202,8 @@ export default function Home() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="dolphin equipements map"
+            aria-placeholder="Angle Rue d’egypte Rue d’espagne 2013, Ben arus Tunis"
           ></iframe>
         </div>
       </main>

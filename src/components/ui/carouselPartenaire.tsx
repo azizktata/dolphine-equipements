@@ -22,6 +22,7 @@ export default function CarouselPartenaire() {
     "/partenaire-8.png",
     "/partenaire-9.png",
     "/partenaire-10.png",
+    "/partenaire-11.png",
   ];
   return (
     <Carousel

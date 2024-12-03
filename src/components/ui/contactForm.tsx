@@ -16,32 +16,39 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Send } from "lucide-react";
+import { sendEmail } from "@/utils/email";
+import { toast } from "sonner";
 
 const formSchema = z.object({
-  nom: z.string().min(2, {
-    message: "nom must be at least 2 characters.",
-  }),
-  email: z.string(),
+  nom: z.string().min(2, { message: "entrez votre nom." }),
+  email: z.string().email({ message: "entrez un email valide." }),
   sujet: z.string().min(2, {
-    message: "sujet must be at least 2 characters.",
+    message: "entrez un sujet valide.",
   }),
-  message: z.string().min(2, {
-    message: "message must be at least 2 characters.",
+  message: z.string().min(10, {
+    message: "votre message doit contenir au moins 10 caractères.",
   }),
 });
 export default function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      nom: "",
-    },
+    defaultValues: { nom: "", email: "", sujet: "", message: "" },
   });
+  const isLoading = form.formState.isSubmitting;
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const mailText = `Nom: ${values.nom}\nEmail: ${values.email}\nSujet: ${values.sujet}\nMessage: ${values.message}`;
+    const res = await sendEmail({
+      text: mailText,
+      sujet: "Nouveau message de contact",
+      email: values.email,
+    });
+    if (res?.success) {
+      toast.success("Votre message a été envoyé avec succès.");
+      form.reset();
+    } else {
+      toast.error(res?.message);
+    }
   }
   return (
     <Form {...form}>
@@ -111,11 +118,18 @@ export default function ContactForm() {
           )}
         />
         <Button
+          disabled={isLoading}
           type="submit"
           className="bg-[#488DCA] rounded-sm text-base lg:text-lg px-4 py-6    font-normal  hover:bg-[#285C8A]"
         >
-          envoyer
-          <Send size={24} />
+          {isLoading ? (
+            "encours..."
+          ) : (
+            <>
+              envoyer
+              <Send size={24} />
+            </>
+          )}
         </Button>
       </form>
     </Form>
