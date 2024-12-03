@@ -74,17 +74,17 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                       .join("/")}`
                   );
                 }}
-                className="accordion-trigger pl-3  text-lg  font-light capitalize"
+                className="accordion-trigger pl-3 text-base text-gray-700   capitalize"
               >
                 {element.title}
               </AccordionTrigger>
-              <AccordionContent className="pl-3 text-lg font-light">
+              <AccordionContent className="pl-3 text-base font-light">
                 {renderAccordionItems(element.children, currentPath)}
               </AccordionContent>
             </AccordionItem>
           </>
         ) : (
-          <AccordionContent className="pl-3 mt-3 text-left text-lg">
+          <AccordionContent className="pl-3 mt-3 text-left text-base">
             {element.title}
           </AccordionContent>
         )}
@@ -93,15 +93,20 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
   };
   const currentPath = usePathname();
   return (
-    <Accordion type="multiple" defaultValue={["produits"]}>
-      <AccordionItem className="data-[state=open]:border-none" value="produits">
-        <AccordionTrigger className="accordion-trigger border-none text-xl track-widest font-light">
-          Produits
-        </AccordionTrigger>
-        <AccordionContent className="pl-3">
-          {data.children && renderAccordionItems(data.children, currentPath)}
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
+    <div className="border-r border-b pr-8 pb-16 shadow-sm">
+      <Accordion type="multiple" defaultValue={["produits"]}>
+        <AccordionItem
+          className="data-[state=open]:border-none"
+          value="produits"
+        >
+          <AccordionTrigger className=" border-none text-xl accordion-trigger track-widest font-light">
+            Produits
+          </AccordionTrigger>
+          <AccordionContent className="pl-3">
+            {data.children && renderAccordionItems(data.children, currentPath)}
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </div>
   );
 }

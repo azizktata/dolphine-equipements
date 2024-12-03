@@ -13,10 +13,13 @@ body {
 
 .accordion-trigger[data-state="open"] {
   font-weight: bold;
+  font-size: large;
   color: #092844;
   text-decoration: underline;
 }
-
+.group-hover\:translate-y-0 {
+  will-change: transform, opacity;
+}
 p {
   max-width: 50ch;
 }

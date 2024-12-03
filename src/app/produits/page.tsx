@@ -17,7 +17,7 @@ export default async function page() {
   const data = await getAll();
 
   return (
-    <div className="bg-[#f4f8ff]">
+    <div className="">
       <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%] gap-16  m-auto lg:justify-between lg:items-baseline justify-center min-h-[100vh]">
         <div className="hidden lg:block lg:w-[350px]">
           <RecursiveAccordion data={data} />

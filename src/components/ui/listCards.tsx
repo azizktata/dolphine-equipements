@@ -11,12 +11,12 @@ export default function ListCards({ composants }: { composants: Data }) {
   const currentPath = usePathname();
   return (
     <div className="my-8 w-full ">
-      <div className="gap-2 grid grid-cols sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  ">
+      <div className="gap-2 grid grid-cols sm:grid-cols-2 lg:grid-cols-3   ">
         {composants.children.map((item, index) => (
           <div key={index} className="flex flex-col ">
             <Card
               shadow="sm"
-              className="bg-transparent "
+              className="bg-transparent  "
               isPressable
               onPress={() => {
                 if (item.children && item.children.length > 0) {
@@ -34,7 +34,7 @@ export default function ListCards({ composants }: { composants: Data }) {
                   radius="sm"
                   width="100%"
                   alt={item.title}
-                  className="w-full object-cover h-[200px]"
+                  className="w-full object-cover h-[250px]"
                   src={item.image !== "" ? item.image : undefined}
                 />
               </CardBody>
