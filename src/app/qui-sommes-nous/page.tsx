@@ -88,7 +88,7 @@ export default function page() {
       <div className="flex flex-col lg:flex-row justify-between lg:w-[90%] xl:w-[80%] lg:self-center">
         <div className="w-[90%] md:w-auto  mx-auto   self-center lg:self-start  mb-16 flex flex-col items-start ">
           <h1 className="text-2xl lg:text-4xl mb-16  font-semibold  tracking-wide">
-            À Propos de Dolphin Équipements
+            À Propos de dolphin équipements
           </h1>
 
           <div className="mb-12  lg:mb-16">
@@ -108,7 +108,7 @@ export default function page() {
 
           <div className="mb-12 lg:mb-16">
             <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4 after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
-              Notre Mission
+              Notre mission
             </h3>
             <p className="max-w-[60ch] text-lg text-gray-700 font-light">
               Fournir des produits et services hydrauliques et pneumatiques de
@@ -123,7 +123,7 @@ export default function page() {
 
           <div className="mb-12 lg:mb-16 ">
             <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
-              Nos Activités
+              Nos activités
             </h3>
             <ul className="max-w-[70ch] text-lg text-gray-700 font-light space-y-4 leading-relaxed">
               <li>
@@ -158,7 +158,7 @@ export default function page() {
           <div className="mb-12 lg:mb-16 ">
             <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
               {" "}
-              Pourquoi Choisir Dolphin Équipements ?
+              Pourquoi choisir dolphin équipements ?
             </h3>
             <ul className="max-w-[70ch] text-lg text-gray-700 font-light space-y-4 leading-relaxed mb-6">
               <li>

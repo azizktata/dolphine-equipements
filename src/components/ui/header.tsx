@@ -37,7 +37,7 @@ export default function Header() {
       shouldHideOnScroll
       isBordered
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-[#092844] text-[#F5F5F5]"
+      className="bg-[#092844] "
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -60,7 +60,14 @@ export default function Header() {
 
       <NavbarContent className="hidden md:flex gap-16 " justify="center">
         <NavbarItem>
-          <Link className="text-gray-300 " href="/qui-sommes-nous">
+          <Link
+            className={
+              currentPath.includes("/qui-sommes-nous")
+                ? "text-white text-lg"
+                : "text-gray-300 text-lg hover:text-gray-400 cursor-pointer"
+            }
+            href="/qui-sommes-nous"
+          >
             Qui sommes nous
           </Link>
         </NavbarItem>
@@ -70,8 +77,8 @@ export default function Header() {
               <span
                 className={
                   currentPath.includes("/produits")
-                    ? "text-white"
-                    : "text-gray-300 cursor-pointer"
+                    ? "text-white text-lg"
+                    : "text-gray-300 text-lg hover:text-gray-400 cursor-pointer"
                 }
               >
                 Nos produits
@@ -118,7 +125,14 @@ export default function Header() {
           </DropdownMenu>
         </Dropdown>
         <NavbarItem>
-          <Link className="text-gray-300" href="/contactez-nous">
+          <Link
+            className={
+              currentPath.includes("/contactez-nous")
+                ? "text-white text-lg"
+                : "text-gray-300 text-lg hover:text-gray-400 cursor-pointer"
+            }
+            href="/contactez-nous"
+          >
             Contactez-nous
           </Link>
         </NavbarItem>

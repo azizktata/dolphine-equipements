@@ -11,13 +11,12 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
-// const merriweather = Merriweather({
-//   weight: ["300", "400", "700"],
-//   subsets: ["latin"],
-// });
 export const metadata: Metadata = {
-  title: "Dolphine Equipements",
-  description: "Hydrolavage, nettoyage industriel",
+  title: "Dolphin Équipements",
+  description:
+    "Dolphin Équipements, spécialisé dans les équipements hydrauliques, pneumatiques, et les services de maintenance et nettoyage industriel. Fournir des produits et services hydrauliques et pneumatiques de qualité. Basés à Tunis, nous offrons des solutions sur mesure pour les secteurs industriels, BTP, et marins..",
+  keywords:
+    "Dolphin Équipements, hydraulique, pneumatique, flushing hydraulique, nettoyage industriel, produits hydrauliques et pneumatiques, équipements hydrauliques, maintenance hydraulique, équipements pneumatiques,  équipements BTP, équipements marins, Tunis",
 };
 
 export default function RootLayout({
