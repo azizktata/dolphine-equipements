@@ -23,9 +23,7 @@ export const getAll = cache (async (): Promise<Data> => {
     return data;
   } catch  {
     return { title: "", children: [] };
-  } finally {
-    return { title: "", children: [] };
-  }
+  } 
 })
 
 
