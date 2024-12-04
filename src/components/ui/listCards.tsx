@@ -37,6 +37,7 @@ export default function ListCards({ composants }: { composants: Data }) {
             >
               <CardBody className="overflow-visible bg-white p-0 border-none ">
                 <Image
+                  isZoomed
                   shadow="sm"
                   radius="sm"
                   width="100%"
