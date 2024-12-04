@@ -15,14 +15,13 @@ export default function CarouselPartenaire() {
     "/partenaire-1.webp",
     "/partenaire-2.webp",
     "/partenaire-3.webp",
-    "/partenaire-4.png",
-    "/partenaire-5.png",
-    // "/partenaire-6.webp",
-    "/partenaire-7.png",
-    "/partenaire-8.png",
-    "/partenaire-9.png",
-    "/partenaire-10.png",
-    "/partenaire-11.png",
+    "/partenaire-4.webp",
+    "/partenaire-5.webp",
+    "/partenaire-7.webp",
+    "/partenaire-8.webp",
+    "/partenaire-9.webp",
+    "/partenaire-10.webp",
+    "/partenaire-11.webp",
   ];
   return (
     <Carousel

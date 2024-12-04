@@ -17,7 +17,6 @@ import {
   DropdownItem,
 } from "@nextui-org/dropdown";
 
-// import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -26,8 +25,12 @@ import { Button } from "./button";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["Qui Sommes Nous", "Nos Produits", "Contactez-nous"];
-
+  const menuItems = ["Qui sommes nous", "Nos produits", "Contactez-nous"];
+  const handleWhatsAppCall = () => {
+    const phoneNumber = "21658432372";
+    const url = `https://wa.me/${phoneNumber}`;
+    window.open(url, "_blank");
+  };
   const currentPath = usePathname();
   return (
     <Navbar
@@ -57,8 +60,8 @@ export default function Header() {
 
       <NavbarContent className="hidden md:flex gap-16 " justify="center">
         <NavbarItem>
-          <Link className="text-gray-300 " href="/about">
-            Qui Sommes Nous
+          <Link className="text-gray-300 " href="/qui-sommes-nous">
+            Qui sommes nous
           </Link>
         </NavbarItem>
         <Dropdown>
@@ -71,18 +74,9 @@ export default function Header() {
                     : "text-gray-300 cursor-pointer"
                 }
               >
-                Nos Produits
+                Nos produits
               </span>
             </DropdownTrigger>
-            {/* <Link
-            href="/produits"
-            aria-current="page"
-            className={
-              currentPath.includes("/produits") ? "text-white" : "text-gray-300"
-            }
-          >
-            Nos Produits
-          </Link> */}
           </NavbarItem>
           <DropdownMenu
             aria-label="Produits Dolhpines"
@@ -134,6 +128,7 @@ export default function Header() {
           <Button
             className="text-[#2E699E] hover:text-[#1F3A75] "
             variant="outline"
+            onClick={handleWhatsAppCall}
           >
             <Phone size={16} />
             +216 58 432 372

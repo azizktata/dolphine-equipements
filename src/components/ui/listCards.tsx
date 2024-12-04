@@ -5,10 +5,17 @@ import { Image } from "@nextui-org/image";
 import { Card, CardBody } from "@nextui-org/card";
 import { useRouter, usePathname } from "next/navigation";
 import { Data } from "@/types";
+import { toast } from "sonner";
 
 export default function ListCards({ composants }: { composants: Data }) {
   const router = useRouter();
   const currentPath = usePathname();
+
+  if (composants.children.length === 0) {
+    toast.error("Erreur lors du chargement des données");
+    return;
+  }
+
   return (
     <div className="my-8 w-full ">
       <div className="gap-2 grid grid-cols sm:grid-cols-2 lg:grid-cols-3   ">

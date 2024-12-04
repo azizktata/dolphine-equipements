@@ -44,9 +44,9 @@ export default function Home() {
                 circuits hydrauliques
               </p>
 
-              <Link className="self-start" href="/about">
+              <Link className="self-start" href="/qui-sommes-nous">
                 <Button className="bg-[#2E699E] rounded-sm text-base lg:text-lg px-4 py-6 ml-6 md:ml-0 text-white  font-normal  hover:bg-[#1F3A75]">
-                  voir plus
+                  plus d&apos;infos
                   <ArrowRight size={24} />
                 </Button>
               </Link>
@@ -56,19 +56,6 @@ export default function Home() {
         <div id="partenaires" className=" bg-[#E9F1F7] py-16 lg:py-32 mb-32">
           <CarouselPartenaire />
         </div>
-        {/* <div id="catalogues" className="text-center py-8 mb-16">
-          <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-[#092844] mt-2">
-            Notre Catalogues
-          </h2>
-
-          <div className="flex justify-center items-center mt-2">
-            <span className="w-10 border-t border-gray-300"></span>
-            <span className="mx-1 text-[#D4AF37]">&#10072;</span>
-            <span className="mx-1 text-[#D4AF37]">&#10072;</span>
-            <span className="mx-1 text-[#D4AF37]">&#10072;</span>
-            <span className="w-10 border-t border-gray-300"></span>
-          </div>
-        </div> */}
 
         <div id="activités" className="text-center py-8 mb-8 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
@@ -77,9 +64,9 @@ export default function Home() {
 
           <div className="flex justify-center items-center mt-2">
             <span className="w-10 border-t border-gray-300"></span>
-            <span className="mx-1 text-[#D4AF37]">&#10072;</span>
-            <span className="mx-1 text-[#D4AF37]">&#10072;</span>
-            <span className="mx-1 text-[#D4AF37]">&#10072;</span>
+            <span className="mx-1 text-[#30085E]">&#10072;</span>
+            <span className="mx-1 text-[#30085E]">&#10072;</span>
+            <span className="mx-1 text-[#30085E]">&#10072;</span>
             <span className="w-10 border-t border-gray-300"></span>
           </div>
         </div>
@@ -87,7 +74,7 @@ export default function Home() {
           <div className="flex flex-col w-[90%] lg:w-[80%] xl:w-[60%] m-auto items-center">
             <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
               <div className="md:w-[45%] ">
-                <h2 className="text-2xl bold text-center md:text-left mb-6 after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
+                <h2 className="text-2xl bold text-center md:text-left mb-6 after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#30085E] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
                   Vente et négoce
                 </h2>
 
@@ -113,7 +100,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
               <div className="md:w-[45%]">
-                <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
+                <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#30085E] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
                   Maintenace et Réparation
                 </h2>
                 <p className="hidden lg:block font-light text-gray-600 text-lg  mb-4  text-left">
@@ -139,7 +126,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
               <div className="md:w-[45%]">
-                <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#488DCA] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
+                <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#30085E] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
                   Étude et conseil
                 </h2>
                 <p className="text-gray-600 font-light text-lg text-center mb-4  md:text-left">
@@ -180,14 +167,14 @@ export default function Home() {
         </div>
         <div className="text-center py-8 mb-8 ">
           <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
-            Vous êtes le Bienvenu
+            Vous êtes les Bienvenu
           </h2>
 
           <div className="flex justify-center items-center mt-2">
             <span className="w-10 border-t border-gray-300"></span>
-            <span className="mx-1 text-[#D4AF37]">&#10072;</span>
-            <span className="mx-1 text-[#D4AF37]">&#10072;</span>
-            <span className="mx-1 text-[#D4AF37]">&#10072;</span>
+            <span className="mx-1 text-[#30085E]">&#10072;</span>
+            <span className="mx-1 text-[#30085E]">&#10072;</span>
+            <span className="mx-1 text-[#30085E]">&#10072;</span>
             <span className="w-10 border-t border-gray-300"></span>
           </div>
         </div>

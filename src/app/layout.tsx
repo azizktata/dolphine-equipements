@@ -32,8 +32,8 @@ export default function RootLayout({
         <Toaster
           toastOptions={{
             classNames: {
-              error: "bg-red-500",
-              success: "text-green-500",
+              error: "bg-red-400 text-white",
+              success: "bg-green-500 text-white",
             },
           }}
         />

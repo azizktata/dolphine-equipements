@@ -74,11 +74,7 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Votre mail</FormLabel>
               <FormControl>
-                <Input
-                  type="email"
-                  placeholder="example@gmail.com"
-                  {...field}
-                />
+                <Input type="email" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -92,7 +88,7 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Sujet</FormLabel>
               <FormControl>
-                <Input placeholder="sujet" {...field} />
+                <Input {...field} />
               </FormControl>
 
               <FormMessage />
@@ -107,7 +103,6 @@ export default function ContactForm() {
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <textarea
-                  placeholder="Message"
                   {...field}
                   className="resize-none border border-gray-300 rounded-md p-2 w-full h-32"
                 />
