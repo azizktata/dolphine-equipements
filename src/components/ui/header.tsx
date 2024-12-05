@@ -167,7 +167,7 @@ export default function Header() {
                   ? "/produits"
                   : item === "Contactez-nous"
                   ? "/contactez-nous"
-                  : "/about"
+                  : "/qui-sommes-nous"
               }
             >
               {item}
