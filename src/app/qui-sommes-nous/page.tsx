@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardBody } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
+import CarouselPartenaire from "@/components/ui/carouselPartenaire";
 
 export default function page() {
   return (
@@ -29,7 +30,7 @@ export default function page() {
           </CardBody>
         </Card>
       </div>
-      <section className="overflow-hidden pt-20 pb-12  lg:pb-[90px] bg-white dark:bg-dark">
+      <section className="overflow-hidden pt-8 lg:pt-20 pb-12  lg:pb-[90px] bg-white dark:bg-dark">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-[90%] mx-auto px-4  lg:w-6/12">
@@ -64,9 +65,6 @@ export default function page() {
 
             <div className="w-[90%] px-4 mx-auto lg:w-1/2 xl:w-5/12">
               <div className="mt-10 lg:mt-0">
-                <span className="block mb-4 text-lg font-semibold text-primary">
-                  Pourquois nous choisir?
-                </span>
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
                   Votre Partenaire en Solutions Hydrauliques et Pneumatiques
                 </h2>
@@ -85,12 +83,8 @@ export default function page() {
           </div>
         </div>
       </section>
-      <div className="flex flex-col lg:flex-row justify-between lg:w-[90%] xl:w-[80%] lg:self-center">
+      <div className="flex flex-col lg:flex-row justify-between lg:w-[90%] xl:w-[85%] lg:self-center">
         <div className="w-[90%] md:w-auto  mx-auto   self-center lg:self-start  mb-16 flex flex-col items-start ">
-          <h1 className="text-2xl lg:text-4xl mb-16  font-semibold  tracking-wide">
-            À Propos de dolphin équipements
-          </h1>
-
           <div className="mb-12  lg:mb-16">
             <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4   after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
               Qui sommes nous?
@@ -123,7 +117,7 @@ export default function page() {
 
           <div className="mb-12 lg:mb-16 ">
             <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
-              Nos activités
+              Nos valeurs
             </h3>
             <ul className="max-w-[70ch] text-lg text-gray-700 font-light space-y-4 leading-relaxed">
               <li>
@@ -198,7 +192,7 @@ export default function page() {
             </p>
           </div>
         </div>
-        <div className="hidden w-1/2 xl:px-16 xl:flex flex-col gap-32 mt-24 items-center">
+        <div className="hidden xl:w-1/2 xl:px-16 xl:flex flex-col gap-32  items-center">
           <div className="flex jusitfy-between gap-8">
             <Image
               src="/partenaire-1.webp"
@@ -262,6 +256,9 @@ export default function page() {
             />
           </div>
         </div>
+      </div>
+      <div className=" bg-[#E9F1F7] py-16 lg:py-32 mb-32 xl:hidden">
+        <CarouselPartenaire />
       </div>
     </div>
   );

@@ -37,12 +37,12 @@ export default function Header() {
       shouldHideOnScroll
       isBordered
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-[#092844] "
+      className="bg-[#092844]"
     >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="md:hidden"
+          className="md:hidden text-gray-200"
         />
         <NavbarBrand>
           <Link href="/">
@@ -92,11 +92,7 @@ export default function Header() {
               base: "gap-4",
             }}
           >
-            <DropdownItem
-              key="autoscaling"
-              // description="ACME scales apps to meet user demand, automagically, based on load."
-              // startContent={icons.scale}
-            >
+            <DropdownItem key="autoscaling">
               <Link className="text-base" href="/produits/hydrauliques">
                 Hydrauliques
               </Link>
