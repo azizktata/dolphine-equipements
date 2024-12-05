@@ -159,7 +159,7 @@ export default function Header() {
               }
               className="w-full"
               href={
-                item === "Nos Produits"
+                item === "Nos produits"
                   ? "/produits"
                   : item === "Contactez-nous"
                   ? "/contactez-nous"
