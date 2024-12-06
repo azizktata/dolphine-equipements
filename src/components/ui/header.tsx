@@ -25,11 +25,18 @@ import { Button } from "./button";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["Qui sommes nous", "Nos produits", "Contactez-nous"];
+  const menuItems = [
+    { label: "Qui sommes nous", path: "/qui-sommes-nous" },
+    { label: "Nos produits", path: "/produits" },
+    { label: "Contactez-nous", path: "/contactez-nous" },
+  ];
   const handleWhatsAppCall = () => {
     const phoneNumber = "21658432372";
     const url = `https://wa.me/${phoneNumber}`;
     window.open(url, "_blank");
+  };
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false); // Close the menu when an item is clicked
   };
   const currentPath = usePathname();
   return (
@@ -38,6 +45,7 @@ export default function Header() {
       isBordered
       onMenuOpenChange={setIsMenuOpen}
       className="bg-[#092844]"
+      isMenuOpen={isMenuOpen}
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -150,6 +158,7 @@ export default function Header() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem className="border-b pb-2 " key={`${item}-${index}`}>
             <Link
+              onClick={handleMenuItemClick}
               color={
                 index === 2
                   ? "primary"
@@ -158,15 +167,9 @@ export default function Header() {
                   : "foreground"
               }
               className="w-full"
-              href={
-                item === "Nos produits"
-                  ? "/produits"
-                  : item === "Contactez-nous"
-                  ? "/contactez-nous"
-                  : "/qui-sommes-nous"
-              }
+              href={item.path}
             >
-              {item}
+              {item.label}
             </Link>
           </NavbarMenuItem>
         ))}
