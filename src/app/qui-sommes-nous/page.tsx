@@ -117,35 +117,34 @@ export default function page() {
 
           <div className="mb-12 lg:mb-16 ">
             <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
-              Nos Engagements
+              Nos valeurs
             </h3>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+              Chez Dolphin Équipements, nos valeurs fondamentales sont le socle
+              de notre engagement envers nos clients, nos partenaires et notre
+              équipe.
+            </p>
             <ul className="max-w-[70ch] text-lg text-gray-700 font-light space-y-4 leading-relaxed">
               <li>
                 <span className="font-medium text-gray-700">
-                  Vente et négoce:
+                  Expertise et Excellence
                 </span>{" "}
-                Une large gamme d’équipements hydrauliques et pneumatiques
-                disponibles dans nos boutiques à Tunis.
+                Nous mettons notre savoir-faire au service de vos besoins en
+                garantissant des produits et services de qualité supérieure
               </li>
               <li>
                 <span className="font-medium text-gray-700">
-                  Étude et conseil:
+                  Innovation Continue
                 </span>{" "}
-                Des solutions personnalisées adaptées à vos besoins spécifiques.
+                Nous adoptons des solutions novatrices pour répondre aux défis
+                modernes et offrir des performances optimales.{" "}
               </li>
               <li>
                 <span className="font-medium text-gray-700">
-                  Maintenance et réparation:
+                  Proximité et Confiance
                 </span>{" "}
-                Des services rapides et fiables pour prolonger la durée de vie
-                de vos équipements.
-              </li>
-              <li>
-                <span className="font-medium text-gray-700">
-                  Assainissement et nettoyage:
-                </span>{" "}
-                Filtration, flushing hydraulique, accessoires de nettoyage, et
-                nettoyeurs haute pression pour des performances optimales.
+                Nous construisons des relations durables basées sur la
+                transparence et la satisfaction de nos clients.
               </li>
             </ul>
           </div>
