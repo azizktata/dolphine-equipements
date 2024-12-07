@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
-import { Image } from "@nextui-org/image";
+
 import { Card, CardBody } from "@nextui-org/card";
 import { useRouter, usePathname } from "next/navigation";
 import { Data } from "@/types";
 import { toast } from "sonner";
+import Image from "next/image";
 
 export default function ListCards({ composants }: { composants: Data }) {
   const router = useRouter();
@@ -37,18 +38,16 @@ export default function ListCards({ composants }: { composants: Data }) {
             >
               <CardBody className="overflow-visible bg-white p-0 border-none ">
                 <Image
-                  isZoomed
-                  shadow="sm"
-                  radius="sm"
-                  width="100%"
+                  width={200}
+                  height={250}
                   alt={item.title}
-                  className="w-full object-cover h-[250px]"
-                  src={item.image !== "" ? item.image : undefined}
+                  className="w-auto object-cover h-[250px]"
+                  src={item.image}
                 />
               </CardBody>
             </Card>
             <div className="text-normal text-center lg:text-normal font-light  justify-center py-4">
-              <b>{item.title}</b>
+              <b> {item.title}</b>
             </div>
           </div>
         ))}
