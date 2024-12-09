@@ -25,7 +25,7 @@ export default function ListCards({ composants }: { composants: Data }) {
             <Card
               shadow="sm"
               className="bg-transparent  "
-              isPressable
+              isPressable={item.children && item.children.length > 0}
               onPress={() => {
                 if (item.children && item.children.length > 0) {
                   router.push(

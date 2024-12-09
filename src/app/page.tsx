@@ -25,6 +25,7 @@ export default function Home() {
                 width={320}
                 height={250}
                 className="md:w-full md:h-full xl:p-16"
+                priority
               />
             </div>
 

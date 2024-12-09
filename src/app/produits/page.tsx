@@ -26,7 +26,7 @@ export default async function page() {
           <Breadcrumb>
             <BreadcrumbList className="text-base">
               <BreadcrumbItem>
-                <BreadcrumbLink href="/">Acceuil</BreadcrumbLink>
+                <BreadcrumbLink href="/">Accueil</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
