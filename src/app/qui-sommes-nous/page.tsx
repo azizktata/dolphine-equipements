@@ -119,7 +119,7 @@ export default function page() {
             <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
               Nos valeurs
             </h3>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+            <p className="max-w-[60ch] text-lg text-gray-700 font-light">
               Chez Dolphin Équipements, nos valeurs fondamentales sont le socle
               de notre engagement envers nos clients, nos partenaires et notre
               équipe.
