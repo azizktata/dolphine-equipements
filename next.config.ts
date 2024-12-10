@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
         hostname: 'dolphiv.cluster030.hosting.ovh.net',
         pathname: '/wp-content/uploads/**',
       },
+      { protocol: "https", hostname: "placehold.co" },
     ],
   },
 };
