@@ -18,7 +18,6 @@ import {
 } from "@nextui-org/dropdown";
 
 import { Phone } from "lucide-react";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Button } from "./button";
@@ -53,15 +52,16 @@ export default function Header() {
           className="md:hidden text-gray-200"
         />
         <NavbarBrand>
-          <Link href="/">
-            <Image
+          <Link className="text-white" href="/">
+            {/* <Image
               src={"/logo_dolphin.svg"}
               alt="hydrauliques"
               width={46}
               height={46}
               priority
               className="text-[#316F9E] "
-            />
+            /> */}
+            Dolphin Equipements
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -149,7 +149,7 @@ export default function Header() {
             onClick={handleWhatsAppCall}
           >
             <Phone size={16} />
-            +216 58 432 372
+            +216 58 432 376
           </Button>
         </NavbarItem>
       </NavbarContent>

@@ -33,7 +33,7 @@ export default function Home() {
               <h1 className="text-2xl tracking-widest text-gray-800 font-medium mb-2 sm:text-3xl lg:text-4xl xl:text-5xl ">
                 Dolphin Equipements
               </h1>
-              <h2 className="text-base text-center mb-6  text-[#2E699E] tracking-widest font-medium ">
+              <h2 className="text-base text-center mb-4  text-[#2E699E] tracking-widest font-medium ">
                 Votre partenaire hydraulique & services
               </h2>
               <p className="mb-16  pl-6 md:pl-0  lg:text-lg  font-light text-gray-600">
@@ -58,15 +58,15 @@ export default function Home() {
           <CardSvg
             title="Hydrauliques"
             description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
-            image="/hydrauliques.webp"
+            image="/hydrauliques-2.webp"
           />
           <CardSvg
             title="Pneumatiques"
             description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
-            image="/pneumatiques.webp"
+            image="/pneumatique.webp"
           />
           <CardSvg
-            title="Assainissement & Nettoyage"
+            title="Assainissement et nettoyage"
             description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
             image="/lavage.webp"
           />
@@ -168,7 +168,7 @@ export default function Home() {
         </div>
         <div className="text-center py-8 mb-8 ">
           <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
-            Vous êtes les Bienvenu
+            Vous êtes les Bienvenus
           </h2>
 
           <div className="flex justify-center items-center mt-2">
@@ -181,7 +181,7 @@ export default function Home() {
         </div>
         <div className="w-full h-full">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.3435477984444!2d10.223686475685739!3d36.762325072257866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd379bc05dd4d5%3A0x26a7e7cff34d891e!2sDOLPHIN%20EQUIPEMENTS!5e0!3m2!1sfr!2stn!4v1732542346492!5m2!1sfr!2stn"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.8974444571472!2d10.18840837640533!3d36.820977366527195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd348b69ba1b1d%3A0x544a1cf0ed915d93!2sRue%20Mohamed%20Badra%2C%20Tunis!5e0!3m2!1sfr!2stn!4v1733904716247!5m2!1sfr!2stn"
             style={{
               border: 0,
               width: "100%",

@@ -66,7 +66,7 @@ export default function CardSvg({
           height={300}
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-linear"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-linear"></div>
         {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
 
         <CardBody className="absolute inset-0 mb-16 z-10 flex flex-col items-center justify-center transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-5">

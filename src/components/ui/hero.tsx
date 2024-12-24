@@ -48,10 +48,10 @@ export default function Hero() {
                   {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
                 </div>
                 <CardBody className="absolute inset-0 mb-16 ml-4 lg:ml-14 z-10 flex items-start justify-center">
-                  <div className="mt-12  flex flex-col w-auto mb-6  ">
+                  <div className="mt-12  flex flex-col w-auto mb-4  ">
                     <h1 className="mb-2 max-w-[30ch] font-medium text-xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-widest text-white ">
                       {" "}
-                      Fournisseur D&apos;équipement Hydraulique
+                      Fournisseur des équipements hydrauliques
                     </h1>
                     <h2 className="text-base  text-[#B0CEE8] tracking-widest font-medium ">
                       Dolphin Equipements

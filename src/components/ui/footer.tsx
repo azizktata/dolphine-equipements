@@ -81,7 +81,7 @@ export default function Footer() {
                   height={16}
                   alt="WhatsApp"
                 />
-                +216 58 432 372
+                +216 58 432 376
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} />
