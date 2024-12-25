@@ -55,34 +55,36 @@ export default function CardSvg({
     //     </Link>
     //   </CardFooter>
     // </Card>
-    <Card className="max-w-md  m-auto border-[#FCFAF3]  flex-1 ">
-      <div className="relative w-full h-full group bg-gray-200">
-        <Image
-          removeWrapper
-          alt="Card background"
-          className="z-0 w-full h-full object-cover transition-opacity duration-300 group-hover:brightness-75"
-          src={image}
-          width={350}
-          height={300}
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-linear"></div>
-        {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
+    <div className="flex flex-col ">
+      <Card className="max-w-md  m-auto border-[#FCFAF3]  flex-1 ">
+        <div className="relative w-full h-full group bg-gray-200">
+          <Image
+            removeWrapper
+            alt="Card background"
+            className="z-0 w-full h-full object-cover transition-opacity duration-300 group-hover:brightness-75"
+            src={image}
+            width={350}
+            height={300}
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-linear"></div>
+          {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
 
-        <CardBody className="absolute inset-0 mb-16 z-10 flex flex-col items-center justify-center transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-5">
-          <h1 className="mb-2 text-center font-medium text-xl sm:text-2xl lg:text-4xl tracking-widest text-white">
-            {title}
-          </h1>
-          <Link href={linkHref}>
-            <Button
-              variant={"outline"}
-              className="px-4 py-5 mt-5 rounded-sm text-white font-normal  bg-transparent border-[#B0CEE8]/80"
-            >
-              voir produits
-            </Button>
-          </Link>
-        </CardBody>
+          <CardBody className="absolute inset-0 mb-16 z-10 flex flex-col items-center justify-center transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-5">
+            <Link href={linkHref}>
+              <Button
+                variant={"outline"}
+                className="px-4 py-5 mt-5 rounded-sm text-white font-normal  bg-transparent border-[#B0CEE8]/80"
+              >
+                voir produits
+              </Button>
+            </Link>
+          </CardBody>
+        </div>
+      </Card>
+      <div className="text-lg text-center  font-light  justify-center py-4">
+        <b> {title}</b>
       </div>
-    </Card>
+    </div>
   );
 }

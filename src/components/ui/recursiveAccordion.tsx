@@ -74,7 +74,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                       .join("/")}`
                   );
                 }}
-                className="accordion-trigger pl-3 text-base text-gray-700   capitalize"
+                className="accordion-trigger-other pl-3 text-base text-gray-700   "
               >
                 {element.title}
               </AccordionTrigger>
