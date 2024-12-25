@@ -55,8 +55,8 @@ export default function CardSvg({
     //     </Link>
     //   </CardFooter>
     // </Card>
-    <div className="flex flex-col ">
-      <Card className="max-w-md  m-auto border-[#FCFAF3]  flex-1 ">
+    <div className="flex flex-col flex-1  m-auto">
+      <Card className="   border-[#FCFAF3]  flex-1 ">
         <div className="relative w-full h-full group bg-gray-200">
           <Image
             removeWrapper
@@ -82,7 +82,7 @@ export default function CardSvg({
           </CardBody>
         </div>
       </Card>
-      <div className="text-lg text-center  font-light  justify-center py-4">
+      <div className="text-xl text-center  font-light  justify-center py-4">
         <b> {title}</b>
       </div>
     </div>

@@ -54,7 +54,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-6 mb-32 md:flex-row w-[90%] mx-auto">
+        <div className="flex flex-col gap-4 mb-32 md:flex-row w-[90%]  mx-auto">
           <CardSvg
             title="Hydrauliques"
             description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
