@@ -13,7 +13,7 @@ export const getAll = cache (async (): Promise<Data> => {
     if (!url) {
       throw new Error("URL is not defined");
     }
-    const res = await fetch(url, { next: { revalidate: 360 } });
+    const res = await fetch(url, { next: { revalidate: 850 } });
     const data = await res.json();
     
     if (!res){

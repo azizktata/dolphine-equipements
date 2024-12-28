@@ -31,7 +31,7 @@ export default async function page() {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbPage>
-                  <BreadcrumbLink className="text-[#4588c5]">
+                  <BreadcrumbLink className="text-blue-900">
                     Produits
                   </BreadcrumbLink>
                 </BreadcrumbPage>

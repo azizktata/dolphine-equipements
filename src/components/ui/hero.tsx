@@ -35,7 +35,7 @@ export default function Hero() {
         <CarouselContent className="">
           {images.map((img, index) => (
             <CarouselItem className="" key={index}>
-              <Card className="h-[450px] ">
+              <Card className="h-[550px] ">
                 <div className="relative w-full h-full overflow-hidden bg-gray-100">
                   <Image
                     removeWrapper

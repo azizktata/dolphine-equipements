@@ -42,7 +42,7 @@ export default function ListCards({ composants }: { composants: Data }) {
                   height={250}
                   alt={item.title}
                   className="w-auto object-cover h-[250px]"
-                  src={item.image || "https://placehold.co/600x400?text="}
+                  src={item.image || "https://placehold.co/200x250?text="}
                 />
               </CardBody>
             </Card>

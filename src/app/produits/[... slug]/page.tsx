@@ -13,6 +13,7 @@ import { getAll } from "@/utils/getProduits";
 import ListCards from "@/components/ui/listCards";
 import { Composant, Data } from "@/types";
 import RecursiveAccordion from "@/components/ui/recursiveAccordion";
+import Link from "next/link";
 export default async function page({
   params,
 }: {
@@ -65,14 +66,11 @@ export default async function page({
                       <BreadcrumbSeparator />
                       <BreadcrumbItem>
                         <BreadcrumbPage>
-                          <BreadcrumbLink
-                            className="capitalize text-[#4588c5]"
-                            href="."
-                          >
+                          <Link href="." className="capitalize text-blue-900">
                             <span>
                               {decodeURIComponent(item).replace(/-/g, " ")}
                             </span>
-                          </BreadcrumbLink>
+                          </Link>
                         </BreadcrumbPage>
                       </BreadcrumbItem>
                     </BreadcrumbList>
