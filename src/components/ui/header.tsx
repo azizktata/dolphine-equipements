@@ -49,10 +49,10 @@ export default function Header() {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="md:hidden text-gray-200"
+          className="lg:hidden text-gray-200"
         />
         <NavbarBrand>
-          <Link className="text-white" href="/">
+          <Link className="text-white hidden sm:flex" href="/">
             {/* <Image
               src={"/logo_dolphin.svg"}
               alt="hydrauliques"
@@ -66,7 +66,7 @@ export default function Header() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden md:flex gap-16 " justify="center">
+      <NavbarContent className="hidden lg:flex gap-16 " justify="center">
         <NavbarItem>
           <Link
             className={

@@ -16,7 +16,7 @@ export const getAll = cache (async (): Promise<Data> => {
     const res = await fetch(url, { next: { revalidate: 850 } });
     const data = await res.json();
     
-    if (!res){
+    if (!res.ok){
       throw new Error("Failed to fetch data");
     }
     // setCachedData(data);

@@ -102,7 +102,7 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="mt-12 text-center text-sm font-light text-gray-400 border-t border-gray-600 pt-4">
-        © 2024 Dolphin Equipements. Tous droits réservés.
+        © 2025 Dolphin Equipements. Tous droits réservés.
       </div>
     </footer>
   );

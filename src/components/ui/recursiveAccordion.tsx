@@ -59,7 +59,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
         {element.children && element.children.length > 0 ? (
           <>
             <AccordionItem
-              className="data-[state=open]:border-none "
+              className="data-[state=open]:border-none   border-0 "
               value={element.title.toLowerCase()}
             >
               <AccordionTrigger
@@ -74,24 +74,34 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                       .join("/")}`
                   );
                 }}
-                className={`[&_svg]:hidden hover:bg-gray-100 pl-3 text-base data-[state=open]:font-semibold ${
+                className={` font-light  pl-2 text-[#D7E6F4] text-base data-[state=open]:text-lg  data-[state=open]:font-semibold data-[state=open]:tracking-wider ${
                   element.title.toLowerCase() ===
                   decodeURIComponent(
                     currentPath.split("/").pop() || ""
                   ).replace(/-/g, " ")
-                    ? "font-bold text-blue-800"
-                    : "text-gray-700"
+                    ? "font-bold text-lg text-[#488DCA]"
+                    : "text-[#D7E6F4]"
                 }`}
               >
-                {element.title}
+                <span
+                  className={`${
+                    element.title === "Hydrauliques" ||
+                    element.title === "Pneumatiques" ||
+                    element.title === "Assainissement et Nettoyage"
+                      ? "font-medium text-lg"
+                      : ""
+                  }`}
+                >
+                  {element.title}
+                </span>
               </AccordionTrigger>
-              <AccordionContent className="pl-3  text-base font-light">
+              <AccordionContent className="pl-2    text-base font-light">
                 {renderAccordionItems(element.children, currentPath)}
               </AccordionContent>
             </AccordionItem>
           </>
         ) : (
-          <AccordionContent className="pl-3 hover:bg-gray-100 pt-3 text-left text-base">
+          <AccordionContent className="pl-2    pt-3 text-left  text-base">
             {element.title}
           </AccordionContent>
         )}
@@ -100,16 +110,13 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
   };
   const currentPath = usePathname();
   return (
-    <div className="border-r border-b pr-8 pb-16 shadow-sm">
+    <div className="  shadow-sm bg-[#0B1A28] rounded-xl px-6 py-8">
       <Accordion type="multiple" defaultValue={["produits"]}>
         <AccordionItem
-          className="data-[state=open]:border-none"
+          className="data-[state=open]:border-none "
           value="produits"
         >
-          <AccordionTrigger className=" border-none  text-xl data-[state=open]:font-bold track-widest font-light">
-            Produits
-          </AccordionTrigger>
-          <AccordionContent className="pl-3">
+          <AccordionContent className="pl-3  text-[#EBF3F9]">
             {data.children && renderAccordionItems(data.children, currentPath)}
           </AccordionContent>
         </AccordionItem>

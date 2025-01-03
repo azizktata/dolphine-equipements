@@ -1,9 +1,9 @@
-// import { Data } from "@/types";
+import { Data } from "@/types";
 
-// let cachedData: Data | null = null;
+let cachedData: Data | null = null;
 
-// export const getCachedData = (): Data | null => cachedData;
+export const getCachedData = (): Data | null => cachedData;
 
-// export const setCachedData = (data: Data): void => {
-//     cachedData = data;
-// }
+export const setCachedData = (data: Data): void => {
+    cachedData = data;
+}

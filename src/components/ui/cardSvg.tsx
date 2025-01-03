@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, CardBody } from "@nextui-org/card";
-import { Image } from "@nextui-org/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CardSvg({
   title,
@@ -20,61 +20,25 @@ export default function CardSvg({
       ? "./produits/pneumatiques"
       : "./produits/assainissement-et-nettoyage";
   return (
-    // <Card className="min-w-[350px] max-w-[450px] m-auto border-[#FCFAF3] flex-1 ">
-    //   <CardContent className="pt-4 ">
-    //     <Image
-    //       src={image ?? "/globe.svg"}
-    //       alt="hydrauliques"
-    //       width={64}
-    //       height={64}
-    //       className="text-[#316F9E] "
-    //     />
-    //   </CardContent>
-    //   <CardHeader>
-    //     <CardTitle className="lg:text-xl font-medium tracking-wide">
-    //       {title}
-    //     </CardTitle>
-    //     <CardDescription>
-    //       <p className="text-lg text-gray-500 font-light">{description}</p>
-    //     </CardDescription>
-    //   </CardHeader>
-    //   <CardFooter>
-    //     {/* <Button variant="outline">Cancel</Button> */}
-    //     <Link
-    //       href={
-    //         title === "Hydroliques"
-    //           ? "./produits/hydrauliques"
-    //           : title === "Pneumatiques"
-    //           ? "./produits/pneumatiques"
-    //           : "./produits/assainissement-et-nettoyage"
-    //       }
-    //     >
-    //       <Button className="px-4 py-5 bg-[#488DCA] rounded-sm text-base lg:self-start hover:bg-[#285C8A] mt-8">
-    //         voir produits
-    //       </Button>
-    //     </Link>
-    //   </CardFooter>
-    // </Card>
-    <div className="flex flex-col flex-1  m-auto">
-      <Card className="   border-[#FCFAF3]  flex-1 ">
-        <div className="relative w-full h-full group bg-gray-200">
-          <Image
-            removeWrapper
-            alt="Card background"
-            className="z-0 w-full h-full object-cover transition-opacity duration-300 group-hover:brightness-75"
-            src={image}
-            width={350}
-            height={300}
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-linear"></div>
-          {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
+    <div className="flex flex-col flex-1 w-full m-auto">
+      <Card radius="none" className="border-[#FCFAF3] w-full flex-1 ">
+        <div className=" w-full group bg-gray-200">
+          <div className="relative w-full h-[320px]">
+            <Image
+              alt="Card background"
+              className="z-0  object-cover transition-opacity duration-300 group-hover:brightness-75"
+              src={image}
+              loading="lazy"
+              fill
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-linear"></div>
 
-          <CardBody className="absolute inset-0 mb-16 z-10 flex flex-col items-center justify-center transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-5">
+          <CardBody className="absolute inset-0 mb-16 z-10 flex flex-col items-center justify-end transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-5">
             <Link href={linkHref}>
               <Button
                 variant={"outline"}
-                className="px-4 py-5 mt-5 rounded-sm text-white font-normal  bg-transparent border-[#B0CEE8]/80"
+                className="px-4 py-5 mt-5 rounded-sm text-white font-normal  bg-transparent border-[#CBCCDC]/80"
               >
                 voir produits
               </Button>
@@ -82,7 +46,7 @@ export default function CardSvg({
           </CardBody>
         </div>
       </Card>
-      <div className="text-xl text-center  font-light  justify-center py-4">
+      <div className="text-xl sm:text-sm md:text-md lg:text-xl xl:text-2xl text-center  font-light text-[#EBF3F9] justify-center py-4">
         <b> {title}</b>
       </div>
     </div>

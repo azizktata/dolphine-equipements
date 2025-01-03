@@ -4,19 +4,19 @@ import NextImage from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import CardSvg from "@/components/ui/cardSvg";
-import { Image } from "@nextui-org/image";
 import CarouselPartenaire from "@/components/ui/carouselPartenaire";
 import Link from "next/link";
+import ActiviteContainer from "@/components/ui/activiteContainer";
 
 export default function Home() {
   return (
     <>
       <main>
         <Hero />
-        <div className="my-32">
+        <div className="my-24">
           <div
             id="dolphin"
-            className="w-[90%]  lg:w-[85%]   m-auto flex flex-col md:flex-row md:jusitfy-between  md:gap-8 items-center"
+            className="w-[90%]  lg:w-[85%] xl:w-[80%]  gap-2 m-auto flex flex-col md:flex-row md:jusitfy-between   items-center"
           >
             <div className=" md:w-[55%] lg:w-[45%]">
               <NextImage
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-center md:items-start  m-auto">
-              <h1 className="text-2xl tracking-widest text-gray-800 font-medium mb-2 sm:text-3xl lg:text-4xl xl:text-5xl ">
+              <h1 className="text-2xl tracking-widest text-gray-800 font-medium mb-2  lg:text-4xl xl:text-5xl ">
                 Dolphin Equipements
               </h1>
               <h2 className="text-base text-center mb-4  text-[#2E699E] tracking-widest font-medium ">
@@ -54,26 +54,27 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 mb-32 md:flex-row w-[90%]  mx-auto">
-          <CardSvg
-            title="Hydrauliques"
-            description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
-            image="/hydrauliques-2.webp"
-          />
-          <CardSvg
-            title="Pneumatiques"
-            description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
-            image="/pneumatique.webp"
-          />
-          <CardSvg
-            title="Assainissement et nettoyage"
-            description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
-            image="/lavage.webp"
-          />
-        </div>
-
+        <section className="bg-[#0B1A28] pt-16 pb-8  mb-16">
+          <div className="flex flex-col gap-4 items-center  md:flex-row w-[90%]  mx-auto">
+            <CardSvg
+              title="Hydrauliques"
+              description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
+              image="/hydrauliques-2.webp"
+            />
+            <CardSvg
+              title="Pneumatiques"
+              description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
+              image="/pneumatique.webp"
+            />
+            <CardSvg
+              title="Assainissement et nettoyage"
+              description="Une référence en matière de composants  hydrauliques et pneumatiques TrΔle®. Pompes, moteurs, mini-blocs d'alimentation, diviseurs, vannes, vannes sélectives, électrovannes et bien plus encore"
+              image="/lavage.webp"
+            />
+          </div>
+        </section>
         <div id="activités" className="text-center py-8 mb-8 lg:mb-16">
-          <h2 className="text-3xl lg:text-4xl tracking-wide font-medium text-gray-800 mt-2">
+          <h2 className="text-4xl tracking-wide font-medium text-gray-800 mt-2">
             Nos Activités
           </h2>
 
@@ -86,81 +87,25 @@ export default function Home() {
           </div>
         </div>
         <div className="mb-32">
-          <div className="flex flex-col w-[90%] lg:w-[80%] xl:w-[60%] m-auto items-center">
-            <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
-              <div className="md:w-[45%] ">
-                <h2 className="text-2xl bold text-center md:text-left mb-6 after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#30085E] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
-                  Vente et négoce
-                </h2>
-
-                <p className="hidden text-lg font-light lg:block text-gray-600  mb-4  text-left">
-                  Une large gamme d’équipements hydrauliques et pneumatiques
-                  disponibles dans nos boutiques à Tunis.
-                </p>
-                <p className="text-gray-600 text-lg font-light text-center mb-4 md:text-left">
-                  {" "}
-                  Tous équipements hydraulique & pneumatique dans secteurs
-                  Industries, BTP, Marine
-                </p>
-              </div>
-              <div className="md:w-[50%] md:h-[280px] md:bg-[#F7EDDB] ">
-                <Image
-                  width={350}
-                  height={280}
-                  alt="NextUI hero Image with delay"
-                  src="/activite-1.webp"
-                  className="object-cover  md:my-4 md:mr-4 md:w-full md:h-full rounded-xs md:-ml-3"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
-              <div className="md:w-[45%]">
-                <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#30085E] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
-                  Maintenace et Réparation
-                </h2>
-                <p className="hidden lg:block font-light text-gray-600 text-lg  mb-4  text-left">
-                  Nous offrons des services complets de maintenance et de
-                  réparation pour tous types d’équipements hydrauliques et
-                  pneumatiques
-                </p>
-                <p className="text-gray-600 font-light text-lg text-center mb-4  md:text-left">
-                  {" "}
-                  Pour tous équipements hydraulique & pneumatique dans secteurs
-                  Industries, BTP, Marine
-                </p>
-              </div>
-              <div className="md:w-[50%] md:h-[280px] md:bg-[#F7EDDB] ">
-                <Image
-                  width={350}
-                  height={280}
-                  alt="NextUI hero Image with delay"
-                  src="/activite-2.webp"
-                  className="object-cover  md:my-4 md:mr-4 md:w-full md:h-full rounded-xs md:-ml-3"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col items-center  md:w-[100%] md:flex-row md:jusitfy-between mb-8 md:gap-8 md:mx-auto">
-              <div className="md:w-[45%]">
-                <h2 className="text-2xl bold text-center mb-6 md:text-left after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#30085E] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center lg:after:origin-left">
-                  Étude et conseil
-                </h2>
-                <p className="text-gray-600 font-light text-lg text-center mb-4  md:text-left">
-                  {" "}
-                  Des solutions personnalisées adaptées à vos besoins
-                  spécifiques.pour tous types d’équipements hydrauliques et
-                  pneumatiques
-                </p>
-              </div>
-              <div className="md:w-[50%] md:h-[280px] md:bg-[#F7EDDB] ">
-                <Image
-                  width={350}
-                  height={280}
-                  alt="NextUI hero Image with delay"
-                  src="/activite-3.webp"
-                  className="object-cover  md:my-4 md:mr-4 md:w-full md:h-full rounded-xs md:-ml-3"
-                />
-              </div>
-            </div>
+          <div className="flex flex-col gap-8 lg:w-[90%] mx-auto">
+            <ActiviteContainer
+              title="Vente et négoce"
+              description="Une large gamme d’équipements hydrauliques et pneumatiques disponibles dans nos boutiques à Tunis."
+              image="/act-1.webp"
+            />
+            <ActiviteContainer
+              title="Maintenace et Réparation"
+              description="Nous offrons des services complets de maintenance et de réparation pour tous types d’équipements hydrauliques et pneumatiques."
+              image="/act-2.webp"
+              inverted={true}
+              bgColor="bg-[#F7EDDB]"
+            />
+            <ActiviteContainer
+              title="Étude et conseil"
+              description="Des solutions personnalisées adaptées à vos besoins spécifiques.pour tous types d’équipements hydrauliques et pneumatiques."
+              image="/act-3.webp"
+              bgColor="bg-[#CBCCDC]"
+            />
           </div>
         </div>
         <div id="partenaires" className=" bg-[#E9F1F7] py-16 lg:py-32 mb-32">

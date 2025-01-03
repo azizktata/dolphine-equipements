@@ -46,7 +46,7 @@ export default async function page({
 
   return (
     <div className="">
-      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%]  gap-16  m-auto lg:justify-between lg:items-baseline justify-center min-h-[100vh]">
+      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%]  gap-16  m-auto lg:justify-between lg:items-start justify-center min-h-[100vh]">
         <div className="hidden  lg:flex lg:w-[400px]  flex-col gap-6  border-right">
           <RecursiveAccordion data={data} />
         </div>
@@ -66,7 +66,7 @@ export default async function page({
                       <BreadcrumbSeparator />
                       <BreadcrumbItem>
                         <BreadcrumbPage>
-                          <Link href="." className="capitalize text-blue-900">
+                          <Link href="." className=" text-blue-900 text-base">
                             <span>
                               {decodeURIComponent(item).replace(/-/g, " ")}
                             </span>
