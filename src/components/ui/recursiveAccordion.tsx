@@ -79,7 +79,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                   decodeURIComponent(
                     currentPath.split("/").pop() || ""
                   ).replace(/-/g, " ")
-                    ? "font-bold text-lg text-[#488DCA]"
+                    ? "font-bold text-lg text-blue-400"
                     : "text-[#D7E6F4]"
                 }`}
               >

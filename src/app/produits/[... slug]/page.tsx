@@ -46,12 +46,13 @@ export default async function page({
 
   return (
     <div className="">
-      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%]  gap-16  m-auto lg:justify-between lg:items-start justify-center min-h-[100vh]">
-        <div className="hidden  lg:flex lg:w-[400px]  flex-col gap-6  border-right">
+      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%]  gap-12  m-auto lg:justify-between lg:items-start justify-center min-h-[100vh]">
+        {/* <div className="  lg:flex lg:w-[400px]  flex-col gap-6  border-right"> */}
+        <div className="w-[90%] mx-auto lg:w-[350px]">
           <RecursiveAccordion data={data} />
         </div>
         <div className="flex-1">
-          <Breadcrumb>
+          <Breadcrumb className="hidden sm:flex">
             <BreadcrumbList className="text-base">
               <BreadcrumbItem>
                 <BreadcrumbLink href="/">Accueil</BreadcrumbLink>
@@ -61,14 +62,23 @@ export default async function page({
                 <BreadcrumbLink href="/produits">Produits</BreadcrumbLink>
               </BreadcrumbItem>
               {paramss[" slug"].length > 0
-                ? paramss[" slug"].map((item: string) => (
+                ? paramss[" slug"].map((item: string, index: number) => (
                     <BreadcrumbList key={item}>
                       <BreadcrumbSeparator />
                       <BreadcrumbItem>
                         <BreadcrumbPage>
-                          <Link href="." className=" text-blue-900 text-base">
+                          <Link
+                            href="."
+                            className={`text-base ${
+                              index === paramss[" slug"].length - 1
+                                ? "text-blue-600"
+                                : "text-gray-500"
+                            }`}
+                          >
                             <span>
-                              {decodeURIComponent(item).replace(/-/g, " ")}
+                              {decodeURIComponent(item)
+                                .replace(/-/g, " ")
+                                .replace(/^\w/, (c) => c.toUpperCase())}
                             </span>
                           </Link>
                         </BreadcrumbPage>
