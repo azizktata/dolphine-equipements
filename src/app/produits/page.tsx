@@ -12,7 +12,12 @@ import { getAll } from "@/utils/getProduits";
 
 import ListCards from "@/components/ui/listCards";
 import RecursiveAccordion from "@/components/ui/recursiveAccordion";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  description:
+    "Découvrez nos produits hydrauliques, pneumatiques, et de maintenance et nettoyage industriel. Fournir des produits et services hydrauliques et pneumatiques de qualité. Basés à Tunis",
+};
 export default async function page() {
   const data = await getAll();
 

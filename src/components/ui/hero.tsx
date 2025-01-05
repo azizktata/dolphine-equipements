@@ -41,10 +41,9 @@ export default function Hero() {
                 <div className="relative w-full h-full overflow-hidden bg-gray-100">
                   <Image
                     removeWrapper
-                    alt="Card background"
+                    alt="banniéres des équipemets hydraulique"
                     className="z-0 w-full h-full object-cover rounded-none"
                     src={img}
-                    loading="eager"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-linear"></div>
                   {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}

@@ -3,23 +3,19 @@ import { cache } from "react";
 
 
 export const getAll = cache (async (): Promise<Data> => {
-  // const cachedData = getCachedData();
-  // if (cachedData) {
-  //   console.log("retrieved data from cache");
-  //   return cachedData;
-  // }
+
   try {
     const url = process.env.ELEMENTS_URL;
     if (!url) {
       throw new Error("URL is not defined");
     }
-    const res = await fetch(url, { next: { revalidate: 850 } });
+    const res = await fetch(url, { next: { revalidate: 3600 } });
     const data = await res.json();
     
     if (!res.ok){
       throw new Error("Failed to fetch data");
     }
-    // setCachedData(data);
+
     return data;
   } catch  {
     return { title: "", children: [] };
