@@ -38,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${siteConfig.site_domain}/produits/${post.title
         .toLowerCase()
         .replace(/ /g, "-")}`,
-    // lastModified: new Date(post.modified),
+    lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.5,
   }));

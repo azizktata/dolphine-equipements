@@ -1,26 +1,31 @@
 import { Data } from "@/types";
-import { cache } from "react";
+import { unstable_cache } from "next/cache";
 
+export const getAll = unstable_cache(
+  async (): Promise<Data> => {
+    try {
+      const url = process.env.ELEMENTS_URL;
+      if (!url) {
+        throw new Error("URL is not defined");
+      }
+      const res = await fetch(url, { next: { revalidate: 3600 } });
+      const data = await res.json();
 
-export const getAll = cache (async (): Promise<Data> => {
+      if (!res.ok) {
+        throw new Error("Failed to fetch data");
+      }
 
-  try {
-    const url = process.env.ELEMENTS_URL;
-    if (!url) {
-      throw new Error("URL is not defined");
+      return data;
+    } catch {
+      return { title: "", children: [] };
     }
-    const res = await fetch(url, { next: { revalidate: 3600 } });
-    const data = await res.json();
-    
-    if (!res.ok){
-      throw new Error("Failed to fetch data");
-    }
+  },
+  ["data"], // Unique cache key
+  {
+    revalidate: 3600, // Cache lifetime
+  }
+);
 
-    return data;
-  } catch  {
-    return { title: "", children: [] };
-  } 
-})
 
 
 // export const mockData = {

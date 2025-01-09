@@ -16,7 +16,7 @@ import { Card, CardBody } from "@nextui-org/card";
 
 export default function Hero() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: true })
   );
   const images = [
     "/cover-1.webp",
@@ -24,7 +24,7 @@ export default function Hero() {
     "/cover-3.webp",
     "/cover-4.webp",
     "/cover-5.webp",
-    "/cover-6.webp",
+    // "/cover-6.webp",
   ];
   return (
     <div className="bg-[#f4f8ff] ">
@@ -44,6 +44,7 @@ export default function Hero() {
                     alt="banniéres des équipemets hydraulique"
                     className="z-0 w-full h-full object-cover rounded-none"
                     src={img}
+                    loading="eager"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-linear"></div>
                   {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
