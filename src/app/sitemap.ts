@@ -35,9 +35,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   const produitUrls: MetadataRoute.Sitemap = produits.children.map((post) => ({
-    url: `${siteConfig.site_domain}/produits/${post.title
+    url: `${siteConfig.site_domain}/produits/${decodeURIComponent(post.title
         .toLowerCase()
-        .replace(/ /g, "-")}`,
+        .replace(/ /g, "-"))}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.5,

@@ -26,10 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = paramss[" slug"][paramss[" slug"].length - 1];
 
   return {
-    title: title
-      .split("-")
-      .join(" ")
-      .replace(/^\w/, (c) => c.toUpperCase()),
+    title: decodeURIComponent(
+      title
+        .split("-")
+        .join(" ")
+        .replace(/^\w/, (c) => c.toUpperCase())
+    ),
   };
 }
 export default async function page({ params }: Props) {
