@@ -84,7 +84,7 @@ export default async function page({ params }: Props) {
                         <BreadcrumbItem>
                           <BreadcrumbPage>
                             <Link
-                              href="."
+                              href={`/produits/${decodeURIComponent(item)}`}
                               className={`text-base ${
                                 index === paramss[" slug"].length - 1
                                   ? "text-blue-600"
