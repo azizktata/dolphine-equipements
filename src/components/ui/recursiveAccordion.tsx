@@ -27,7 +27,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
         children: Composant[],
         targetTitle: string
       ): boolean => {
-        console.log(activeItems);
+        // console.log(activeItems);
         for (const child of children) {
           if (child.title === targetTitle) {
             return true;
@@ -74,12 +74,12 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                       .join("/")}`
                   );
                 }}
-                className={` font-light  pl-2 text-[#D7E6F4] text-base data-[state=open]:text-lg  data-[state=open]:font-semibold data-[state=open]:tracking-wider ${
+                className={` font-light  pl-2 text-[#D7E6F4] text-base data-[state=open]:text-lg  data-[state=open]:font-medium data-[state=open]:text-[#99CFFF] sm:data-[state=open]:tracking-wide ${
                   element.title.toLowerCase() ===
                   decodeURIComponent(
                     currentPath.split("/").pop() || ""
                   ).replace(/-/g, " ")
-                    ? "font-bold text-lg text-blue-400"
+                    ? " text-lg data-[state=open]:text-[#488DCA] data-[state=open]:font-semibold"
                     : "text-[#D7E6F4]"
                 }`}
               >
@@ -110,7 +110,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
   };
   const currentPath = usePathname();
   return (
-    <div className="  shadow-sm bg-[#0B1A28] rounded-xl px-6 py-8">
+    <div className="  shadow-sm bg-[#0B1A28] rounded-xl px-3 sm:px-6 py-8">
       <Accordion type="multiple" defaultValue={["produits"]}>
         <AccordionItem
           className="data-[state=open]:border-none "

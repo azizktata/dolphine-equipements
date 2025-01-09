@@ -64,7 +64,7 @@ export default async function page({ params }: Props) {
       <div className="">
         <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%]  gap-12  m-auto lg:justify-between lg:items-start justify-center min-h-[100vh]">
           {/* <div className="  lg:flex lg:w-[400px]  flex-col gap-6  border-right"> */}
-          <div className="w-[90%] mx-auto lg:w-[350px]">
+          <div className="w-[90%] mx-auto lg:w-[380px]">
             <RecursiveAccordion data={data} />
           </div>
           <div className="flex-1">
