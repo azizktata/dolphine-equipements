@@ -84,7 +84,14 @@ export default async function page({ params }: Props) {
                         <BreadcrumbItem>
                           <BreadcrumbPage>
                             <Link
-                              href={`/produits/${decodeURIComponent(item)}`}
+                              href={
+                                Array.isArray(paramss[" slug"])
+                                  ? `/produits/${paramss[" slug"]
+                                      .slice(0, index + 1) // Ensure it slices the path up to the current item
+                                      .map((s: string) => decodeURIComponent(s)) // Decode each slug segment
+                                      .join("/")}`
+                                  : "."
+                              }
                               className={`text-base ${
                                 index === paramss[" slug"].length - 1
                                   ? "text-blue-600"
