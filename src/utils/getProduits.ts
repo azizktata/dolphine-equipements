@@ -23,10 +23,10 @@ export const getAll = memoize (async (): Promise<Data> => {
 }, {
   persist: true,
   duration: 3600,
-  revalidateTags: ()=> ['produits:elements'],
+  // revalidateTags: ()=> ['produits:elements'],
   suppressWarnings: true, 
-  log: ['datacache', 'verbose', 'dedupe'],
-  logid: 'produits:elements',
+  // log: ['datacache', 'verbose', 'dedupe'],
+  // logid: 'produits:elements',
 })
 
 
