@@ -1,31 +1,28 @@
 import { Data } from "@/types";
-import { unstable_cache } from "next/cache";
+// import { cache } from "react";
+import { memoize} from "nextjs-better-unstable-cache"
 
-export const getAll = unstable_cache(
-  async (): Promise<Data> => {
-    try {
-      const url = process.env.ELEMENTS_URL;
-      if (!url) {
-        throw new Error("URL is not defined");
-      }
-      const res = await fetch(url, { next: { revalidate: 3600 } });
-      const data = await res.json();
+export const getAll = memoize (async (): Promise<Data> => {
 
-      if (!res.ok) {
-        throw new Error("Failed to fetch data");
-      }
-
-      return data;
-    } catch {
-      return { title: "", children: [] };
+  try {
+    const url = process.env.ELEMENTS_URL;
+    if (!url) {
+      throw new Error("URL is not defined");
     }
-  },
-  ["data"], // Unique cache key
-  {
-    revalidate: 3600, // Cache lifetime
-  }
-);
+    const res = await fetch(url, { next: { revalidate: 3600 } });
+    const data = await res.json();
+    
+    if (!res.ok){
+      throw new Error("Failed to fetch data");
+    }
 
+    return data;
+  } catch  {
+    return { title: "", children: [] };
+  } 
+}, {
+  persist: true
+})
 
 
 // export const mockData = {
