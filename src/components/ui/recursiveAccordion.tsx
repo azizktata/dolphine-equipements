@@ -59,7 +59,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
         {element.children && element.children.length > 0 ? (
           <>
             <AccordionItem
-              className="data-[state=open]:border-none   border-0 "
+              className="data-[state=open]:border-none mt-2  border-0 "
               value={element.title.toLowerCase()}
             >
               <AccordionTrigger
@@ -74,34 +74,33 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                       .join("/")}`
                   );
                 }}
-                className={` font-light  pl-2 text-[#D7E6F4] text-base data-[state=open]:text-lg  data-[state=open]:font-medium data-[state=open]:text-[#99CFFF] sm:data-[state=open]:tracking-wide ${
-                  element.title.toLowerCase() ===
-                  decodeURIComponent(
-                    currentPath.split("/").pop() || ""
-                  ).replace(/-/g, " ")
-                    ? " text-lg data-[state=open]:text-[#488DCA] data-[state=open]:font-semibold"
-                    : "text-[#D7E6F4]"
+                className={`accordion-trigger pl-2 text-base font-light text-left sm:text-lg
+                  data-[state=open]:font-medium data-[state=open]:tracking-wide
+                  ${
+                    element.title.toLowerCase() ===
+                    decodeURIComponent(
+                      currentPath.split("/").pop() || ""
+                    ).replace(/-/g, " ")
+                      ? "text-[#4187C6] font-semibold"
+                      : "text-[#656565]"
+                  } ${
+                  element.title === "Hydrauliques" ||
+                  element.title === "Pneumatiques" ||
+                  element.title === "Assainissement et Nettoyage"
+                    ? "bg-[#4187C6] text-white  rounded-md  px-3 font-medium"
+                    : ""
                 }`}
               >
-                <span
-                  className={`${
-                    element.title === "Hydrauliques" ||
-                    element.title === "Pneumatiques" ||
-                    element.title === "Assainissement et Nettoyage"
-                      ? "font-medium text-lg"
-                      : ""
-                  }`}
-                >
-                  {element.title}
-                </span>
+                {element.title}
               </AccordionTrigger>
-              <AccordionContent className="pl-2    text-base font-light">
+              <AccordionContent className="pl-4 text-[#656565] text-sm font-light">
+                {" "}
                 {renderAccordionItems(element.children, currentPath)}
               </AccordionContent>
             </AccordionItem>
           </>
         ) : (
-          <AccordionContent className="pl-2    pt-3 text-left  text-base">
+          <AccordionContent className="pl-2 pt-2 text-left text-base text-[#656565]">
             {element.title}
           </AccordionContent>
         )}
@@ -110,13 +109,13 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
   };
   const currentPath = usePathname();
   return (
-    <div className="  shadow-sm bg-[#0B1A28] rounded-xl px-3 sm:px-6 py-8">
+    <div className="shadow-md bg-[#E6F3FB] rounded-xl px-4 py-6">
       <Accordion type="multiple" defaultValue={["produits"]}>
         <AccordionItem
           className="data-[state=open]:border-none "
           value="produits"
         >
-          <AccordionContent className="pl-3  text-[#EBF3F9]">
+          <AccordionContent className=" text-[#656565]">
             {data.children && renderAccordionItems(data.children, currentPath)}
           </AccordionContent>
         </AccordionItem>

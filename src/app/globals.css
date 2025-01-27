@@ -3,36 +3,20 @@
 @tailwind utilities;
 
 body {
-  font-family: var(--font-roboto);
+  font-family: var(--font-dm_sans);
+}
+h1 {
+  font-family: var(--font-inter);
 }
 
-.accordion-trigger {
-  font-weight: normal;
-  transition: font-weight 0.2s ease;
-}
-
-.accordion-trigger[data-state="open"] {
-  font-weight: bold;
-  font-size: x-large;
-  color: #092844;
-  text-decoration: underline;
-}
-.accordion-trigger-other {
-  font-weight: normal;
-  transition: font-weight 0.2s ease;
-}
-
-.accordion-trigger-other[data-state="open"] {
-  font-weight: bold;
-  font-size: large;
-  color: #092844;
-  text-decoration: underline;
-}
 .group-hover\:translate-y-0 {
   will-change: transform, opacity;
 }
 p {
   max-width: 50ch;
+}
+.accordion-trigger svg {
+  fill: #ffff; /* Default chevron color */
 }
 
 @layer base {
@@ -64,6 +48,8 @@ p {
     --radius: 0.5rem;
     --font-roboto: "Roboto", sans-serif;
     --font-merriweather: "Merriweather", serif;
+    --font-dm_sans: "DM Sans", sans-serif;
+    --font-inter: "Inter", sans-serif;
   }
   .dark {
     --background: 240 10% 3.9%;

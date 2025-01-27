@@ -10,22 +10,17 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-} from "@nextui-org/dropdown";
 
 import { Phone } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Button } from "./button";
+import Image from "next/image";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    { label: "Qui sommes nous", path: "/qui-sommes-nous" },
+    { label: "Accueil", path: "/" },
     { label: "Nos produits", path: "/produits" },
     { label: "Contactez-nous", path: "/contactez-nous" },
   ];
@@ -43,97 +38,57 @@ export default function Header() {
       shouldHideOnScroll
       isBordered
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-[#092844]"
+      className="bg-white py-4 lg:px-4 border-[#4187C6] border-b-3"
       isMenuOpen={isMenuOpen}
+      maxWidth="full"
     >
-      <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="lg:hidden text-gray-200"
-        />
-        <NavbarBrand>
-          <Link className="text-white hidden sm:flex" href="/">
-            {/* <Image
-              src={"/logo_dolphin.svg"}
-              alt="hydrauliques"
-              width={46}
-              height={46}
-              priority
-              className="text-[#316F9E] "
-            /> */}
-            Dolphin Equipements
-          </Link>
-        </NavbarBrand>
-      </NavbarContent>
+      <NavbarBrand className=" max-w-[280px]">
+        <Link className="text-white " href="/">
+          <Image
+            src={"/logo.svg"}
+            alt="logo dolphin"
+            width={211}
+            height={60}
+            priority
+          />
+        </Link>
+      </NavbarBrand>
 
-      <NavbarContent className="hidden lg:flex gap-16 " justify="center">
+      <NavbarContent
+        className=" hidden md:flex gap-8 font-medium "
+        justify="start"
+      >
         <NavbarItem>
           <Link
             className={
-              currentPath.includes("/qui-sommes-nous")
-                ? "text-white text-lg"
-                : "text-gray-300 text-lg hover:text-gray-400 cursor-pointer"
+              currentPath.includes("/")
+                ? "text-[#222222] text-lg "
+                : "text-[#222222] text-lg hover:text-gray-400 cursor-pointer"
             }
-            href="/qui-sommes-nous"
+            href="/"
           >
-            Qui sommes nous
+            Accueil
           </Link>
         </NavbarItem>
-        <Dropdown>
-          <NavbarItem>
-            <DropdownTrigger>
-              <span
-                className={
-                  currentPath.includes("/produits")
-                    ? "text-white text-lg"
-                    : "text-gray-300 text-lg hover:text-gray-400 cursor-pointer"
-                }
-              >
-                Nos produits
-              </span>
-            </DropdownTrigger>
-          </NavbarItem>
-          <DropdownMenu
-            aria-label="Produits Dolhpines"
-            className="w-auto  text-center"
-            itemClasses={{
-              base: "gap-4",
-            }}
+
+        <NavbarItem>
+          <span
+            className={
+              currentPath.includes("/produits")
+                ? "text-[#222222] text-lg"
+                : "text-[#222222] text-lg hover:text-gray-400 cursor-pointer"
+            }
           >
-            <DropdownItem key="autoscaling">
-              <Link className="text-base" href="/produits/hydrauliques">
-                Hydrauliques
-              </Link>
-            </DropdownItem>
-            <DropdownItem
-              key="usage_metrics"
-              // description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-              // startContent={icons.activity}
-            >
-              <Link className="text-base" href="/produits/pneumatiques">
-                Pneumatiques
-              </Link>
-            </DropdownItem>
-            <DropdownItem
-              key="production_ready"
-              // description="ACME runs on ACME, join us and others serving requests at web scale."
-              // startContent={icons.flash}
-            >
-              <Link
-                className="text-base"
-                href="/produits/assainissement-et-nettoyage"
-              >
-                Assainissement
-              </Link>
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+            Nos produits
+          </span>
+        </NavbarItem>
+
         <NavbarItem>
           <Link
             className={
               currentPath.includes("/contactez-nous")
-                ? "text-white text-lg"
-                : "text-gray-300 text-lg hover:text-gray-400 cursor-pointer"
+                ? "text-[#222222] text-md"
+                : "text-[#222222] text-lg hover:text-gray-400 cursor-pointer"
             }
             href="/contactez-nous"
           >
@@ -141,15 +96,40 @@ export default function Header() {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
+      <NavbarContent className="md:hidden" justify="end">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        />
+      </NavbarContent>
+      <NavbarContent className="hidden lg:flex" justify="end">
+        <NavbarItem>
+          <a
+            target="_blank"
+            href="https://www.google.com/maps/place/DOLPHIN+EQUIPEMENTS/@36.7623251,10.2236865,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd379bc05dd4d5:0x26a7e7cff34d891e!8m2!3d36.7623251!4d10.2262614!16s%2Fg%2F11t4fw6lrr?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+          >
+            <Button
+              className="bg-[#4187C640] text-[#222222] text-md font-normal capitalize px-6 py-6"
+              variant="outline"
+            >
+              <Image
+                src={"/maps.svg"}
+                alt="logo google maps"
+                width={22}
+                height={22}
+                priority
+              />
+              localisation
+            </Button>
+          </a>
+        </NavbarItem>
         <NavbarItem>
           <Button
-            className="text-[#2E699E] hover:text-[#1F3A75] "
+            className="bg-[#4187C640] text-[#222222] font-normal px-6 py-6"
             variant="outline"
             onClick={handleWhatsAppCall}
           >
-            <Phone size={16} />
-            +216 58 432 376
+            <Phone size={16} color="#4085C6" />
+            58 432 376
           </Button>
         </NavbarItem>
       </NavbarContent>

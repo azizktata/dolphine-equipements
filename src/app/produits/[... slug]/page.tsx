@@ -15,6 +15,7 @@ import { Composant, Data } from "@/types";
 import RecursiveAccordion from "@/components/ui/recursiveAccordion";
 import Link from "next/link";
 import { Metadata } from "next";
+import ListCardsV2 from "@/components/ui/listCardsV2";
 
 type Props = {
   params: Promise<{ " slug": string | string[] }>;
@@ -68,7 +69,12 @@ export default async function page({ params }: Props) {
             <RecursiveAccordion data={data} />
           </div>
           <div className="flex-1">
-            <Breadcrumb className="hidden sm:flex">
+            <h1 className="text-2xl font-medium capitalize">
+              {decodeURIComponent(title)
+                .replace(/-/g, " ")
+                .replace(/^\w/, (c) => c.toUpperCase())}
+            </h1>
+            {/* <Breadcrumb className="hidden sm:flex">
               <BreadcrumbList className="text-base">
                 <BreadcrumbItem>
                   <BreadcrumbLink href="/">Accueil</BreadcrumbLink>
@@ -110,9 +116,9 @@ export default async function page({ params }: Props) {
                     ))
                   : null}
               </BreadcrumbList>
-            </Breadcrumb>
+            </Breadcrumb> */}
 
-            {composants && <ListCards composants={composants} />}
+            {composants && <ListCardsV2 composants={composants} />}
           </div>
         </div>
       </div>

@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto, DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import { Toaster } from "sonner";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import SubHeader from "@/components/ui/subHeader";
 
-const roboto = Roboto({
+const inter = Inter({
   weight: ["300", "400", "500"],
   subsets: ["latin"],
 });
-
+const DM_SANS = DM_Sans({
+  weight: ["300", "400", "500"],
+  subsets: ["latin"],
+});
 export const metadata: Metadata = {
   title: "Dolphin Équipements",
   description:
@@ -27,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto}  antialiased`}>
+      <body className={`${DM_SANS} ${inter}  antialiased`}>
         <SpeedInsights />
         <Toaster
           toastOptions={{
@@ -38,6 +42,7 @@ export default function RootLayout({
           }}
         />
         <Header />
+        <SubHeader />
         {children}
         <Footer />
       </body>

@@ -5,32 +5,22 @@ export default function ActiviteContainer({
   title,
   description,
   image,
-  inverted = false,
-  bgColor = "bg-[#D7E6F4]",
 }: {
   title: string;
   description: string;
   image: string;
-  inverted?: boolean;
-  bgColor?: string;
 }) {
-  const order1 = inverted ? "order-2" : "order-1";
-  const order2 = inverted ? "order-2 sm:order-1" : "order-2";
   return (
-    <div className="w-[90%] mx-auto flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
+    <div className="w-[90%] mx-auto flex flex-col items-center gap-8 md:flex-row md:justify-between mt-8 sm:mt-0">
       <div
-        className={`max-w-sm mx-auto flex flex-col items-center sm:items-start sm:w-1/2 sm:max-w-lg md:max-w-xl xl:max-w-2xl ${order1}`}
+        className={` mx-auto flex flex-col items-start md:w-1/2 md:max-w-lg md:max-w-xl xl:max-w-2xl `}
       >
-        <h2
-          className={`text-3xl md:text-4xl bold  mb-6 after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#30085E] after:mt-3 after:rounded-md after:scale-x-50 after:origin-center sm:after:origin-left`}
-        >
-          {title}
-        </h2>
-        <div className="text-center sm:text-left">
-          <p className="hidden text-lg font-light lg:block text-gray-600  mb-4 ">
+        <h2 className={`text-3xl md:text-4xl bold  mb-6 `}>{title}</h2>
+        <div className="text-left">
+          <p className="hidden text-lg font-light lg:block text-white  mb-4 ">
             {description}
           </p>
-          <p className="text-gray-600 text-lg font-light mb-4 ">
+          <p className="text-white text-lg font-light mb-4 ">
             {" "}
             Tous équipements hydraulique & pneumatique dans secteurs Industries,
             BTP, Marine
@@ -38,9 +28,7 @@ export default function ActiviteContainer({
         </div>
       </div>
       {/* md:bg-[#F7EDDB] */}
-      <div
-        className={`relative w-full h-[280px] ${bgColor} sm:w-1/2 md:h-[350px] ${order2}`}
-      >
+      <div className={`relative w-full h-[280px]  md:w-1/2 md:h-[350px] `}>
         <Image
           alt="NextUI hero Image with delay"
           src={image}
