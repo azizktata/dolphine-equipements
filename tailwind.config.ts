@@ -12,6 +12,10 @@ export default {
   ],
   theme: {
   	extend: {
+		screens: {
+			'2xl': '1536px', // New breakpoint for large screens
+			'xs': '415px', // Example of a custom smaller breakpoint
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "@/components/ui/hero";
 import NextImage from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapIcon, Phone } from "lucide-react";
+import { ArrowRight, MapPin, Phone } from "lucide-react";
 
 import Link from "next/link";
 import ContactCarousel from "@/components/ui/contactCarousel";
@@ -61,11 +61,12 @@ export default async function Home() {
         <section>
           <div className="flex justify-between items-center w-[90%] mx-auto mt-16">
             <h1 className="text-4xl font-medium">Nos Catégories</h1>
-            <Link href="/produits">
-              <Button className="bg-[#4187C6] hidden md:flex rounded-xl text-base lg:text-lg px-10 py-7 text-white  font-normal  hover:bg-[#1F3A75]">
-                Voir nos produits
-              </Button>
-            </Link>
+            <Button
+              asChild
+              className="bg-[#4187C6] hidden md:flex rounded-xl text-base lg:text-lg px-10 py-7 text-white  font-normal  hover:bg-[#1F3A75]"
+            >
+              <Link href="/produits">Voir nos produits</Link>
+            </Button>
           </div>
           <div className="flex flex-col items-center gap-4 w-[90%]  mx-auto md:flex-row  justify-center my-16">
             <CardCategorie title="Hydrauliques" img="/hydrauliques-v1.png" />
@@ -91,10 +92,10 @@ export default async function Home() {
               className="w-full lg:w-[90%] mt-8 lg:mt-0  gap-2 mx-auto flex flex-col sm:flex-row sm:jusitfy-between   items-center"
             >
               <div className="flex flex-col items-center sm:items-start order-2 sm:order-1 w-full sm:w-1/2 m-auto">
-                <h1 className="text-3xl sm:text-2xl text-center  text-gray-800 font-medium mb-2  lg:text-4xl xl:text-5xl ">
+                <h1 className="text-2xl xs:text-3xl text-center  text-gray-800 font-medium mb-2  lg:text-4xl xl:text-5xl ">
                   Dolphin Equipements
                 </h1>
-                <h2 className="text-base tracking-widest sm:text-sm sm:tracking-normal  md:text-base text-center mb-4  text-[#2E699E] md:tracking-wide font-medium ">
+                <h2 className="text-sm xs:text-base tracking-widest sm:text-sm sm:tracking-normal  md:text-base text-center mb-4  text-[#2E699E] md:tracking-wide font-medium ">
                   Votre partenaire hydraulique & services
                 </h2>
                 <p className="mb-16 max-w-[45ch] lg:text-lg  font-light text-gray-600">
@@ -107,13 +108,13 @@ export default async function Home() {
                 </p>
 
                 <Link className="self-start " href="/qui-sommes-nous">
-                  <Button className="bg-[#2E699E] rounded-sm text-base lg:text-lg px-4 py-6 ml-4 sm:ml-0 text-white  font-normal  hover:bg-[#1F3A75]">
+                  <Button className="bg-[#4187C6] capitalize rounded-sm text-base lg:text-lg px-4 py-6 ml-4 sm:ml-0 text-white  font-normal  hover:bg-[#1F3A75]">
                     plus d&apos;infos
                     <ArrowRight size={24} />
                   </Button>
                 </Link>
               </div>
-              <div className=" md:w-[50%] order-1 md:order-2">
+              <div className="sm:w-[40%] md:w-[50%] order-1 md:order-2">
                 <NextImage
                   src={"/logo_dolphin.webp"}
                   alt="logo dolphin"
@@ -138,10 +139,12 @@ export default async function Home() {
 
           <div id="hydrauliques" className="flex flex-col">
             <div className="flex justify-between items-center w-[90%] mx-auto mt-16">
-              <h1 className="text-2xl font-medium">Hydrauliques</h1>
+              <h1 className="text-xl sm:text-2xl  font-medium after:block after:w-48 after:h-[2px] after:bg-[#4085C6] after:mt-1">
+                Hydrauliques
+              </h1>
               <Link
                 href="/produits/hydrauliques"
-                className="flex items-center gap-2 text-[#4187C6]"
+                className="flex items-center text-sm underline sm:no-underline sm:text-base gap-2 text-[#4187C6]"
               >
                 Plus de produits
                 <Image
@@ -161,10 +164,12 @@ export default async function Home() {
           </div>
           <div id="Pneumatiques" className="flex flex-col">
             <div className="flex justify-between items-center w-[90%] mx-auto mt-16">
-              <h1 className="text-2xl font-medium">Pneumatiques</h1>
+              <h1 className="text-xl sm:text-2xl  font-medium after:block after:w-48 after:h-[2px] after:bg-[#4085C6] after:mt-1">
+                Pneumatiques
+              </h1>
               <Link
                 href="/produits/pneumatiques"
-                className="flex items-center gap-2 text-[#4187C6]"
+                className="flex items-center gap-2  text-sm underline sm:no-underline sm:text-base text-[#4187C6]"
               >
                 Plus de produits
                 <Image
@@ -184,12 +189,12 @@ export default async function Home() {
           </div>
           <div id="Assainissements et nettoyage" className="flex flex-col">
             <div className="flex justify-between items-center w-[90%] mx-auto mt-16">
-              <h1 className="text-2xl font-medium">
+              <h1 className="text-xl sm:text-2xl font-medium after:block after:w-48 after:h-[2px] after:bg-[#4085C6] after:mt-1">
                 Assainissements et nettoyage
               </h1>
               <Link
                 href="/produits/assainissement-et-nettoyage"
-                className="flex items-center gap-2 text-[#4187C6]"
+                className="flex items-center gap-2  text-sm underline sm:no-underline sm:text-base text-[#4187C6]"
               >
                 Plus de produits
                 <Image
@@ -213,7 +218,7 @@ export default async function Home() {
         </section>
 
         <section
-          id="nos-marques"
+          id="nos-partenaires"
           className="mx-auto mt-16 flex flex-col w-[90%] mb-8"
         >
           <h1 className="text-3xl font-semibold">Nos Marques</h1>
@@ -247,10 +252,15 @@ export default async function Home() {
               par téléphone ou consultez notre position sur la carte ci-dessous.
             </p>
             <div className="flex items-center gap-8">
-              <Button className="bg-[#4085C6] rounded-xs text-base lg:text-lg px-4 py-6 text-white  font-normal  hover:bg-[#1F3A75]">
-                <MapIcon size={24} />
-                Localisation
-              </Button>
+              <a
+                target="_blank"
+                href="https://www.google.com/maps/place/DOLPHIN+EQUIPEMENTS/@36.7623251,10.2236865,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd379bc05dd4d5:0x26a7e7cff34d891e!8m2!3d36.7623251!4d10.2262614!16s%2Fg%2F11t4fw6lrr?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+              >
+                <Button className="bg-[#4085C6] rounded-xs text-base lg:text-lg px-4 py-6 text-white  font-normal  hover:bg-[#1F3A75]">
+                  <MapPin size={24} />
+                  Localisation
+                </Button>
+              </a>
               <Button className="bg-[#4085C6] rounded-xs text-base lg:text-lg px-4 py-6 text-white  font-normal  hover:bg-[#1F3A75]">
                 <Phone size={24} />
                 58 432 376

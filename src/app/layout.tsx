@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Roboto, DM_Sans, Inter } from "next/font/google";
+import { DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import { Toaster } from "sonner";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import SubHeader from "@/components/ui/subHeader";
+import TopBar from "@/components/ui/topBar";
 
 const inter = Inter({
   weight: ["300", "400", "500"],
@@ -41,6 +42,7 @@ export default function RootLayout({
             },
           }}
         />
+        <TopBar />
         <Header />
         <SubHeader />
         {children}

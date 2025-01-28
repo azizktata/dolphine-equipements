@@ -15,13 +15,13 @@ export default function page() {
     <>
       <div className="flex flex-col">
         <div className="w-full mb-16">
-          <Card className="h-[400px] rounded-none">
+          <Card className="h-[500px] rounded-none">
             <div className="relative w-full h-full">
               <Image
                 removeWrapper
                 alt="Card background"
                 className="z-0 w-full h-full object-cover rounded-none"
-                src={"/cover-4.webp"}
+                src={"/cover-6.webp"}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-linear"></div>
             </div>
@@ -94,7 +94,7 @@ export default function page() {
         <div className="flex flex-col lg:flex-row justify-between lg:w-[90%] xl:w-[85%] lg:self-center">
           <div className="w-[90%] md:w-auto  mx-auto   self-center lg:self-start  mb-16 flex flex-col items-start ">
             <div className="mb-12  lg:mb-16">
-              <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4   after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
+              <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4   after:content-[''] after:block after:w-1/4 after:h-[2px] after:bg-[#4085C6] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
                 Qui sommes nous?
               </h3>
               <p className="max-w-[70ch] text-lg text-gray-700 font-light">
@@ -111,7 +111,7 @@ export default function page() {
             </div>
 
             <div className="mb-12 lg:mb-16">
-              <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4 after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
+              <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4 after:content-[''] after:block after:w-1/4 after:h-[2px] after:bg-[#4085C6] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
                 Notre mission
               </h3>
               <p className="max-w-[60ch] text-lg text-gray-700 font-light">
@@ -126,7 +126,7 @@ export default function page() {
             </div>
 
             <div className="mb-12 lg:mb-16 ">
-              <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
+              <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  after:content-[''] after:block after:w-1/4 after:h-[2px] after:bg-[#4085C6] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
                 Nos valeurs
               </h3>
               <p className="max-w-[60ch] text-lg text-gray-700 font-light">
@@ -159,7 +159,7 @@ export default function page() {
               </ul>
             </div>
             <div className="mb-12 lg:mb-16 ">
-              <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  after:content-[''] after:block after:w-1/4 after:h-[1px] after:bg-[#30085E] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
+              <h3 className="text-2xl font-medium text-gray-800 lg:text-3xl mb-4  after:content-[''] after:block after:w-1/4 after:h-[2px] after:bg-[#4085C6] after:mt-2 after:rounded-md after:scale-x-100 after:origin-left">
                 {" "}
                 Pourquoi choisir dolphin équipements ?
               </h3>
@@ -209,24 +209,24 @@ export default function page() {
                 alt=""
                 className="w-full rounded-2xl"
               />
-              <Image
+              {/* <Image
                 src="/partenaire-2.webp"
                 alt=""
                 className="w-full rounded-2xl"
-              />
-            </div>
-            <div className="flex items-center gap-20">
-              <Image
-                src="/partenaire-3.webp"
-                alt=""
-                className="w-full rounded-2xl bg-gray-800"
-              />
+              /> */}
               <Image
                 src="/partenaire-4.webp"
                 alt=""
                 className="w-full rounded-2xl"
               />
             </div>
+            {/* <div className="flex items-center gap-20">
+              <Image
+                src="/partenaire-3.webp"
+                alt=""
+                className="w-full rounded-2xl bg-gray-800"
+              />
+            </div> */}
             <div className="flex items-center gap-8">
               <Image
                 src="/partenaire-5.webp"
@@ -251,7 +251,7 @@ export default function page() {
                 className="w-full rounded-2xl"
               />
             </div>
-            <div className="flex gap-16 items-center">
+            {/* <div className="flex gap-16 items-center">
               <Image
                 src="/partenaire-11.webp"
                 alt=""
@@ -264,7 +264,7 @@ export default function page() {
                 alt=""
                 className="w-full  rounded-2xl"
               />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className=" bg-[#E9F1F7] py-16 lg:py-32 mb-32 xl:hidden">

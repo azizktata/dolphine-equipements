@@ -16,7 +16,30 @@ p {
   max-width: 50ch;
 }
 .accordion-trigger svg {
-  fill: #ffff; /* Default chevron color */
+  color: #ffff; /* Default chevron color */
+}
+.custom-scrollbar {
+  overflow-y: auto; /* Always show scrollbar */
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Adjust width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #c8c8c8; /* Track color */
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #4187c6; /* Blue scrollbar thumb */
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #306593; /* Darker blue on hover */
 }
 
 @layer base {

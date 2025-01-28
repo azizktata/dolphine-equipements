@@ -9,7 +9,13 @@ import Autoplay from "embla-carousel-autoplay";
 import { Image } from "@nextui-org/image";
 
 export default function ContactCarousel() {
-  const plugin = React.useRef(Autoplay());
+  const plugin = React.useRef(
+    Autoplay({
+      delay: 1500, // No pause, keep it moving
+      stopOnInteraction: false, // Don't stop when user interacts
+      stopOnMouseEnter: false, // Don't stop when hovering
+    })
+  );
 
   const partenairs = [
     "Contactez-nous sur: 58 432 376",
@@ -34,11 +40,18 @@ export default function ContactCarousel() {
       <CarouselContent className="m-auto flex ">
         {partenairs.map((contact, index) => (
           <CarouselItem
-            className=" sm:basis-1/3 md:basis-1/4 flex justify-center gap-10 items-center font-medium text-lg"
+            className=" md:basis-1/2  xl:basis-1/3 flex justify-center gap-10 items-center font-medium text-lg"
             key={index}
           >
             <Image src="/dot.svg" alt="dot" width={16} height={16} />
             {contact}
+            <Image
+              src="/dot.svg"
+              alt="dot"
+              className="md:hidden lg:block"
+              width={16}
+              height={16}
+            />
           </CarouselItem>
         ))}
       </CarouselContent>

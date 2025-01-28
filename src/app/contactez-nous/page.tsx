@@ -1,6 +1,12 @@
 import ContactForm from "@/components/ui/contactForm";
 import React from "react";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Contactez-nous | Dolphin équipements",
+  description:
+    "Découvrez nos produits hydrauliques, pneumatiques, et de maintenance et nettoyage industriel. Fournir des produits et services hydrauliques et pneumatiques de qualité. Basés à Tunis",
+};
 export default function page() {
   return (
     <section className="text-gray-600 body-font relative min-h-[75vh] ">

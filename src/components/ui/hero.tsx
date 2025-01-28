@@ -9,16 +9,9 @@ import {
 import { Image } from "@nextui-org/image";
 import { Button } from "./button";
 import { Card, CardBody } from "@nextui-org/card";
+import Link from "next/link";
 
 export default function Hero() {
-  // const images = [
-  //   "/cover-1.webp",
-  //   "/cover-2.webp",
-  //   "/cover-3.webp",
-  //   "/cover-4.webp",
-  //   "/cover-5.webp",
-  //   // "/cover-6.webp",
-  // ];
   return (
     <div className="bg-[#f4f8ff] ">
       <Carousel className="w-full  ">
@@ -51,8 +44,13 @@ export default function Hero() {
                     à Tunis.
                   </h3>
                 </div>
-                <Button className="bg-[#4187C6] rounded-sm text-base lg:text-lg px-12 py-7 text-white rounded-md  font-light  hover:bg-[#1F3A75] ">
-                  <p className="text-white ">Découvrir plus</p>
+                <Button
+                  asChild
+                  className="bg-[#4187C6] rounded-sm text-base lg:text-lg px-12 py-7 text-white rounded-md  font-light  hover:bg-[#1F3A75] "
+                >
+                  <Link href="/produits">
+                    <p className="text-white ">Découvrir plus</p>
+                  </Link>
                 </Button>
               </CardBody>
             </Card>

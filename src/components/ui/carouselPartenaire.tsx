@@ -13,15 +13,15 @@ export default function CarouselPartenaire() {
   );
   const partenairs = [
     "/partenaire-1.webp",
-    "/partenaire-2.webp",
-    "/partenaire-3.webp",
+    // "/partenaire-2.webp",
+    // "/partenaire-3.webp",
     "/partenaire-4.webp",
     "/partenaire-5.webp",
     "/partenaire-7.webp",
     "/partenaire-8.webp",
     "/partenaire-9.webp",
-    "/partenaire-10.webp",
-    "/partenaire-11.webp",
+    // "/partenaire-10.webp",
+    // "/partenaire-11.webp",
   ];
   return (
     <Carousel
