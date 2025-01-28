@@ -69,12 +69,18 @@ export default async function Home() {
             </Button>
           </div>
           <div className="flex flex-col items-center gap-4 w-[90%]  mx-auto md:flex-row  justify-center my-16">
-            <CardCategorie title="Hydrauliques" img="/hydrauliques-v1.png" />
-            <CardCategorie title="Pneumatiques" img="/hydrauliques-v1.png" />
-            <CardCategorie
-              title="Assainissement et nettoyage"
-              img="/hydrauliques-v1.png"
-            />
+            <Link href="/produits/hydrauliques">
+              <CardCategorie title="Hydrauliques" img="/hydrauliques-v1.png" />
+            </Link>
+            <Link href="/produits/pneumatiques">
+              <CardCategorie title="Pneumatiques" img="/hydrauliques-v1.png" />
+            </Link>
+            <Link href="/produits/assainissement-et-nettoyage ">
+              <CardCategorie
+                title="Assainissement et nettoyage"
+                img="/hydrauliques-v1.png"
+              />
+            </Link>
             <Link href="/produits">
               <Button className="bg-[#4187C6] flex md:hidden  rounded-xl text-base lg:text-lg px-10 py-7 text-white  font-normal  hover:bg-[#1F3A75]">
                 Voir nos produits
@@ -189,12 +195,12 @@ export default async function Home() {
           </div>
           <div id="Assainissements et nettoyage" className="flex flex-col">
             <div className="flex justify-between items-center w-[90%] mx-auto mt-16">
-              <h1 className="text-xl sm:text-2xl font-medium after:block after:w-48 after:h-[2px] after:bg-[#4085C6] after:mt-1">
+              <h1 className="text-base sm:text-2xl font-medium after:block after:w-48 after:h-[2px] after:bg-[#4085C6] after:mt-1">
                 Assainissements et nettoyage
               </h1>
               <Link
                 href="/produits/assainissement-et-nettoyage"
-                className="flex items-center gap-2  text-sm underline sm:no-underline sm:text-base text-[#4187C6]"
+                className="flex items-center gap-2  text-xs underline sm:no-underline sm:text-base text-[#4187C6]"
               >
                 Plus de produits
                 <Image

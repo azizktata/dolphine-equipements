@@ -40,7 +40,7 @@ export default function ContactCarousel() {
       <CarouselContent className="m-auto flex ">
         {partenairs.map((contact, index) => (
           <CarouselItem
-            className=" md:basis-1/2  xl:basis-1/3 flex justify-center gap-10 items-center font-medium text-lg"
+            className=" md:basis-1/2  xl:basis-1/3 flex justify-center gap-10 items-center font-medium text-base sm:text-lg"
             key={index}
           >
             <Image src="/dot.svg" alt="dot" width={16} height={16} />

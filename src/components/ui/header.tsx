@@ -135,9 +135,12 @@ export default function Header() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="flex flex-col gap-8 pt-8 ">
+      <NavbarMenu className="flex flex-col gap-8 pt-24 ">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem className="border-b pb-2 " key={`${item}-${index}`}>
+          <NavbarMenuItem
+            className="border-b pb-2 text-xl"
+            key={`${item}-${index}`}
+          >
             <Link
               onClick={handleMenuItemClick}
               color={

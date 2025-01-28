@@ -34,7 +34,10 @@ export default function ListCards({
         >
           <div className="grid w-max grid-cols-5 gap-4 p-4">
             {composants.children.map((item, index) => (
-              <div key={index} className="flex w-full justify-center flex-1">
+              <div
+                key={index}
+                className="flex w-full justify-center max-w-[300px]"
+              >
                 <Card
                   shadow="sm"
                   className="bg-transparent flex-1 "
