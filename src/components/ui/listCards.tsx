@@ -61,7 +61,7 @@ export default function ListCards({
                       src={item.image || "https://placehold.co/200x250?text="}
                     />
                   </CardBody>
-                  <CardFooter className="text-small justify-center py-5 bg-[#4187C6] text-white font-light text-lg">
+                  <CardFooter className="text-sm xs:text-base sm:text-lg justify-center py-5  bg-[#4187C6] text-white font-light ">
                     <b>{item.title}</b>
                   </CardFooter>
                 </Card>
