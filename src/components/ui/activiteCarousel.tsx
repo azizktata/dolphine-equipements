@@ -23,7 +23,7 @@ export default function ActiviteCarousel() {
       title: "Conseil et Formation",
       description:
         "Une large gamme d’équipements hydrauliques et pneumatiques disponibles dans nos     boutiques à Tunis.",
-      image: "/act-2.webp",
+      image: "/act-4.webp",
     },
   ];
 
@@ -57,7 +57,7 @@ export default function ActiviteCarousel() {
       >
         <CarouselContent className="m-auto flex ">
           {activites.map((activite, index) => (
-            <CarouselItem className=" " key={index}>
+            <CarouselItem key={index}>
               <ActiviteContainer
                 title={activite.title}
                 description={activite.description}

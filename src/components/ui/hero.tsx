@@ -31,14 +31,14 @@ export default function Hero() {
               </div>
               <CardBody className="absolute inset-0 mb-16  z-10 flex items-center justify-center gap-12">
                 <div className="mt-12  flex flex-col w-auto   ">
-                  <h1 className="text-center text-4xl sm:text-5xl   md:text-7xl max-w-5xl leading-normal text-white font-semibold">
+                  <h1 className="text-center text-4xl sm:text-5xl   md:text-5xl xl:text-7xl max-w-5xl leading-normal text-white font-semibold">
                     {" "}
                     Fournisseur des <br></br> équipements hydrauliques
                   </h1>
                 </div>
 
                 <div className="flex flex-col items-center   ">
-                  <h3 className="text-base md:text-lg lg:text-xl text-center text-white font-medium ">
+                  <h3 className="text-base md:text-xl  text-center text-white font-medium ">
                     Explorez nos nombreux produits hydrauliques.
                     <br /> Nous vous souhaitons la bienvenue dans nos boutiques
                     à Tunis.
@@ -46,7 +46,7 @@ export default function Hero() {
                 </div>
                 <Button
                   asChild
-                  className="bg-[#4187C6] rounded-sm text-base lg:text-lg px-12 py-7 text-white rounded-md  font-light  hover:bg-[#1F3A75] "
+                  className="bg-[#4187C6] rounded-sm text-base md:text-lg px-12 py-7 text-white rounded-md  font-light  hover:bg-[#1F3A75] "
                 >
                   <Link href="/produits">
                     <p className="text-white ">Découvrir plus</p>

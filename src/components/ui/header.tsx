@@ -62,8 +62,8 @@ export default function Header() {
           <Link
             className={
               currentPath.includes("/")
-                ? "text-[#222222] text-sm sm:text-base lg:text-lg "
-                : "text-[#222222] text-sm sm:text-base lg:text-lg hover:text-gray-400 cursor-pointer"
+                ? "text-[#222222] text-sm  lg:text-lg "
+                : "text-[#222222] text-sm  lg:text-lg hover:text-gray-400 cursor-pointer"
             }
             href="/"
           >
@@ -75,8 +75,8 @@ export default function Header() {
           <Link
             className={
               currentPath.includes("/produits")
-                ? "text-[#222222] text-sm sm:text-base lg:text-lg"
-                : "text-[#222222]  text-sm sm:text-base lg:text-lg hover:text-gray-400 cursor-pointer"
+                ? "text-[#222222] text-sm  lg:text-lg"
+                : "text-[#222222]  text-sm  lg:text-lg hover:text-gray-400 cursor-pointer"
             }
             href={"/produits"}
           >
@@ -88,8 +88,8 @@ export default function Header() {
           <Link
             className={
               currentPath.includes("/contactez-nous")
-                ? "text-[#222222] text-sm sm:text-base lg:text-lg"
-                : "text-[#222222]  text-sm sm:text-base lg:text-lg hover:text-gray-400 cursor-pointer"
+                ? "text-[#222222] text-sm  lg:text-lg"
+                : "text-[#222222]  text-sm  lg:text-lg hover:text-gray-400 cursor-pointer"
             }
             href="/contactez-nous"
           >
@@ -109,7 +109,7 @@ export default function Header() {
             href="https://www.google.com/maps/place/DOLPHIN+EQUIPEMENTS/@36.7623251,10.2236865,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd379bc05dd4d5:0x26a7e7cff34d891e!8m2!3d36.7623251!4d10.2262614!16s%2Fg%2F11t4fw6lrr?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
           >
             <Button
-              className="bg-[#4187C640] text-[#222222] text-sm lg:text-base font-normal capitalize px-5 py-5 lg:px-6 lg:py-6"
+              className="bg-[#4187C640] text-[#222222] text-xs lg:text-base font-medium capitalize px-5 py-5 lg:px-6 lg:py-6"
               variant="outline"
             >
               <Image
@@ -125,7 +125,7 @@ export default function Header() {
         </NavbarItem>
         <NavbarItem>
           <Button
-            className="bg-[#4187C640] text-[#222222] text-sm lg:text-base font-normal px-5 py-5 lg:px-6 lg:py-6"
+            className="bg-[#4187C640] text-[#222222] text-xs lg:text-base font-medium px-5 py-5 lg:px-6 lg:py-6"
             variant="outline"
             onClick={handleWhatsAppCall}
           >

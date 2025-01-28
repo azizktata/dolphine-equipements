@@ -45,8 +45,8 @@ export default function ListCardsV2({ composants }: { composants: Data }) {
                 />
                 <div className="absolute inset-0 bg-[#4085C626] rounded-2xl"></div>
               </CardBody>
-              <CardFooter className="text-sm sm:text-base  flex font-normale justify-between py-5 bg-white text-left text-gray-700  ">
-                <b>{item.title}</b>
+              <CardFooter className="text-sm lg:text-base  flex font-semibold justify-between py-5 bg-white text-left text-gray-700  ">
+                <p>{item.title}</p>
                 <Image
                   src="/right-arrow.svg"
                   alt="arrow-right"

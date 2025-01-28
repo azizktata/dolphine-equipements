@@ -9,7 +9,7 @@ import SubHeader from "@/components/ui/subHeader";
 import TopBar from "@/components/ui/topBar";
 
 const inter = Inter({
-  weight: ["300", "400", "500"],
+  weight: ["300", "400", "500", "600"],
   subsets: ["latin"],
 });
 const DM_SANS = DM_Sans({

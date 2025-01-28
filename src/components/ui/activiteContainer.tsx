@@ -15,12 +15,12 @@ export default function ActiviteContainer({
       <div
         className={` mx-auto flex flex-col items-start md:w-1/2 md:max-w-lg md:max-w-xl xl:max-w-2xl `}
       >
-        <h2 className={`text-3xl md:text-4xl bold  mb-6 `}>{title}</h2>
-        <div className="text-left">
-          <p className=" text-lg font-light  text-white  mb-4 ">
+        <h1 className={`text-xl  md:text-3xl font-semibold  mb-6 `}>{title}</h1>
+        <div className="text-left max-w-[600px]  ">
+          <p className=" text-base md:text-xl font-normal !leading-10  text-white  mb-4 ">
             {description}
           </p>
-          <p className="text-white text-lg font-light mb-4 ">
+          <p className="text-white text-base md:text-xl !leading-10  font-normal mb-4 ">
             {" "}
             Tous équipements hydraulique & pneumatique dans secteurs Industries,
             BTP, Marine

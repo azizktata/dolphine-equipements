@@ -59,7 +59,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
         {element.children && element.children.length > 0 ? (
           <>
             <AccordionItem
-              className="data-[state=open]:border-none mt-2  border-0 "
+              className="data-[state=open]:border-none mt-4  border-0 "
               value={element.title.toLowerCase()}
             >
               <AccordionTrigger
@@ -74,7 +74,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                       .join("/")}`
                   );
                 }}
-                className={`accordion-trigger pl-2  font-medium text-left text-sm xs:text-base sm:text-lg
+                className={`accordion-trigger pl-2  font-medium text-left text-sm  
                    py-3 data-[state=open]:tracking-wide
                   ${
                     element.title.toLowerCase() ===
@@ -87,7 +87,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                   element.title === "Hydrauliques" ||
                   element.title === "Pneumatiques" ||
                   element.title === "Assainissement et Nettoyage"
-                    ? "bg-[#4187C6] text-white  rounded-md  px-3 py-2 font-medium"
+                    ? "bg-[#4187C6] text-white  rounded-md  px-3 py-3 font-medium"
                     : ""
                 }`}
               >
@@ -100,7 +100,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
             </AccordionItem>
           </>
         ) : (
-          <AccordionContent className="pl-2 py-2 pb-0 text-left text-sm xs:text-base sm:text-lg text-[#656565]">
+          <AccordionContent className="pl-2 py-2 pb-0 text-left text-sm   text-[#656565]">
             {element.title}
           </AccordionContent>
         )}
@@ -110,7 +110,7 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
   const currentPath = usePathname();
   return (
     <>
-      <h1 className="text-lg font-medium  uppercase mb-6">categories</h1>
+      <h1 className="text-base font-semibold  uppercase mb-6">categories</h1>
       <div className="shadow-md bg-[#E6F3FB] rounded-xl px-2 py-2 ">
         <div className="max-h-[500px]   custom-scrollbar px-3">
           <Accordion type="multiple" defaultValue={["produits"]}>

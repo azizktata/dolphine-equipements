@@ -60,7 +60,9 @@ export default async function Home() {
         </section>
         <section>
           <div className="flex justify-between items-center w-[90%] mx-auto mt-16">
-            <h1 className="text-4xl font-medium">Nos Catégories</h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+              Nos Catégories
+            </h1>
             <Button
               asChild
               className="bg-[#4187C6] hidden md:flex rounded-xl text-base lg:text-lg px-10 py-7 text-white  font-normal  hover:bg-[#1F3A75]"
@@ -89,7 +91,7 @@ export default async function Home() {
           </div>
         </section>
         <section className="w-[90%] mx-auto my-8">
-          <h1 className="text-3xl font-semibold self-start">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold self-start text-[#222222] ">
             Qui sommes-nous ?
           </h1>
           <div>
@@ -114,8 +116,8 @@ export default async function Home() {
                 </p>
 
                 <Link className="self-start " href="/qui-sommes-nous">
-                  <Button className="bg-[#4187C6] capitalize rounded-sm text-base lg:text-lg px-4 py-6 ml-4 sm:ml-0 text-white  font-normal  hover:bg-[#1F3A75]">
-                    plus d&apos;infos
+                  <Button className="bg-[#4187C6]  rounded-sm text-base lg:text-lg px-4 py-6 ml-4 sm:ml-0 text-white  font-normal  hover:bg-[#1F3A75]">
+                    Plus d&apos;infos
                     <ArrowRight size={24} />
                   </Button>
                 </Link>
@@ -135,9 +137,11 @@ export default async function Home() {
         </section>
         <section>
           <div className="flex justify-between items-center w-[90%] mx-auto mt-16">
-            <h1 className="text-4xl font-medium">Découvrez plus</h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl text-[#222222] font-semibold">
+              Découvrez plus
+            </h1>
             <Link href="/produits">
-              <Button className="bg-[#4187C6] hidden md:flex rounded-xl text-base lg:text-lg px-10 py-7 text-white  font-normal  hover:bg-[#1F3A75]">
+              <Button className="bg-[#4187C6] hidden md:flex rounded-xl text-sm lg:text-lg px-10 py-7 text-white  font-normal  hover:bg-[#1F3A75]">
                 Voir nos produits
               </Button>
             </Link>
@@ -145,7 +149,7 @@ export default async function Home() {
 
           <div id="hydrauliques" className="flex flex-col">
             <div className="flex justify-between items-center w-[90%] mx-auto mt-16">
-              <h1 className="text-xl sm:text-2xl  font-medium after:block after:w-48 after:h-[2px] after:bg-[#4085C6] after:mt-1">
+              <h1 className="text-base md:text-2xl lg:text-3xl text-[#222222]  font-semibold after:block after:w-32 md:after:w-64 after:h-[2px] after:bg-[#4085C6] after:mt-1">
                 Hydrauliques
               </h1>
               <Link
@@ -170,7 +174,7 @@ export default async function Home() {
           </div>
           <div id="Pneumatiques" className="flex flex-col">
             <div className="flex justify-between items-center w-[90%] mx-auto mt-16">
-              <h1 className="text-xl sm:text-2xl  font-medium after:block after:w-48 after:h-[2px] after:bg-[#4085C6] after:mt-1">
+              <h1 className="text-base md:text-2xl lg:text-3xl text-[#222222]  font-semibold after:block after:w-32 md:after:w-64 after:h-[2px] after:bg-[#4085C6] after:mt-1">
                 Pneumatiques
               </h1>
               <Link
@@ -195,7 +199,7 @@ export default async function Home() {
           </div>
           <div id="Assainissements et nettoyage" className="flex flex-col">
             <div className="flex justify-between items-center w-[90%] mx-auto mt-16">
-              <h1 className="text-base sm:text-2xl font-medium after:block after:w-48 after:h-[2px] after:bg-[#4085C6] after:mt-1">
+              <h1 className="text-base md:text-2xl lg:text-3xl text-[#222222]  font-semibold after:block after:w-32 md:after:w-64 after:h-[2px] after:bg-[#4085C6] after:mt-1">
                 Assainissements et nettoyage
               </h1>
               <Link
@@ -225,9 +229,11 @@ export default async function Home() {
 
         <section
           id="nos-partenaires"
-          className="mx-auto mt-16 flex flex-col w-[90%] mb-8"
+          className="mx-auto mt-16 flex flex-col w-[90%] mb-16"
         >
-          <h1 className="text-3xl font-semibold">Nos Marques</h1>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+            Nos Marques
+          </h1>
           <div className="  grid grid-cols-2 sm:grid-cols-3 gap-16 max-w-5xl w-full mx-auto  items-center mt-8">
             {partenairs.map((img, index) => (
               <Image
@@ -235,25 +241,31 @@ export default async function Home() {
                 alt="hydrauliques"
                 width={175}
                 height={175}
-                className="object-fill"
+                className="object-fill transform transition hover:scale-110 "
                 key={index}
               />
             ))}
           </div>
         </section>
 
-        <section id="activités" className="bg-[#4187C6] mt-16 text-white">
+        <section id="activités" className="bg-[#4187C6] mt-16 text-white mb-8">
           <div className="w-[90%] mx-auto py-16">
-            <h1 className="text-3xl font-semibold">Nos Activités</h1>
+            <h1 className="text-2xl md:text-4xl  font-semibold">
+              Nos Activités
+            </h1>
             <ActiviteCarousel />
           </div>
         </section>
 
         <div className="w-[90%] mx-auto py-8 mb-8 ">
-          <h1 className="text-3xl font-semibold mb-16">Contactez-nous</h1>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-16">
+            Contactez-nous
+          </h1>
           <div className="flex flex-col items-center justify-center mt-2 gap-8">
-            <h3 className="font-semibold text-2xl">Plus de détails</h3>
-            <p className="text-gray-800 text-lg font-light text-center">
+            <h3 className="font-semibold text-xl md:text-3xl">
+              Plus de détails
+            </h3>
+            <p className="text-gray-800 text-lg font-light leading-9 text-center">
               Pour plus de détails sur nos produits et services, contactez-nous
               par téléphone ou consultez notre position sur la carte ci-dessous.
             </p>

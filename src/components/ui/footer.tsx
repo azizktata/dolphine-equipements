@@ -11,8 +11,8 @@ export default function Footer() {
           <Image
             src="/logo_footer.svg"
             alt="Dolphin Logo"
-            width={194}
-            height={194}
+            width={230}
+            height={60}
             className="mb-4 text-white fill-current fill-white"
           />
           <p className="text-center max-w-[30ch]  text-sm font-light">
@@ -25,7 +25,7 @@ export default function Footer() {
             <h3 className="text-xl font-medium uppercase mb-4 relative after:block after:w-12 after:h-[2px] after:bg-white after:mt-1">
               Informations
             </h3>
-            <ul className="space-y-2 text-base text-gray-100 pl-2">
+            <ul className="space-y-2 text-base font-medium text-white pl-2">
               <li className="hover:text-gray-300">
                 <Link href="/">Accueil</Link>
               </li>
@@ -48,7 +48,7 @@ export default function Footer() {
             <h3 className="text-xl font-medium uppercase mb-4 relative after:block after:w-12 after:h-[2px] after:bg-white after:mt-1">
               Produits
             </h3>
-            <ul className="space-y-2 text-base text-gray-100 pl-2">
+            <ul className="space-y-2 text-base text-white pl-2">
               <li className="hover:text-gray-300">
                 <Link href="/produits/hydrauliques">Hydrauliques</Link>
               </li>
@@ -67,7 +67,7 @@ export default function Footer() {
             <h3 className="text-xl font-medium uppercase mb-4 relative after:block after:w-12 after:h-[2px] after:bg-white after:mt-1">
               Coordonnées
             </h3>
-            <ul className="space-y-3 text-base text-gray-100 ">
+            <ul className="space-y-3 text-base text-white ">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="flex-shrink-0 mt-1" />
                 <span>

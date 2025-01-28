@@ -57,7 +57,7 @@ export default async function page({ params }: Props) {
             <RecursiveAccordion data={data} />
           </div>
           <div className="flex-1 ">
-            <h1 className="text-2xl font-medium capitalize">
+            <h1 className="text-base md:text-xl font-semibold capitalize">
               {decodeURIComponent(title)
                 .replace(/-/g, " ")
                 .replace(/^\w/, (c) => c.toUpperCase())}

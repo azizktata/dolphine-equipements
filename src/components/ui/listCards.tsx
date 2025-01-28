@@ -36,7 +36,7 @@ export default function ListCards({
             {composants.children.map((item, index) => (
               <div
                 key={index}
-                className="flex w-full justify-center max-w-[300px]"
+                className="flex w-full justify-center  max-w-[300px] w-[230px] lg:w-[300px] "
               >
                 <Card
                   shadow="sm"
@@ -54,14 +54,14 @@ export default function ListCards({
                 >
                   <CardBody className="overflow-visible bg-white p-0 border-none ">
                     <Image
-                      width={200}
-                      height={250}
+                      width={300}
+                      height={258}
                       alt={item.title}
-                      className="w-auto object-cover h-[257px]"
+                      className="w-auto object-cover h-[197px] md:h-[210px] lg:h-[258px] "
                       src={item.image || "https://placehold.co/200x250?text="}
                     />
                   </CardBody>
-                  <CardFooter className="text-sm xs:text-base sm:text-lg justify-center py-5  bg-[#4187C6] text-white font-light ">
+                  <CardFooter className="font-semibold text-sm lg:text-base justify-center py-5  bg-[#4187C6] text-white  ">
                     <b>{item.title}</b>
                   </CardFooter>
                 </Card>
