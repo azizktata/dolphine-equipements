@@ -11,9 +11,7 @@ import { Image } from "@nextui-org/image";
 export default function ContactCarousel() {
   const plugin = React.useRef(
     Autoplay({
-      delay: 1500, // No pause, keep it moving
-      stopOnInteraction: false, // Don't stop when user interacts
-      stopOnMouseEnter: false, // Don't stop when hovering
+      delay: 1200, // No pause, keep it moving
     })
   );
 
@@ -34,8 +32,6 @@ export default function ContactCarousel() {
         loop: true,
       }}
       className="w-full bg-[#F6F6F6] py-6 m-auto"
-      // onMouseEnter={plugin.current.stop}
-      // onMouseLeave={plugin.current.reset}
     >
       <CarouselContent className="m-auto flex ">
         {partenairs.map((contact, index) => (
