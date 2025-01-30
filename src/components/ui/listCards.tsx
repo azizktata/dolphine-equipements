@@ -96,7 +96,7 @@ export default function ListCards({
                   width={200}
                   height={250}
                   alt={item.title}
-                  className="w-auto object-cover h-[257px]"
+                  className="w-auto  h-[257px] object-contain"
                   src={item.image || "https://placehold.co/200x250?text="}
                 />
               </CardBody>

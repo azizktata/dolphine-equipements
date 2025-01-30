@@ -17,8 +17,8 @@ export const getAll = memoize (async (): Promise<Data> => {
     }
 
     return data;
-  } catch (error) {
-    console.error(error);
+  } catch  {
+    // console.error(error);
     return { title: "", children: [] };
   } 
 }, {

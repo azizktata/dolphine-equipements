@@ -40,7 +40,7 @@ export default function ListCardsV2({ composants }: { composants: Data }) {
                   width={200}
                   height={330}
                   alt={item.title}
-                  className="w-full h-[257px] object-cover" // Ensure image takes up full width of the card
+                  className="w-full h-[257px] object-contain" // Ensure image takes up full width of the card
                   src={item.image || "https://placehold.co/200x250?text="}
                 />
                 <div className="absolute inset-0 bg-[#4085C626] rounded-2xl"></div>
