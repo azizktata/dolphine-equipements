@@ -105,8 +105,7 @@ export default function page() {
                 En tant que membre du groupe FLEXIMAT France, fort de plus de 20
                 ans d&apos;expertise, nous sommes fiers de proposer des
                 solutions innovantes et adaptées aux besoins des professionnels
-                dans divers secteurs, tels que l&apos;industrie, le BTP et la
-                marine.
+                dans divers secteurs, tels que l&apos;industrie et le BTP
               </p>
             </div>
 
@@ -174,8 +173,7 @@ export default function page() {
                   <span className="font-medium text-gray-700">
                     Produits de qualité:
                   </span>{" "}
-                  Adaptés aux exigences des secteurs industriels, du BTP et de
-                  la marine.
+                  Adaptés aux exigences des secteurs industriels et du BTP.
                 </li>
                 <li>
                   <span className="font-medium text-gray-700">
