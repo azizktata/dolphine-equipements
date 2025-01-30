@@ -9,12 +9,11 @@ export const getAll = memoize (async (): Promise<Data> => {
     if (!url) {
       throw new Error("URL is not defined");
     }
+    console.log('url', url)
     const res = await fetch(url);
     const data = await res.json();
     
-    if (!res.ok){
-      throw new Error("Failed to fetch data");
-    }
+    
 
     return data;
   } catch  {
