@@ -272,7 +272,8 @@ export default async function Home() {
             <div className="flex items-center gap-8">
               <a
                 target="_blank"
-                href="https://www.google.com/maps/place/DOLPHIN+EQUIPEMENTS/@36.7623251,10.2236865,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd379bc05dd4d5:0x26a7e7cff34d891e!8m2!3d36.7623251!4d10.2262614!16s%2Fg%2F11t4fw6lrr?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+                href="https://maps.app.goo.gl/sJrcFgewxKgPd8K5A
+"
               >
                 <Button className="bg-[#4085C6] rounded-xs text-base lg:text-lg px-4 py-6 text-white  font-normal  hover:bg-[#1F3A75]">
                   <MapPin size={24} />

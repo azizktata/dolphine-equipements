@@ -23,7 +23,7 @@ export default function ActiviteContainer({
           <p className="text-white text-base md:text-xl !leading-10  font-normal mb-4 ">
             {" "}
             Tous équipements hydraulique & pneumatique dans secteurs Industries,
-            BTP, Marine
+            BTP.
           </p>
         </div>
       </div>

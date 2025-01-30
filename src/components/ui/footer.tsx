@@ -6,8 +6,8 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="bg-[#4085C6] text-[#F5F5F5] py-12 px-8">
-      <div className="container mx-auto flex flex-col flex-wrap items-center sm:flex-row sm:justify-between sm:items-start gap-12">
-        <div className="flex flex-col items-center ">
+      <div className="container mx-auto flex flex-col  items-center lg:flex-row lg:justify-between lg:items-start gap-12">
+        <div className="flex flex-col items-center justify-center mx-auto ">
           <Image
             src="/logo_footer.svg"
             alt="Dolphin Logo"
@@ -71,7 +71,7 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="flex-shrink-0 mt-1" />
                 <span>
-                  Angle Rue d’Egypte Rue d’Espagne 2013, Ben Arous, Tunis
+                  Angle Rue d’Egypte, et Rue d’Espagne. Ben Arous 2013, Tunis
                 </span>
               </li>
               <li className="flex items-center gap-2">

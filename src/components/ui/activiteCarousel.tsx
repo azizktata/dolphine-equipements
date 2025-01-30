@@ -23,7 +23,7 @@ export default function ActiviteCarousel() {
       title: "Conseil et Formation",
       description:
         "Une large gamme d’équipements hydrauliques et pneumatiques disponibles dans nos     boutiques à Tunis.",
-      image: "/act-4.webp",
+      image: "/act-5.jpg",
     },
   ];
 
