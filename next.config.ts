@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
       },
       { protocol: "https", hostname: "placehold.co" },
     ],
+    unoptimized: true,
+    domains: ["dolphiv.cluster030.hosting.ovh.net"],
   },
 };
 

@@ -75,14 +75,14 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                   );
                 }}
                 className={`accordion-trigger pl-2  font-medium text-left text-sm  
-                   py-3 data-[state=open]:tracking-wide
+                    data-[state=open]:tracking-wide
                   ${
                     element.title.toLowerCase() ===
                     decodeURIComponent(
                       currentPath.split("/").pop() || ""
                     ).replace(/-/g, " ")
                       ? "text-[#4187C6] py-1 data-[state=open]:underline"
-                      : "text-[#656565] py-1"
+                      : "text-[#656565] py-0"
                   } ${
                   element.title === "Hydrauliques" ||
                   element.title === "Pneumatiques" ||
@@ -93,14 +93,14 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
               >
                 {element.title}
               </AccordionTrigger>
-              <AccordionContent className="pl-8  pb-2 text-[#656565] font-medium">
+              <AccordionContent className="pl-8  py-2 text-[#656565] font-medium">
                 {" "}
                 {renderAccordionItems(element.children, currentPath)}
               </AccordionContent>
             </AccordionItem>
           </>
         ) : (
-          <AccordionContent className="pl-2 py-2 pb-0 text-left text-sm   text-[#656565]">
+          <AccordionContent className="pl-2 py-3 pb-0 text-left text-sm   text-[#656565]">
             {element.title}
           </AccordionContent>
         )}

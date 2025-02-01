@@ -9,8 +9,8 @@ export const getAll = memoize (async (): Promise<Data> => {
     if (!url) {
       throw new Error("URL is not defined");
     }
-    console.log('url', url)
-    const res = await fetch(url);
+    // console.log('url', url)
+    const res = await fetch(url, {next: { revalidate: 1800 }});
     const data = await res.json();
     
     
@@ -22,7 +22,7 @@ export const getAll = memoize (async (): Promise<Data> => {
   } 
 }, {
   persist: true,
-  duration: 6800,
+  duration: 1800,
   revalidateTags: ()=> ['produits:elements'],
   suppressWarnings: true, 
   // log: ['datacache', 'verbose', 'dedupe'],
