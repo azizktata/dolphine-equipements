@@ -74,14 +74,14 @@ export default function RecursiveAccordion({ data }: { data: Data }) {
                       .join("/")}`
                   );
                 }}
-                className={`accordion-trigger pl-2  font-medium text-left text-sm  
-                    data-[state=open]:tracking-wide
+                className={`accordion-trigger pl-2  font-medium text-left text-sm   
+                    
                   ${
                     element.title.toLowerCase() ===
                     decodeURIComponent(
                       currentPath.split("/").pop() || ""
                     ).replace(/-/g, " ")
-                      ? "text-[#4187C6] py-1 data-[state=open]:underline"
+                      ? "text-[#4187C6] py-0 data-[state=open]:underline "
                       : "text-[#656565] py-0"
                   } ${
                   element.title === "Hydrauliques" ||

@@ -81,11 +81,11 @@ export default function page() {
                     dans le domaine de l&apos;hydraulique et des services en
                     Tunisie.
                   </p>
-                  <p className="mb-8 text-lg text-gray-800 font-light">
+                  {/* <p className="mb-8 text-lg text-gray-800 font-light">
                     Fournir des produits et services hydrauliques et
                     pneumatiques de qualité, conçus pour optimiser vos
                     performances et garantir la durabilité de vos équipements.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -98,14 +98,10 @@ export default function page() {
                 Qui sommes nous?
               </h3>
               <p className="max-w-[70ch] text-lg text-gray-700 font-light">
-                Bienvenue chez Dolphin Équipements, un acteur incontournable
-                dans le domaine de l&apos;hydraulique et des services en
-                Tunisie.
-                <span className="block mt-2"></span>
                 En tant que membre du groupe FLEXIMAT France, fort de plus de 20
                 ans d&apos;expertise, nous sommes fiers de proposer des
                 solutions innovantes et adaptées aux besoins des professionnels
-                dans divers secteurs, tels que l&apos;industrie et le BTP
+                dans divers secteurs, tels que l&apos;industrie, le BTP.
               </p>
             </div>
 
@@ -114,13 +110,13 @@ export default function page() {
                 Notre mission
               </h3>
               <p className="max-w-[60ch] text-lg text-gray-700 font-light">
-                Fournir des produits et services hydrauliques et pneumatiques de
-                qualité, conçus pour optimiser vos performances et garantir la
-                durabilité de vos équipements.
+                Fournir des produits et des services hydrauliques et
+                pneumatiques de qualité, conçus pour garantir la durabilité de
+                vos équipements
                 <span className="block mt-2"></span>
                 Que ce soit pour la vente, la maintenance ou le nettoyage des
                 circuits hydrauliques, nous nous engageons à vous accompagner
-                avec expertise et professionnalisme.
+                avec expertise et professionnalisme
               </p>
             </div>
 
@@ -139,14 +135,14 @@ export default function page() {
                     Expertise et Excellence
                   </span>{" "}
                   Nous mettons notre savoir-faire au service de vos besoins en
-                  garantissant des produits et services de qualité supérieure
+                  garantissant des produits et services de qualité supérieure.
                 </li>
                 <li>
                   <span className="font-medium text-gray-700">
                     Innovation Continue
                   </span>{" "}
                   Nous adoptons des solutions novatrices pour répondre aux défis
-                  modernes et offrir des performances optimales.{" "}
+                  modernes et offrir des performances optimales.
                 </li>
                 <li>
                   <span className="font-medium text-gray-700">
@@ -162,25 +158,21 @@ export default function page() {
                 {" "}
                 Pourquoi choisir dolphin équipements ?
               </h3>
+              <p className="max-w-[60ch] text-lg text-gray-700 font-light">
+                Votre partenaire en solutions hydrauliques et pneumatiques vous
+                offre
+              </p>
               <ul className="max-w-[70ch] text-lg text-gray-700 font-light space-y-4 leading-relaxed mb-6">
                 <li>
-                  <span className="font-medium text-gray-700">
-                    Expertise reconnue:
-                  </span>{" "}
-                  Grâce à notre appartenance au groupe FLEXIMAT France.
+                  Expertise reconnue: Grâce à notre appartenance au groupe
+                  FLEXIMAT France.
                 </li>
                 <li>
-                  <span className="font-medium text-gray-700">
-                    Produits de qualité:
-                  </span>{" "}
-                  Adaptés aux exigences des secteurs industriels et du BTP.
+                  Des services personnalisés pour répondre à tous vos besoins.
                 </li>
                 <li>
-                  <span className="font-medium text-gray-700">
-                    Services personnalisés:
-                  </span>{" "}
-                  Un accompagnement de proximité pour répondre à tous vos
-                  besoins.
+                  Des produits de qualité, adaptés aux exigences des secteurs
+                  industriels, du BTP.
                 </li>
               </ul>
               <p className="text-lg max-w-[70ch] text-gray-700 font-light leading-relaxed">
@@ -188,14 +180,13 @@ export default function page() {
                 <span className="font-medium text-gray-700">
                   Dolphin Équipements
                 </span>
-                , nous faisons bien plus que vendre des équipements : nous
-                devenons votre partenaire de confiance pour toutes vos solutions
+                , nous faisons bien plus que vendre des équipements, nous sommes
+                votre partenaire de confiance pour toutes vos solutions
                 hydrauliques et pneumatiques.
                 <span className="block mt-2">
-                  Venez nous rencontrer à{" "}
-                  <span className="font-medium">Tunis</span> et découvrez
-                  comment nous pouvons vous aider à optimiser vos performances
-                  et garantir la fiabilité de vos équipements !
+                  C’est à <span className="font-medium">Tunis</span> que vous
+                  pouvez découvrir comment optimiser vos performances et
+                  garantir la fiabilité de vos équipements !
                 </span>
               </p>
             </div>

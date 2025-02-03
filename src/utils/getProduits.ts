@@ -10,7 +10,13 @@ export const getAll = memoize (async (): Promise<Data> => {
       throw new Error("URL is not defined");
     }
     // console.log('url', url)
-    const res = await fetch(url);
+    const res = await fetch(url, 
+      {
+        next: {revalidate:3600},
+        // headers: {
+        //   'Cache-Control': 'public, max-age=3600, must-revalidate',
+        // }
+      } );
     const data = await res.json();
     
     
@@ -22,11 +28,11 @@ export const getAll = memoize (async (): Promise<Data> => {
   } 
 }, {
   persist: true,
-  duration: 7200,
+  duration: 7600,
   revalidateTags: ()=> ['produits:elements'],
   suppressWarnings: true, 
-  // log: ['datacache', 'verbose', 'dedupe'],
-  // logid: 'produits:elements',
+  log: ['datacache', 'verbose', 'dedupe'],
+  logid: 'produits:elements',
 })
 
 
