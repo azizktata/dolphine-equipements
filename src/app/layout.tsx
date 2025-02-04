@@ -13,6 +13,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 const DM_SANS = DM_Sans({
+  variable: "--font-dmsans",
   weight: ["300", "400", "500"],
   subsets: ["latin"],
 });
@@ -32,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${DM_SANS} ${inter}  antialiased`}>
+      <body className={`${DM_SANS.variable} ${inter}  antialiased`}>
         <SpeedInsights />
         <Toaster
           toastOptions={{

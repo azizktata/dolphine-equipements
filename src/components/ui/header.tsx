@@ -38,7 +38,7 @@ export default function Header() {
       shouldHideOnScroll
       isBordered
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-white py-4 lg:px-4 border-[#4187C6] border-b-3"
+      className="bg-white py-4 lg:px-4 border-[#4187C6] border-b-3  "
       isMenuOpen={isMenuOpen}
       maxWidth="full"
     >
@@ -62,7 +62,7 @@ export default function Header() {
           <Link
             className={
               currentPath.includes("/")
-                ? "text-[#222222] text-sm  lg:text-lg "
+                ? "text-[#222222] text-sm  lg:text-lg font-[var(--font-dmsans)] "
                 : "text-[#222222] text-sm  lg:text-lg hover:text-gray-400 cursor-pointer"
             }
             href="/"
@@ -75,7 +75,7 @@ export default function Header() {
           <Link
             className={
               currentPath.includes("/produits")
-                ? "text-[#222222] text-sm  lg:text-lg"
+                ? "text-[#222222] text-sm  lg:text-lg font-[var(--font-dmsans)]"
                 : "text-[#222222]  text-sm  lg:text-lg hover:text-gray-400 cursor-pointer"
             }
             href={"/produits"}
