@@ -28,9 +28,9 @@ export default function ListCardsV2({
     <div className="my-8 w-full">
       <div className="w-full grid grid-cols-1 xs:grid-cols-2  sm:grid-cols-2 xl:grid-cols-3   gap-4 ">
         {composants.children.map((item, index) => (
-          <div key={index} className="flex flex-col flex-1   w-full">
+          <div key={index} className="flex flex-col flex-1  w-full">
             <Card
-              className="bg-[#4085C626] w-full border border-[#4085C6]"
+              className="bg-[#4085C626] w-full border  border-[#4085C6]"
               isPressable={item.children && item.children.length > 0}
               onPress={() => {
                 if (item.children && item.children.length > 0) {
@@ -54,13 +54,15 @@ export default function ListCardsV2({
               </CardBody>
               <CardFooter className="text-sm lg:text-base  flex font-semibold justify-between py-5 bg-white text-left text-gray-700  ">
                 <p>{item.title}</p>
-                <Image
-                  src="/right-arrow.svg"
-                  alt="arrow-right"
-                  width={43}
-                  height={43}
-                  className="ml-2"
-                />
+                {item.children && item.children.length > 0 ? (
+                  <Image
+                    src="/right-arrow.svg"
+                    alt="arrow-right"
+                    width={43}
+                    height={43}
+                    className="ml-2"
+                  />
+                ) : null}
               </CardFooter>
             </Card>
           </div>

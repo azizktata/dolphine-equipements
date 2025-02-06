@@ -16,13 +16,13 @@ export default function ActiviteCarousel() {
     {
       title: "Vente et Location",
       description:
-        "Une large gamme d’équipements hydrauliques et pneumatiques disponibles dans notre boutiques à Tunis.",
+        "Une large gamme d’équipements hydrauliques et pneumatiques disponibles dans notre boutique à Tunis.",
       image: "/act-3.webp",
     },
     {
       title: "Conseil et Formation",
       description:
-        "Une large gamme d’équipements hydrauliques et pneumatiques disponibles dans notre boutiques à Tunis.",
+        "Une large gamme d’équipements hydrauliques et pneumatiques disponibles dans notre boutique à Tunis.",
       image: "/act-5.jpg",
     },
   ];

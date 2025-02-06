@@ -15,19 +15,15 @@ import ActiviteCarousel from "@/components/ui/activiteCarousel";
 
 export default async function Home() {
   const partenairs = [
-    "/partenaire-1.webp",
-    // "/partenaire-2.webp",
-    "/partenaire-3.jpg",
     "/partenaire-4.webp",
+    "/partenaire-3.jpg",
+    "/partenaire-1.webp",
     "/partenaire-5.webp",
-    // "/partenaire-7.webp",
     "/partenaire-8.webp",
     "/partenaire-9.webp",
     "vitillo-logo.svg",
     "hydac-logo.svg",
     "Hawk logo.svg",
-    // "/partenaire-10.webp",
-    // "/partenaire-11.webp",
   ];
   const data = await getAll();
 
@@ -237,14 +233,17 @@ export default async function Home() {
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
             Nos Marques
           </h1>
-          <div className="  grid grid-cols-2 sm:grid-cols-3 gap-16 max-w-5xl w-full mx-auto  items-center mt-8">
+          <div
+            id="marques"
+            className="marques grid grid-cols-2 sm:grid-cols-3 gap-16 max-w-5xl w-full mx-auto  items-center mt-8"
+          >
             {partenairs.map((img, index) => (
               <Image
                 src={img}
                 alt="hydrauliques"
                 width={175}
                 height={175}
-                className="object-fill transform transition hover:scale-110 "
+                className="object-fill transform transition hover:scale-110 justify-center"
                 key={index}
               />
             ))}
