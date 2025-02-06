@@ -21,11 +21,11 @@ export default async function page() {
 
   return (
     <div className="bg-white">
-      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[90%] gap-12  m-auto lg:justify-between items-start justify-center min-h-[100vh]">
+      <div className="pt-16 pb-64 flex flex-col lg:flex-row w-[93%] gap-8  m-auto lg:justify-between items-start justify-center min-h-[100vh]">
         <div className="w-full mx-auto lg:w-[400px]">
           <RecursiveAccordion data={data} />
         </div>
-        <div className="w-full lg:w-[calc(100%-350px)]">
+        <div className="w-full lg:w-[calc(100%-300px)] ">
           <Breadcrumb>
             <BreadcrumbList className="text-base font-medium text-gray-900 ">
               <BreadcrumbItem>
@@ -37,7 +37,7 @@ export default async function page() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <ListCardsV2 composants={data} />
+          <ListCardsV2 composants={data} zoomOut={false} />
         </div>
       </div>
     </div>

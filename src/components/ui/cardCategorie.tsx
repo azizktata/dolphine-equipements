@@ -18,7 +18,7 @@ export default function CardCategorie({
         <Image
           width="100%"
           alt={title}
-          className="w-full object-cover h-[340px] rounded-b-none rounded-t-none border-b-2 border-gray-100"
+          className="w-full object-cover  h-[300px] rounded-b-none rounded-t-none border-b-2 border-gray-100"
           src={img}
         />
       </CardBody>

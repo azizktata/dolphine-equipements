@@ -23,6 +23,9 @@ export default async function Home() {
     // "/partenaire-7.webp",
     "/partenaire-8.webp",
     "/partenaire-9.webp",
+    "vitillo-logo.svg",
+    "hydac-logo.svg",
+    "Hawk logo.svg",
     // "/partenaire-10.webp",
     // "/partenaire-11.webp",
   ];
@@ -72,15 +75,15 @@ export default async function Home() {
           </div>
           <div className="flex flex-col items-center gap-4 w-[90%]  mx-auto md:flex-row  justify-center my-16">
             <Link href="/produits/hydrauliques">
-              <CardCategorie title="Hydrauliques" img="/hydrauliques-v1.png" />
+              <CardCategorie title="Hydrauliques" img="/hydrauliques-v1.webp" />
             </Link>
             <Link href="/produits/pneumatiques">
-              <CardCategorie title="Pneumatiques" img="/hydrauliques-v1.png" />
+              <CardCategorie title="Pneumatiques" img="/pneumatique-v1.webp" />
             </Link>
             <Link href="/produits/assainissement-et-nettoyage ">
               <CardCategorie
                 title="Assainissement et nettoyage"
-                img="/hydrauliques-v1.png"
+                img="/assainissement-v1.webp"
               />
             </Link>
             <Link href="/produits">
