@@ -21,9 +21,9 @@ export default async function Home() {
     "/partenaire-5.webp",
     "/partenaire-8.webp",
     "/partenaire-9.webp",
-    "vitillo-logo.svg",
-    "hydac-logo.svg",
-    "Hawk logo.svg",
+    "/vitillo-logo.svg",
+    "/hydac-logo.svg",
+    "/Hawk-logo.svg",
   ];
   const data = await getAll();
 

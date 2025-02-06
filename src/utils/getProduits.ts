@@ -31,8 +31,8 @@ export const getAll = memoize (async (): Promise<Data> => {
   duration: 7600,
   revalidateTags: ()=> ['produits:elements'],
   suppressWarnings: true, 
-  log: ['datacache', 'verbose', 'dedupe'],
-  logid: 'produits:elements',
+  // log: ['datacache', 'verbose', 'dedupe'],
+  // logid: 'produits:elements',
 })
 
 
