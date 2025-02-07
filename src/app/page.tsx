@@ -243,7 +243,7 @@ export default async function Home() {
                 alt="hydrauliques"
                 width={175}
                 height={175}
-                className="object-fill transform transition hover:scale-110 justify-center"
+                className="object-fill transform transition hover:scale-110 "
                 key={index}
               />
             ))}

@@ -25,10 +25,10 @@ export default function ListCardsV2({
   const imageCSS = zoomOut ? "object-contain" : "object-cover";
 
   return (
-    <div className="my-8 w-full">
-      <div className="w-full grid grid-cols-1 xs:grid-cols-2  sm:grid-cols-2 xl:grid-cols-3   gap-4 ">
+    <div className="my-8 w-full ">
+      <div className="w-full grid  grid-cols-1 xs:grid-cols-2  sm:grid-cols-2 xl:grid-cols-3 place-items-stretch  gap-4 ">
         {composants.children.map((item, index) => (
-          <div key={index} className="flex flex-col flex-1  w-full">
+          <div key={index} className="flex flex-col flex-1 h-[324px] w-full">
             <Card
               className="bg-[#4085C626] w-full border  border-[#4085C6]"
               isPressable={item.children && item.children.length > 0}

@@ -42,9 +42,12 @@ p {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #306593; /* Darker blue on hover */
 }
-.marques > *:nth-last-child(1):nth-child(odd) {
-  justify-self: center;
-  grid-column: 1/-1;
+
+@media screen and (max-width: 639px) {
+  .marques > *:nth-last-child(1):nth-child(odd) {
+    justify-self: center;
+    grid-column: 1/-1;
+  }
 }
 
 @layer base {
