@@ -9,12 +9,22 @@ export const metadata: Metadata = {
   description:
     "Dolphin équipements, fournir des produits et services hydrauliques et pneumatiques de qualité, conçus pour optimiser vos performances et garantir la durabilité de vos équipements.",
 };
-
+const partenairs = [
+  "/partenaire-3.jpg",
+  "/partenaire-4.webp",
+  "/cosmas-logo.svg",
+  "/partenaire-5.webp",
+  "/nardi-white-logo.webp",
+  "/partenaire-9.webp",
+  "/vitillo-logo.svg",
+  "/hydac-logo.svg",
+  "/Hawk-logo.svg",
+];
 export default function page() {
   return (
     <>
       <div className="flex flex-col">
-        <div className="w-full mb-16">
+        <div className="w-full mb-12">
           <Card className="h-[500px] rounded-none">
             <div className="relative w-full h-full">
               <Image
@@ -192,31 +202,31 @@ export default function page() {
             </div>
           </div>
           <div className="hidden xl:w-1/2 xl:px-16 xl:flex flex-col gap-32  items-center">
-            <div className="flex jusitfy-between gap-8">
-              <Image
-                src="/partenaire-1.webp"
-                alt=""
-                className="w-full rounded-2xl"
-              />
+            <div className="flex flex-col   gap-16">
+              {partenairs.map((partenaire, index) => {
+                return (
+                  <Image
+                    key={index}
+                    src={partenaire}
+                    alt=""
+                    className="max-w-[250px] min-h-[80px] mx-auto rounded-2xl "
+                  />
+                );
+              })}
+
               {/* <Image
-                src="/partenaire-2.webp"
-                alt=""
-                className="w-full rounded-2xl"
-              /> */}
+                  src="/partenaire-1.webp"
+                  alt=""
+                  className="w-full rounded-2xl"
+                />
               <Image
                 src="/partenaire-4.webp"
                 alt=""
                 className="w-full rounded-2xl"
-              />
+              /> */}
             </div>
-            {/* <div className="flex items-center gap-20">
-              <Image
-                src="/partenaire-3.webp"
-                alt=""
-                className="w-full rounded-2xl bg-gray-800"
-              />
-            </div> */}
-            <div className="flex items-center gap-8">
+
+            {/* <div className="flex items-center gap-8">
               <Image
                 src="/partenaire-5.webp"
                 alt=""
@@ -238,20 +248,6 @@ export default function page() {
                 src="/partenaire-8.webp"
                 alt=""
                 className="w-full rounded-2xl"
-              />
-            </div>
-            {/* <div className="flex gap-16 items-center">
-              <Image
-                src="/partenaire-11.webp"
-                alt=""
-                height={100}
-                width={200}
-                className="w-full rounded-2xl"
-              />
-              <Image
-                src="/partenaire-10.webp"
-                alt=""
-                className="w-full  rounded-2xl"
               />
             </div> */}
           </div>

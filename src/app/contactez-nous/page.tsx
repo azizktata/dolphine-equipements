@@ -24,7 +24,7 @@ export default function page() {
                 ADDRESS
               </h2>
               <p className="mt-1">
-                Angle Rue d’egypte Rue d’espagne 2013, Ben arus Tunis
+                Angle Rue d’egypte Rue d’espagne 2013, Ben arous Tunis
               </p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">

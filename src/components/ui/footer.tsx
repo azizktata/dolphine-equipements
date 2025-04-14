@@ -91,9 +91,15 @@ export default function Footer() {
                 <Mail size={16} />
                 dolphinequipements@orange.tn
               </li>
-              <li className="flex items-center gap-2">
-                <Facebook size={16} />
-                Dolphin Equipements
+              <li className="">
+                <a
+                  href="https://www.facebook.com/share/1AX4YHTuCH/"
+                  target="_blank"
+                  className="cursor-pointer hover:text-gray-300 flex items-center gap-2"
+                >
+                  <Facebook size={16} />
+                  Dolphin Equipements
+                </a>
               </li>
             </ul>
           </div>
